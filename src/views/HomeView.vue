@@ -1,20 +1,31 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 import { database } from '../data/database.js'
+import { DISTRICT_CATEGORIES } from '../data/districts.js'
 import { Icon } from '@iconify/vue'
 
 const randomPlace = ref(null)
 const isSpinning = ref(false)
 const selectedDist = ref('Tất cả')
+const selectedType = ref('Tất cả')
+const searchQuery = ref('')
 
-const distList = computed(() => {
-  const dists = new Set(database.map((p) => p.dist).filter(Boolean))
-  return ['Tất cả', ...Array.from(dists).sort()]
+const typeList = computed(() => {
+  const types = new Set(database.map((p) => p.type).filter(Boolean))
+  return ['Tất cả', ...Array.from(types).sort()]
 })
 
 const filteredDatabase = computed(() => {
-  if (selectedDist.value === 'Tất cả') return database
-  return database.filter((p) => p.dist === selectedDist.value)
+  return database.filter((p) => {
+    const matchDist = selectedDist.value === 'Tất cả' || p.dist === selectedDist.value
+    const matchType = selectedType.value === 'Tất cả' || p.type === selectedType.value
+    const matchSearch = !searchQuery.value || 
+      p.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      p.dish.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
+      p.addr.toLowerCase().includes(searchQuery.value.toLowerCase())
+    
+    return matchDist && matchType && matchSearch
+  })
 })
 
 // === WHEEL LOGIC ===
@@ -149,13 +160,44 @@ const getGoogleMapsLink = (place) => {
         </p>
 
         <!-- Filters -->
-        <div class="w-full max-w-sm mb-10 relative z-20">
-          <label class="block text-text-secondary text-sm mb-3 px-2 text-center uppercase tracking-widest font-medium text-white/70">Bé muốn ăn ở khu vực nào?</label>
+        <div class="w-full max-w-2xl mb-10 relative z-20 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Search -->
           <div class="relative group">
-            <select v-model="selectedDist" @change="resetWheel" class="w-full appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-white rounded-2xl px-6 py-4 font-display text-lg tracking-wide focus:outline-none focus:border-accent-sky/50 focus:ring-1 focus:ring-accent-sky/50 transition-all cursor-pointer backdrop-blur-xl shadow-lg">
-              <option v-for="dist in distList" :key="dist" :value="dist" class="bg-gray-900 text-white py-2">{{ dist }}</option>
-            </select>
-            <Icon icon="lucide:chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none size-5 group-hover:text-white transition-colors" />
+            <label class="block text-text-secondary text-xs mb-2 px-2 uppercase tracking-widest font-medium text-white/50">Tìm kiếm</label>
+            <div class="relative">
+              <input 
+                v-model="searchQuery" 
+                type="text" 
+                placeholder="Tên quán, món ăn..."
+                class="w-full bg-black/40 border border-white/10 hover:border-white/30 text-white rounded-2xl px-6 py-4 font-display text-base focus:outline-none focus:border-accent-sky/50 focus:ring-1 focus:ring-accent-sky/50 transition-all backdrop-blur-xl shadow-lg"
+              />
+              <Icon icon="lucide:search" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/30 pointer-events-none size-5" />
+            </div>
+          </div>
+
+          <!-- District -->
+          <div class="relative group">
+            <label class="block text-text-secondary text-xs mb-2 px-2 uppercase tracking-widest font-medium text-white/50">Khu vực</label>
+            <div class="relative">
+              <select v-model="selectedDist" @change="resetWheel" class="w-full appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-white rounded-2xl px-6 py-4 font-display text-base tracking-wide focus:outline-none focus:border-accent-sky/50 focus:ring-1 focus:ring-accent-sky/50 transition-all cursor-pointer backdrop-blur-xl shadow-lg">
+                <option value="Tất cả">Tất cả khu vực</option>
+                <optgroup v-for="(dists, category) in DISTRICT_CATEGORIES" :key="category" :label="category.replace('_', ' ')">
+                  <option v-for="dist in dists" :key="dist" :value="dist">{{ dist }}</option>
+                </optgroup>
+              </select>
+              <Icon icon="lucide:chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none size-5 group-hover:text-white transition-colors" />
+            </div>
+          </div>
+
+          <!-- Type -->
+          <div class="relative group">
+            <label class="block text-text-secondary text-xs mb-2 px-2 uppercase tracking-widest font-medium text-white/50">Loại món</label>
+            <div class="relative">
+              <select v-model="selectedType" @change="resetWheel" class="w-full appearance-none bg-black/40 border border-white/10 hover:border-white/30 text-white rounded-2xl px-6 py-4 font-display text-base tracking-wide focus:outline-none focus:border-accent-sky/50 focus:ring-1 focus:ring-accent-sky/50 transition-all cursor-pointer backdrop-blur-xl shadow-lg">
+                <option v-for="type in typeList" :key="type" :value="type">{{ type === 'Tất cả' ? 'Tất cả loại món' : type }}</option>
+              </select>
+              <Icon icon="lucide:chevron-down" class="absolute right-6 top-1/2 -translate-y-1/2 text-white/50 pointer-events-none size-5 group-hover:text-white transition-colors" />
+            </div>
           </div>
         </div>
 
