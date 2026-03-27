@@ -7,14 +7,32 @@ const randomPlace = ref(null)
 const isSpinning = ref(false)
 const selectedDist = ref('Tất cả')
 
+const provinceMapping = {
+  'Tp. HCM': ['Quận 1', 'Quận 2', 'Quận 3', 'Quận 4', 'Quận 5', 'Quận 6', 'Quận 7', 'Quận 8', 'Quận 9', 'Quận 10', 'Quận 11', 'Quận 12', 'Quận Bình Thạnh', 'Quận Bình Tân', 'Quận Gò Vấp', 'Quận Phú Nhuận', 'Quận Tân Bình', 'Quận Tân Phú', 'Huyện Bình Chánh', 'Huyện Nhà Bè', 'Thủ Đức'],
+  'Hà Nội': ['Hà Nội'],
+  'Hải Phòng': ['Hải Phòng'],
+  'Đà Nẵng': ['Đà Nẵng'],
+  'Huế': ['Huế'],
+  'Hồ Chí Minh': ['Toàn Thành Phố'],
+  'Cần Thơ': ['Cần Thơ'],
+  'Vũng Tàu': ['Tp. Vũng Tàu', 'Vũng Tàu'],
+  'Đà Lạt': ['Đà Lạt'],
+  'Nha Trang': ['Nha Trang'],
+  'Hội An': ['Hội An'],
+  'Phan Thiết': ['Phan Thiết'],
+  'Biên Hòa': ['Biên Hòa'],
+  'Thủ Dầu Một': ['Thủ Dầu Một']
+}
+
 const distList = computed(() => {
-  const dists = new Set(database.map((p) => p.dist).filter(Boolean))
-  return ['Tất cả', ...Array.from(dists).sort()]
+  const uniqueProvinces = Object.keys(provinceMapping).sort()
+  return ['Tất cả', ...uniqueProvinces]
 })
 
 const filteredDatabase = computed(() => {
   if (selectedDist.value === 'Tất cả') return database
-  return database.filter((p) => p.dist === selectedDist.value)
+  const allowedDists = provinceMapping[selectedDist.value] || []
+  return database.filter((p) => allowedDists.includes(p.dist))
 })
 
 watch(filteredDatabase, () => {
