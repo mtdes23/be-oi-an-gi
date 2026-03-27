@@ -76,7 +76,7 @@ const getGoogleMapsLink = (place) => {
           Bé ơi ăn gì?
         </h1>
         <p class="text-text-dim mb-8 text-center text-base sm:text-lg max-w-md">
-          Chỉ cần chọn khu vực và nhấn quay, vòng xoay may mắn sẽ chọn món ngon cho bé!
+          Chỉ cần chọn khu vực và nhấn sẽ chọn món ngon cho bé!
         </p>
 
         <!-- Filters -->
