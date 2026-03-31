@@ -250,7 +250,7 @@ const getGoogleMapsLink = (place) => {
           <div v-if="randomPlace && !isSpinning" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
             <!-- Modal Content -->
             <div class="w-full max-w-lg flex flex-col items-center transform transition-all animate-bounce-in bg-white rounded-3xl p-6 sm:p-8 shadow-2xl relative border-2 border-[#ee4d2d]/20">
-              
+
               <!-- Close Button -->
               <button @click="randomPlace = null" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
                 <Icon icon="lucide:x" class="size-5" />
@@ -290,7 +290,7 @@ const getGoogleMapsLink = (place) => {
                     <Icon icon="lucide:clock" class="size-5 shrink-0 text-gray-400" />
                     <span class="text-[0.95rem] sm:text-[1.05rem] font-medium">{{ randomPlace.time }}</span>
                   </div>
-                  
+
                   <!-- Maps Button -->
                   <a
                     :href="getGoogleMapsLink(randomPlace)"
