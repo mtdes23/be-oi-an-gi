@@ -1,4 +1,5 @@
 import fs from 'fs';
+ 
 
 const content = fs.readFileSync('/Users/mtdes23.com/Desktop/@ -3,528 +3,4818 @@ import { ref, comput.yaml', 'utf8');
 
@@ -18,7 +19,7 @@ if (matches) {
             if (obj && obj.name && !unique.has(obj.name)) {
                 unique.set(obj.name, obj);
             }
-        } catch(e) {
+        } catch {
             // ignore bad objects
         }
     }

@@ -1,4 +1,5 @@
 import fs from 'fs';
+import process from 'process';
 import { database as existingData } from './src/data/database.js';
 
 const html = fs.readFileSync('./src/data_hcm.html', 'utf8');
