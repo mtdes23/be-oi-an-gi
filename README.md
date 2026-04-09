@@ -1,44 +1,35 @@
-# ./
+# Bé Ơi Ăn Gì?
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="left">
+  <a href="https://unikorn.vn/p/be-oi-an-gi?ref=embed-be-oi-an-gi" target="_blank">
+    <img src="https://unikorn.vn/api/widgets/badge/be-oi-an-gi?theme=light" alt="Bé Ơi Ăn Gì? trên Unikorn.vn" width="256" height="64" />
+  </a>
+  <a href="https://unikorn.vn/p/be-oi-an-gi?ref=embed-be-oi-an-gi" target="_blank">
+    <img src="https://unikorn.vn/api/widgets/badge/be-oi-an-gi/rank?theme=light&type=daily" alt="Bé Ơi Ăn Gì? - Hàng ngày" width="250" height="64" />
+  </a>
+</p>
 
-## Recommended IDE Setup
+<p align="center">
+  <img src="https://i.ibb.co/BHW5cBqM/screenshot.png" alt="Giao diện ứng dụng Bé Ơi Ăn Gì?" width="800" />
+</p>
+## Tổng quan dự án
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+"Bé ơi ăn gì?" là một nền tảng công nghệ được phát triển nhằm hỗ trợ người dùng lên kế hoạch hẹn hò và lựa chọn thực đơn. Mục tiêu cốt lõi của ứng dụng là giải quyết tình trạng thiếu quyết đoán trong giao tiếp phổ biến của các cặp đôi, đặc biệt đối với những câu trả lời thiếu cụ thể như "ăn gì cũng được" hoặc "không biết".
 
-## Recommended Browser Setup
+## Phương thức hoạt động
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Nền tảng đóng vai trò là một công cụ phân tích và gợi ý ngẫu nhiên với cơ sở dữ liệu đa dạng. Hệ thống hỗ trợ người dùng:
+* Xác định thực đơn nhanh chóng.
+* Lược bỏ quá trình suy nghĩ và bàn luận kéo dài.
 
-## Customize configuration
+## Đánh giá tiện ích
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Dự án được nhận định là một giải pháp thiết thực, mang lại hiệu quả cao trong việc:
+* Tiết kiệm thời gian đưa ra quyết định.
+* Giảm thiểu sự lúng túng trong các tình huống giao tiếp.
+* Tối ưu hóa chất lượng trải nghiệm cho các buổi gặp gỡ.
 
-## Project Setup
+## Trải nghiệm ứng dụng
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Người dùng có thể truy cập và sử dụng trực tiếp nền tảng tại liên kết sau:
+* **Website chính thức:** [https://be-oi-an-gi.vercel.app](https://be-oi-an-gi.vercel.app)
