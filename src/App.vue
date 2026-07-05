@@ -7,13 +7,15 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style>
-/* Any global resets */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  background-color: #000;
+  min-height: 100vh;
+  background: #fefce8;
+}
+
+#app {
+  min-height: 100vh;
 }
 </style>

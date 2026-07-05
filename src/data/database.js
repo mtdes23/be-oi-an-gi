@@ -1,4 +1,7 @@
-export const database = [
+import { newRestaurants } from './new_restaurants.js'
+import { provincialRestaurants } from './provincial_restaurants.js'
+
+export const database = [...newRestaurants, ...provincialRestaurants,
   {
     "name": "Cơm Tấm Cô Bảy",
     "dish": "Cơm tấm",
@@ -1444,7 +1447,8 @@ export const database = [
     "dish": "Bún riêu",
     "type": "Món nước",
     "addr": "41 Thái Ly",
-    "dist": "Quận 2",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Quận 2",
     "time": "16h-21h",
     "price": "25-40k"
   },
@@ -1615,7 +1619,8 @@ export const database = [
     "dish": "Bò nướng",
     "type": "Nhậu nhẹt",
     "addr": "254 Hoàng Diệu 2, Linh Chiểu",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "17:00-22:00",
     "price": "Vừa phải"
   },
@@ -2704,7 +2709,8 @@ export const database = [
     "dish": "Má heo",
     "type": "Nhậu nhẹt",
     "addr": "51 đường số 10, Linh Trung",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "8:00 - 00:00",
     "price": "60k-120k"
   },
@@ -3064,7 +3070,8 @@ export const database = [
     "dish": "Mì cay",
     "type": "Món nước",
     "addr": "62 Nguyễn Hoàng, P. An Phú",
-    "dist": "Quận 2",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Quận 2",
     "time": "11:00 - 22:00",
     "price": "120-220k"
   },
@@ -3109,7 +3116,8 @@ export const database = [
     "dish": "Bánh canh chả cá",
     "type": "Món nước",
     "addr": "135 Đình Phong Phú",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "06:00 - 12:00",
     "price": "20-30k"
   },
@@ -3352,7 +3360,8 @@ export const database = [
     "dish": "Há cảo, phá lấu",
     "type": "Món nước",
     "addr": "12/15 Lương Định Của",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "12:00 - 20:00",
     "price": "20-35k"
   },
@@ -3559,7 +3568,8 @@ export const database = [
     "dish": "Ốc",
     "type": "Nhậu nhẹt",
     "addr": "45 Đ. Số 4, Trường Thọ, Thủ Đức",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
     "price": "50-200k"
   },
@@ -3568,7 +3578,8 @@ export const database = [
     "dish": "Tàu Hũ Đá",
     "type": "Tráng miệng",
     "addr": "475 Đ. Nguyễn Văn Bá",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "15:30 - 21:30",
     "price": "15k-50k"
   },
@@ -3577,7 +3588,8 @@ export const database = [
     "dish": "Mì Udon Nhật",
     "type": "Món Nhật",
     "addr": "27 Thảo Điền",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
     "price": "80k - 150k"
   },
@@ -3586,7 +3598,8 @@ export const database = [
     "dish": "Món Âu View Sông",
     "type": "Sang chảnh",
     "addr": "38 Nguyễn Ư Dĩ",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "08:00 - 23:00",
     "price": "500k++"
   },
@@ -3595,7 +3608,8 @@ export const database = [
     "dish": "Ốc các loại",
     "type": "Ốc",
     "addr": "5 Thảo Điền",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
     "price": "Cao"
   },
@@ -3604,7 +3618,8 @@ export const database = [
     "dish": "Cơm tấm",
     "type": "Cơm",
     "addr": "652 Xa Lộ Hà Nội",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "06:00 - 21:00",
     "price": "45k - 70k"
   },
@@ -3613,7 +3628,8 @@ export const database = [
     "dish": "Lẩu bò",
     "type": "Lẩu",
     "addr": "218 Quốc Lộ 1K",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "09:00 - 22:00",
     "price": "150k - 250k"
   },
@@ -3622,7 +3638,8 @@ export const database = [
     "dish": "Nem nướng",
     "type": "Món cuốn",
     "addr": "104 Hoàng Diệu 2",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
     "price": "40k - 60k"
   },
@@ -3631,7 +3648,8 @@ export const database = [
     "dish": "Đồ nướng",
     "type": "Nhậu nhẹt",
     "addr": "58 Đường 10, Tăng Nhơn Phú B",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "09:00 - 23:00",
     "price": "Bình dân"
   },
@@ -3640,7 +3658,8 @@ export const database = [
     "dish": "Gà nướng",
     "type": "Món khô",
     "addr": "82 Đường số 2, P. Trường Thọ",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
     "price": "140k/con"
   },
@@ -4873,7 +4892,8 @@ export const database = [
     "dish": "Bụi",
     "type": "Ăn vặt",
     "addr": "Qua cầu Thủ Thiêm 2 rồi rẽ phải, đến ngã ba đầu tiên rẽ phải tiếp là đến",
-    "dist": "Quận 2",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Quận 2",
     "time": "",
     "price": ""
   },
@@ -5440,7 +5460,8 @@ export const database = [
     "dish": "Bún riêu",
     "type": "Món nước",
     "addr": "41 Thái Ly, Quận 2",
-    "dist": "Quận 2",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Quận 2",
     "time": "16h-21h",
     "price": "25-40k"
   },
@@ -5548,7 +5569,8 @@ export const database = [
     "dish": "nướng, lẩu",
     "type": "Lẩu",
     "addr": "51 Đường Số 10, Linh Trung, Thủ Đức",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "",
     "price": ""
   },
@@ -6565,7 +6587,8 @@ export const database = [
     "dish": "Má heo",
     "type": "Nhậu nhẹt",
     "addr": "51 đường số 10, Phường Linh Trung",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "8:00 - 00:00",
     "price": "60k-120k"
   },
@@ -6907,7 +6930,8 @@ export const database = [
     "dish": "Bánh canh chả cá",
     "type": "Món nước",
     "addr": "135 Đình Phong Phú, P. Tăng Nhơn Phú B",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "06:00 - 12:00",
     "price": "20-30k"
   },
@@ -7078,7 +7102,8 @@ export const database = [
     "dish": "Há cảo, phá lấu",
     "type": "Món nước",
     "addr": "12/15 Lương Định Của, P. An Khánh",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "12:00 - 20:00",
     "price": "20-35k"
   },
@@ -7168,7 +7193,8 @@ export const database = [
     "dish": "Ốc",
     "type": "Nhậu nhẹt",
     "addr": "45 Đ. Số 4, Trường Thọ, Thủ Đức, Thành phố Hồ Chí Minh 70000, Việt Nam",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
     "price": "50-200k"
   },
@@ -7177,7 +7203,8 @@ export const database = [
     "dish": "Tàu Hũ Đá",
     "type": "Tráng miệng",
     "addr": "475 Đ. Nguyễn Văn Bá, Phước Long B, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam",
-    "dist": "Thủ Đức",
+    "dist": "Thành phố Thủ Đức",
+    "oldDist": "Thủ Đức",
     "time": "15:30 - 21:30",
     "price": "15k-50k"
   }

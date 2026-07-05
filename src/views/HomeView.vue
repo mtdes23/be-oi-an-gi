@@ -1,7 +1,7 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { database } from '../data/database.js'
-import { DISTRICT_CATEGORIES } from '../data/districts.js'
+import { DISTRICT_CATEGORIES, getProvinceDisplay } from '../data/districts.js'
 import { Icon } from '@iconify/vue'
 
 const randomPlace = ref(null)
@@ -9,6 +9,17 @@ const isSpinning = ref(false)
 const selectedDist = ref('Tất cả')
 const selectedType = ref('Tất cả')
 const searchQuery = ref('')
+const history = ref([])
+const showHistory = ref(false)
+const showStats = ref(false)
+const spinCount = ref(0)
+
+onMounted(() => {
+  const saved = localStorage.getItem('be-oi-an-gi-history')
+  if (saved) history.value = JSON.parse(saved)
+  const savedCount = localStorage.getItem('be-oi-an-gi-spin-count')
+  if (savedCount) spinCount.value = parseInt(savedCount)
+})
 
 const typeList = computed(() => {
   const types = new Set(database.map((p) => p.type).filter(Boolean))
@@ -23,12 +34,22 @@ const filteredDatabase = computed(() => {
       p.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       p.dish.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       p.addr.toLowerCase().includes(searchQuery.value.toLowerCase())
-
     return matchDist && matchType && matchSearch
   })
 })
 
-// === WHEEL LOGIC ===
+const resultCount = computed(() => filteredDatabase.value.length)
+
+const stats = computed(() => {
+  const types = {}
+  const dists = {}
+  history.value.forEach(h => {
+    types[h.type] = (types[h.type] || 0) + 1
+    dists[h.dist] = (dists[h.dist] || 0) + 1
+  })
+  return { types, dists }
+})
+
 const wheelItems = ref([])
 const wheelRotation = ref(0)
 const wheelSlices = 12
@@ -56,41 +77,31 @@ const pickRandom = () => {
 
   if (wheelItems.value.length === 0) resetWheel()
 
-  // Pick winner globally from the filtered list, not just the currently displayed items
   const winner = currentList[Math.floor(Math.random() * currentList.length)]
-
-  // Decide which slice on the wheel will land as the winner to update it visually
   const winnerSliceIndex = Math.floor(Math.random() * wheelSlices)
   wheelItems.value[winnerSliceIndex] = winner
 
-  // Math for rotation
   const sliceAngle = 360 / wheelSlices
-  // Target angle is the orientation the winning slice should be at (-90 deg offset logic: top is 0)
   const targetAngle = winnerSliceIndex * sliceAngle + (sliceAngle / 2)
-  const spins = 6 // rotate 6 full cycles
-
-  // Current absolute rotation
+  const spins = 6
   const currentRot = wheelRotation.value
   const normalizedCurrent = currentRot % 360
-
-  // We want the final rotation to land such that the targetAngle is pointing UP (0 degrees).
-  // The amount we need to turn to get the targetAngle to 0 is (360 - targetAngle).
   let extraRotation = (360 * spins) + (360 - targetAngle) - normalizedCurrent
-
-  // Add a slight random offset inside the slice so it doesn't always land perfectly in center
   const randomOffset = (Math.random() - 0.5) * (sliceAngle * 0.7)
-
   wheelRotation.value += extraRotation + randomOffset
 
   setTimeout(() => {
     isSpinning.value = false
     randomPlace.value = winner
+    spinCount.value++
+    localStorage.setItem('be-oi-an-gi-spin-count', spinCount.value)
+    history.value.unshift({ ...winner, timestamp: Date.now() })
+    if (history.value.length > 20) history.value = history.value.slice(0, 20)
+    localStorage.setItem('be-oi-an-gi-history', JSON.stringify(history.value))
   }, 5000)
 }
 
-// SVG helpers
 const getCoord = (angle, radius) => {
-  // -90 to make 0 degrees at the top
   const rad = (angle - 90) * Math.PI / 180
   return { x: radius * Math.cos(rad), y: radius * Math.sin(rad) }
 }
@@ -102,244 +113,321 @@ const getSlicePath = (i, N) => {
 }
 const getTextTransform = (i, N) => {
   const angle = i * (360 / N) + (360 / N / 2)
-  const coord = getCoord(angle, 35) // Place text away from center
+  const coord = getCoord(angle, 35)
   return `translate(${coord.x}, ${coord.y}) rotate(${angle - 90})`
 }
 const getSliceColor = (i) => {
-  const colors = [
-    '#ffffff', // White
-    '#ee4d2d', // Shopee Orange
-  ]
+  const colors = ['#fff7ed', '#fed7aa']
   return colors[i % colors.length]
 }
-
 const truncate = (text) => text.length > 14 ? text.substring(0, 14) + '..' : text
 
 const getGoogleMapsLink = (place) => {
   if (!place) return '#'
-  const query = `${place.name} ${place.addr}, ${place.dist}`
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${place.name} ${place.addr}, ${place.dist}`)}`
+}
+
+const shareResult = (place) => {
+  const oldDistNote = place.oldDist ? `\n📍 Trước đây thuộc ${place.oldDist}` : ''
+  const text = `🍜 Bé ơi ăn gì đã chọn: ${place.name}\n📍 ${place.addr}, ${place.dist}${oldDistNote}\n💰 ${place.price}\n⏰ ${place.time}`
+  if (navigator.share) {
+    navigator.share({ title: 'Bé ơi ăn gì?', text })
+  } else {
+    navigator.clipboard.writeText(text)
+    alert('Đã copy vào clipboard!')
+  }
+}
+
+const clearHistory = () => {
+  history.value = []
+  localStorage.removeItem('be-oi-an-gi-history')
+}
+
+const formatTime = (ts) => {
+  const d = new Date(ts)
+  return d.toLocaleDateString('vi-VN') + ' ' + d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
 }
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#f5f5f5] text-gray-800 flex flex-col relative overflow-x-hidden selection:bg-[#ee4d2d]/20 font-sans">
+  <div class="min-h-screen relative overflow-hidden">
 
-    <!-- Top Navigation (Empty but keeps spacing) -->
-    <header class="relative z-10 p-4 sm:p-6 flex items-center justify-between"></header>
+    <!-- Background decorations -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-orange-200/40 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-amber-100/50 rounded-full blur-[100px]"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-50/40 rounded-full blur-[120px]"></div>
+    </div>
 
-    <main class="relative z-10 flex-1 flex flex-col items-center px-4 w-full max-w-4xl mx-auto pb-16 pt-2 sm:pt-10">
+    <!-- Header -->
+    <header class="relative z-10 px-4 sm:px-6 py-4 sm:py-5">
+      <div class="max-w-5xl mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-orange-400 to-amber-400 flex items-center justify-center text-lg sm:text-xl shadow-lg shadow-orange-200">
+            🍜
+          </div>
+          <div>
+            <h2 class="text-sm sm:text-base font-bold text-stone-800 tracking-tight font-display">BÉ ƠI ĂN GÌ</h2>
+            <p class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">{{ resultCount }} quán • {{ spinCount }} lượt quay</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button @click="showStats = !showStats" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/80 border border-orange-100 flex items-center justify-center text-stone-400 hover:text-orange-500 hover:border-orange-200 hover:shadow-md transition-all card-shadow">
+            <Icon icon="lucide:bar-chart-3" class="size-4 sm:size-5" />
+          </button>
+          <button @click="showHistory = !showHistory" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/80 border border-orange-100 flex items-center justify-center text-stone-400 hover:text-orange-500 hover:border-orange-200 hover:shadow-md transition-all card-shadow relative">
+            <Icon icon="lucide:history" class="size-4 sm:size-5" />
+            <span v-if="history.length" class="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full text-[0.6rem] font-bold text-white flex items-center justify-center">{{ history.length }}</span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-      <!-- Main Content Card -->
-      <div class="w-full flex flex-col items-center p-5 sm:p-8 rounded-2xl bg-white shadow-md transition-all duration-300 relative z-10 border border-gray-100">
+    <main class="relative z-10 flex-1 flex flex-col items-center px-4 w-full max-w-5xl mx-auto pb-8 sm:pb-16">
 
-        <h1 class="text-[2rem] sm:text-4xl text-[#ee4d2d] font-bold tracking-tight mb-2 text-center">
-          Bé ơi ăn gì?
+      <!-- Title -->
+      <div class="text-center mb-6 sm:mb-8 mt-2">
+        <h1 class="text-[2.25rem] sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-3 font-display">
+          <span class="bg-gradient-to-r from-orange-500 via-rose-400 to-amber-500 bg-clip-text text-transparent">Bé ơi ăn gì?</span>
         </h1>
-        <p class="text-gray-500 mb-6 sm:mb-8 text-[0.9rem] sm:text-base max-w-md font-medium leading-relaxed text-center">
-          Chỉ cần chọn khu vực và nhấn quay nha công chúa ✨
+        <p class="text-stone-400 text-[0.85rem] sm:text-base font-medium">
+          Quay để tìm quán ngon nào ✨
         </p>
+      </div>
 
-        <!-- Filters -->
-        <div class="w-full max-w-2xl mb-10 relative z-20 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Filters -->
+      <div class="w-full max-w-3xl mb-8 sm:mb-10 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
 
-          <!-- Search -->
-          <div class="relative group">
-            <label class="block text-gray-500 text-[0.7rem] sm:text-xs mb-1.5 uppercase font-bold px-1">Tìm kiếm</label>
-            <div class="relative">
-              <input
-                v-model="searchQuery"
-                type="text"
-                placeholder="Tên quán, món ăn..."
-                class="w-full bg-gray-50 border border-gray-200 hover:border-[#ee4d2d] focus:bg-white text-gray-800 rounded-lg px-4 py-3 sm:py-3.5 text-sm sm:text-base focus:outline-none focus:border-[#ee4d2d] transition-colors shadow-sm placeholder:text-gray-400 font-medium"
-              />
-              <Icon icon="lucide:search" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none size-4 sm:size-5" />
-            </div>
+        <!-- Search -->
+        <div class="sm:col-span-1">
+          <label class="block text-stone-500 text-[0.65rem] sm:text-xs mb-1.5 uppercase font-bold tracking-wider px-1">Tìm kiếm</label>
+          <div class="relative">
+            <input v-model="searchQuery" type="text" placeholder="Tên quán, món ăn..."
+              class="w-full bg-white border border-stone-200 hover:border-orange-300 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 sm:py-3.5 text-sm sm:text-base text-stone-700 placeholder:text-stone-300 transition-all card-shadow font-medium outline-none" />
+            <Icon icon="lucide:search" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-300 pointer-events-none size-4 sm:size-5" />
           </div>
-
-          <!-- District -->
-          <div class="relative group">
-            <label class="block text-gray-500 text-[0.7rem] sm:text-xs mb-1.5 uppercase font-bold px-1">Khu vực</label>
-            <div class="relative">
-              <select v-model="selectedDist" @change="resetWheel" class="w-full appearance-none bg-gray-50 border border-gray-200 hover:border-[#ee4d2d] focus:bg-white text-gray-800 rounded-lg px-4 py-3 sm:py-3.5 text-sm sm:text-base tracking-wide focus:outline-none focus:border-[#ee4d2d] transition-colors cursor-pointer shadow-sm font-medium">
-                <option value="Tất cả">Tất cả khu vực</option>
-                <optgroup v-for="(dists, category) in DISTRICT_CATEGORIES" :key="category" :label="category.replace('_', ' ')">
-                  <option v-for="dist in dists" :key="dist" :value="dist">{{ dist }}</option>
-                </optgroup>
-              </select>
-              <Icon icon="lucide:chevron-down" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none size-4 sm:size-5 group-hover:text-[#ee4d2d] transition-colors" />
-            </div>
-          </div>
-
-          <!-- Type -->
-          <div class="relative group">
-            <label class="block text-gray-500 text-[0.7rem] sm:text-xs mb-1.5 uppercase font-bold px-1">Loại món</label>
-            <div class="relative">
-              <select v-model="selectedType" @change="resetWheel" class="w-full appearance-none bg-gray-50 border border-gray-200 hover:border-[#ee4d2d] focus:bg-white text-gray-800 rounded-lg px-4 py-3 sm:py-3.5 text-sm sm:text-base tracking-wide focus:outline-none focus:border-[#ee4d2d] transition-colors cursor-pointer shadow-sm font-medium">
-                <option v-for="type in typeList" :key="type" :value="type">{{ type === 'Tất cả' ? 'Tất cả loại món' : type }}</option>
-              </select>
-              <Icon icon="lucide:chevron-down" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none size-4 sm:size-5 group-hover:text-[#ee4d2d] transition-colors" />
-            </div>
-          </div>
-
         </div>
 
-        <!-- Wheel of Fortune -->
-        <div class="relative w-64 h-64 sm:w-[380px] sm:h-[380px] mb-10 flex-shrink-0">
-
-          <!-- Pointer overlay -->
-          <div class="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 z-20 drop-shadow-sm">
-            <Icon icon="lucide:map-pin" class="size-10 sm:size-12 fill-[#ee4d2d] text-white stroke-[1.5] drop-shadow-[0_4px_4px_rgba(238,77,45,0.3)] animate-pulse" />
+        <!-- District -->
+        <div>
+          <label class="block text-stone-500 text-[0.65rem] sm:text-xs mb-1.5 uppercase font-bold tracking-wider px-1">Khu vực</label>
+          <div class="relative">
+            <select v-model="selectedDist" @change="resetWheel"
+              class="w-full appearance-none bg-white border border-stone-200 hover:border-orange-300 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 sm:py-3.5 text-sm sm:text-base text-stone-700 transition-all cursor-pointer card-shadow font-medium outline-none">
+              <option value="Tất cả">Tất cả khu vực</option>
+              <optgroup v-for="(dists, category) in DISTRICT_CATEGORIES" :key="category" :label="category.replace('_', ' ')">
+                <option v-for="dist in dists" :key="dist" :value="dist">{{ dist }}</option>
+              </optgroup>
+            </select>
+            <Icon icon="lucide:chevron-down" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-300 pointer-events-none size-4 sm:size-5" />
           </div>
+        </div>
 
-          <!-- SVG Container with Casino styling & Win Effect -->
-          <div :class="['w-full h-full rounded-full border-[6px] sm:border-8 overflow-hidden relative transition-all duration-700 bg-amber-500', (!isSpinning && randomPlace) ? 'border-amber-300 border-dotted shadow-[0_0_60px_rgba(251,191,36,0.8)] animate-pulse' : 'border-amber-400 border-dotted shadow-[0_5px_20px_rgba(0,0,0,0.15)]']">
+        <!-- Type -->
+        <div>
+          <label class="block text-stone-500 text-[0.65rem] sm:text-xs mb-1.5 uppercase font-bold tracking-wider px-1">Loại món</label>
+          <div class="relative">
+            <select v-model="selectedType" @change="resetWheel"
+              class="w-full appearance-none bg-white border border-stone-200 hover:border-orange-300 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 sm:py-3.5 text-sm sm:text-base text-stone-700 transition-all cursor-pointer card-shadow font-medium outline-none">
+              <option v-for="type in typeList" :key="type" :value="type">{{ type === 'Tất cả' ? 'Tất cả loại món' : type }}</option>
+            </select>
+            <Icon icon="lucide:chevron-down" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-300 pointer-events-none size-4 sm:size-5" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Wheel -->
+      <div class="relative mb-8 sm:mb-10">
+        <!-- Pointer -->
+        <div class="absolute -top-4 sm:-top-5 left-1/2 -translate-x-1/2 z-20">
+          <div class="w-0 h-0 border-l-[14px] sm:border-l-[18px] border-l-transparent border-r-[14px] sm:border-r-[18px] border-r-transparent border-t-[22px] sm:border-t-[26px] border-t-orange-500 drop-shadow-lg"></div>
+        </div>
+
+        <!-- Wheel ring -->
+        <div class="w-56 h-56 sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] rounded-full p-2 sm:p-3 bg-gradient-to-br from-orange-200 via-amber-100 to-yellow-200"
+             :class="{ 'animate-glow-pulse': !isSpinning && randomPlace }">
+          <div class="w-full h-full rounded-full overflow-hidden relative bg-white border-4 border-white card-shadow-lg">
             <svg viewBox="-50 -50 100 100"
                  class="w-full h-full will-change-transform"
-                 :style="{
-                   transform: `rotate(${wheelRotation}deg)`,
-                   transition: isSpinning ? 'transform 5s cubic-bezier(0.25, 1, 0.1, 1)' : 'none'
-                 }">
-               <path v-for="(item, i) in wheelItems" :key="i"
-                     :d="getSlicePath(i, wheelSlices)"
-                     :fill="getSliceColor(i)"
-                     stroke="#f5f5f5" stroke-width="0.3" />
-               <text v-for="(item, i) in wheelItems" :key="`text-${i}`"
-                     :transform="getTextTransform(i, wheelSlices)"
-                     text-anchor="middle" dominant-baseline="central"
-                     :fill="i % 2 === 0 ? '#ee4d2d' : '#ffffff'" font-size="3.5" font-weight="800"
-                     class="pointer-events-none tracking-wide"
-                     style="text-shadow: 0px 1px 1px rgba(0,0,0,0.05)">
-                  {{ truncate(item?.name || '') }}
-               </text>
+                 :style="{ transform: `rotate(${wheelRotation}deg)`, transition: isSpinning ? 'transform 5s cubic-bezier(0.25, 1, 0.1, 1)' : 'none' }">
+              <path v-for="(item, i) in wheelItems" :key="i"
+                    :d="getSlicePath(i, wheelSlices)"
+                    :fill="getSliceColor(i)"
+                    stroke="#fff" stroke-width="0.4" />
+              <text v-for="(item, i) in wheelItems" :key="`text-${i}`"
+                    :transform="getTextTransform(i, wheelSlices)"
+                    text-anchor="middle" dominant-baseline="central"
+                    :fill="i % 2 === 0 ? '#ea580c' : '#92400e'" font-size="3" font-weight="700"
+                    class="pointer-events-none" style="font-family: 'Be Vietnam Pro', sans-serif;">
+                {{ truncate(item?.name || '') }}
+              </text>
             </svg>
 
-            <!-- Center Pivot -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full border-[3px] border-[#ee4d2d] shadow-[0_4px_15px_rgba(0,0,0,0.2)] z-10 flex items-center justify-center transform transition-transform duration-300" :class="{ 'scale-110': !isSpinning && randomPlace }">
-              <div class="text-[#ee4d2d] font-bold text-[0.75rem] sm:text-[0.9rem] uppercase tracking-tighter">😋</div>
+            <!-- Center -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-orange-400 to-amber-400 border-4 border-white shadow-lg z-20 flex items-center justify-center transition-transform duration-300"
+                 :class="{ 'scale-110': !isSpinning && randomPlace }">
+              <span class="text-lg sm:text-xl">😋</span>
             </div>
           </div>
         </div>
-
-        <!-- Actions Container (Tight Spacing) -->
-        <div class="flex flex-col items-center mb-6 w-full">
-          <!-- Action Button -->
-          <button
-            @click="pickRandom"
-            :disabled="isSpinning"
-            class="relative overflow-hidden px-12 py-3.5 sm:px-16 sm:py-4 rounded-xl bg-[#ee4d2d] text-white text-[1rem] sm:text-[1.125rem] font-bold tracking-widest uppercase transition-all hover:bg-[#d73f22] active:scale-95 shadow-md disabled:opacity-60 disabled:scale-100 disabled:cursor-not-allowed z-20"
-          >
-            <span class="relative z-10 flex items-center justify-center gap-2.5">
-              <Icon
-                :icon="isSpinning ? 'lucide:loader-2' : 'lucide:utensils-crossed'"
-                :class="{ 'animate-spin': isSpinning }"
-                class="size-5 text-white"
-              />
-              {{ isSpinning ? 'Đang quay...' : 'Quay ngay' }}
-            </span>
-          </button>
-
-          <!-- Idle Text right below button -->
-          <div v-show="!isSpinning && !randomPlace" class="text-center text-[#ee4d2d]/80 text-[0.85rem] sm:text-[0.95rem] font-medium italic mt-3 h-[24px]">
-            ✨ Đang chờ lệnh công chúa ạ...
-          </div>
-        </div>
-
-        <!-- Result Popup Modal -->
-        <transition name="fade">
-          <div v-if="randomPlace && !isSpinning" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm">
-            <!-- Modal Content -->
-            <div class="w-full max-w-lg flex flex-col items-center transform transition-all animate-bounce-in bg-white rounded-3xl p-6 sm:p-8 shadow-2xl relative border-2 border-[#ee4d2d]/20">
-
-              <!-- Close Button -->
-              <button @click="randomPlace = null" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors">
-                <Icon icon="lucide:x" class="size-5" />
-              </button>
-
-              <div class="text-[1.75rem] sm:text-[2.25rem] text-[#ee4d2d] font-bold tracking-tight text-center mb-6 leading-tight mt-4 px-4">
-                {{ randomPlace.name }}
-              </div>
-
-              <!-- Badges -->
-              <div class="flex flex-wrap justify-center gap-3 mb-8 w-full">
-                <div class="px-5 py-2.5 rounded-xl bg-orange-50 border border-orange-100 shadow-sm flex items-center gap-2 text-[#ee4d2d]">
-                  <Icon icon="lucide:pizza" class="size-4 sm:size-5" />
-                  <span class="text-[0.85rem] sm:text-[0.95rem] tracking-wide font-medium">{{ randomPlace.dish }}</span>
-                </div>
-                <div class="px-5 py-2.5 rounded-xl bg-orange-50 border border-orange-100 shadow-sm flex items-center gap-2 text-[#ee4d2d]">
-                  <Icon icon="lucide:tag" class="size-4 sm:size-5" />
-                  <span class="text-[0.85rem] sm:text-[0.95rem] tracking-wide font-medium">{{ randomPlace.price }}</span>
-                </div>
-              </div>
-
-              <!-- Location & Time Details -->
-              <div class="w-full bg-gray-50 rounded-2xl p-5 sm:p-6 border border-gray-100 flex flex-col gap-4 shadow-inner relative overflow-hidden">
-                <!-- Address -->
-                <div class="flex items-start justify-between gap-3 relative">
-                  <div class="flex items-start gap-3 text-gray-800 w-full">
-                    <Icon icon="lucide:map-pin" class="mt-0.5 size-5 shrink-0 text-[#ee4d2d]" />
-                    <span class="text-[0.95rem] sm:text-[1.05rem] leading-relaxed font-medium">{{ randomPlace.addr }}, {{ randomPlace.dist }}</span>
-                  </div>
-                </div>
-
-                <div class="h-[1px] w-full bg-gray-200 relative my-1"></div>
-
-                <!-- Time & Actions -->
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative">
-                  <div class="flex items-center gap-3 text-gray-500">
-                    <Icon icon="lucide:clock" class="size-5 shrink-0 text-gray-400" />
-                    <span class="text-[0.95rem] sm:text-[1.05rem] font-medium">{{ randomPlace.time }}</span>
-                  </div>
-
-                  <!-- Maps Button -->
-                  <a
-                    :href="getGoogleMapsLink(randomPlace)"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="shrink-0 flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-50 border border-gray-200 text-gray-700 rounded-xl font-bold transition-colors shadow-sm w-full sm:w-auto active:scale-95"
-                  >
-                    <Icon icon="lucide:navigation" class="size-5 text-[#ee4d2d]" />
-                    Chỉ đường
-                  </a>
-                </div>
-              </div>
-
-              <!-- Action Button (Spin again / Close) -->
-              <button @click="randomPlace = null" class="w-full mt-6 py-4 bg-[#ee4d2d] hover:bg-[#d73f22] text-white rounded-xl font-bold text-lg tracking-wide shadow-md active:scale-[0.98] transition-all">
-                Tuyệt vời, chốt luôn!
-              </button>
-            </div>
-          </div>
-        </transition>
       </div>
+
+      <!-- Spin Button -->
+      <div class="flex flex-col items-center mb-6 w-full">
+        <button @click="pickRandom" :disabled="isSpinning"
+          class="group relative px-12 py-4 sm:px-16 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg tracking-wider uppercase transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto overflow-hidden card-shadow-lg"
+          :class="isSpinning ? 'bg-stone-200 text-stone-400' : 'bg-gradient-to-r from-orange-400 to-amber-400 text-white hover:from-orange-500 hover:to-amber-500 hover:shadow-xl hover:shadow-orange-200/50 active:scale-95'">
+          <span class="relative z-10 flex items-center justify-center gap-3">
+            <Icon :icon="isSpinning ? 'lucide:loader-2' : 'lucide:sparkles'" :class="{ 'animate-spin': isSpinning }" class="size-5" />
+            {{ isSpinning ? 'Đang quay...' : 'Quay ngay' }}
+          </span>
+          <div v-if="!isSpinning" class="absolute inset-0 animate-shimmer rounded-2xl"></div>
+        </button>
+        <p v-show="!isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
+          ✨ Đang chờ lệnh công chúa ạ...
+        </p>
+      </div>
+
+      <!-- Stats Panel -->
+      <transition name="slide">
+        <div v-if="showStats" class="w-full max-w-2xl bg-white rounded-3xl p-5 sm:p-6 mb-6 card-shadow-lg border border-stone-100">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-bold text-stone-800 font-display">📊 Thống kê</h3>
+            <button @click="showStats = false" class="text-stone-300 hover:text-stone-600 transition-colors p-1"><Icon icon="lucide:x" class="size-5" /></button>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-4 text-center border border-orange-100">
+              <div class="text-2xl sm:text-3xl font-bold text-orange-500 font-display">{{ spinCount }}</div>
+              <div class="text-xs text-stone-400 mt-1 font-medium">Lượt quay</div>
+            </div>
+            <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-4 text-center border border-rose-100">
+              <div class="text-2xl sm:text-3xl font-bold text-rose-400 font-display">{{ history.length }}</div>
+              <div class="text-xs text-stone-400 mt-1 font-medium">Đã lưu</div>
+            </div>
+          </div>
+          <div v-if="Object.keys(stats.types).length" class="mt-4">
+            <h4 class="text-xs text-stone-400 uppercase font-bold tracking-wider mb-2">Loại hay quay</h4>
+            <div class="flex flex-wrap gap-2">
+              <span v-for="(count, type) in stats.types" :key="type" class="px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-xs font-medium text-orange-600">
+                {{ type }} ({{ count }})
+              </span>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- History Panel -->
+      <transition name="slide">
+        <div v-if="showHistory" class="w-full max-w-2xl bg-white rounded-3xl p-5 sm:p-6 mb-6 card-shadow-lg border border-stone-100">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg font-bold text-stone-800 font-display">🕐 Lịch sử quay</h3>
+            <div class="flex items-center gap-2">
+              <button v-if="history.length" @click="clearHistory" class="text-xs text-stone-400 hover:text-rose-500 transition-colors font-medium">Xóa tất cả</button>
+              <button @click="showHistory = false" class="text-stone-300 hover:text-stone-600 transition-colors p-1"><Icon icon="lucide:x" class="size-5" /></button>
+            </div>
+          </div>
+          <div v-if="history.length === 0" class="text-center py-8 text-stone-300">
+            <Icon icon="lucide:history" class="size-10 mx-auto mb-2" />
+            <p class="text-sm">Chưa có lịch sử quay</p>
+          </div>
+          <div v-else class="space-y-2 max-h-64 overflow-y-auto pr-1">
+            <div v-for="(item, i) in history" :key="i"
+                 class="bg-stone-50 hover:bg-orange-50 rounded-xl p-3 flex items-center justify-between transition-colors cursor-pointer border border-transparent hover:border-orange-100"
+                 @click="randomPlace = item; showHistory = false">
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-semibold text-stone-700 truncate">{{ item.name }}</p>
+                <p class="text-xs text-stone-400 truncate">{{ item.dish }} • {{ item.dist }}</p>
+              </div>
+              <span class="text-[0.65rem] text-stone-300 ml-3 whitespace-nowrap">{{ formatTime(item.timestamp) }}</span>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- Result Modal -->
+      <transition name="modal">
+        <div v-if="randomPlace && !isSpinning" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm" @click.self="randomPlace = null">
+          <div class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative overflow-hidden animate-bounce-in border border-stone-100" @click.stop>
+
+            <!-- Close -->
+            <button @click="randomPlace = null" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:x" class="size-4 sm:size-5" />
+            </button>
+
+            <!-- Share -->
+            <button @click="shareResult(randomPlace)" class="absolute top-4 right-14 text-stone-300 hover:text-orange-500 bg-stone-100 hover:bg-orange-50 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:share-2" class="size-4 sm:size-5" />
+            </button>
+
+            <!-- Badge -->
+            <div class="flex justify-center mb-4">
+              <span class="px-4 py-1.5 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 border border-orange-200 text-xs font-bold text-orange-600 uppercase tracking-widest">
+                🎉 Kết quả quay
+              </span>
+            </div>
+
+            <!-- Name -->
+            <h2 class="text-[1.5rem] sm:text-[1.85rem] font-extrabold text-stone-800 text-center mb-4 leading-tight font-display">{{ randomPlace.name }}</h2>
+
+            <!-- Badges -->
+            <div class="flex flex-wrap justify-center gap-2 mb-5">
+              <span class="px-4 py-2 rounded-xl bg-orange-50 border border-orange-100 flex items-center gap-2 text-orange-600">
+                <Icon icon="lucide:utensils" class="size-4" />
+                <span class="text-[0.8rem] font-medium">{{ randomPlace.dish }}</span>
+              </span>
+              <span class="px-4 py-2 rounded-xl bg-amber-50 border border-amber-100 flex items-center gap-2 text-amber-600">
+                <Icon icon="lucide:tag" class="size-4" />
+                <span class="text-[0.8rem] font-medium">{{ randomPlace.price }}</span>
+              </span>
+            </div>
+
+            <!-- Details -->
+            <div class="bg-stone-50 rounded-2xl p-4 sm:p-5 space-y-3 border border-stone-100">
+              <div class="flex items-start gap-3">
+                <Icon icon="lucide:map-pin" class="size-5 shrink-0 text-orange-400 mt-0.5" />
+                <div class="flex-1">
+                  <span class="text-[0.85rem] sm:text-[0.9rem] text-stone-600 leading-relaxed">{{ randomPlace.addr }}, {{ getProvinceDisplay(randomPlace.dist) }}</span>
+                  <span v-if="randomPlace.oldDist" class="block text-[0.7rem] sm:text-[0.75rem] text-stone-400 mt-1 italic">
+                    📍 Trước đây thuộc {{ randomPlace.oldDist }}
+                  </span>
+                </div>
+              </div>
+              <div class="h-px bg-stone-200"></div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3 text-stone-400">
+                  <Icon icon="lucide:clock" class="size-5 shrink-0" />
+                  <span class="text-[0.85rem] sm:text-[0.9rem] font-medium">{{ randomPlace.time }}</span>
+                </div>
+                <a :href="getGoogleMapsLink(randomPlace)" target="_blank" rel="noopener noreferrer"
+                   class="flex items-center gap-2 px-4 py-2 bg-white border border-stone-200 hover:border-orange-300 rounded-xl text-sm font-semibold text-stone-600 hover:text-orange-600 transition-all active:scale-95 card-shadow">
+                  <Icon icon="lucide:navigation" class="size-4" />
+                  Chỉ đường
+                </a>
+              </div>
+            </div>
+
+            <!-- Action -->
+            <button @click="randomPlace = null" class="w-full mt-5 py-3.5 bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-500 hover:to-amber-500 text-white rounded-xl font-bold text-base tracking-wide shadow-lg shadow-orange-200/50 active:scale-[0.98] transition-all">
+              Tuyệt vời, chốt luôn! 🎉
+            </button>
+          </div>
+        </div>
+      </transition>
     </main>
   </div>
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
-}
+.slide-enter-active, .slide-leave-active { transition: all 0.3s ease; }
+.slide-enter-from, .slide-leave-to { opacity: 0; transform: translateY(-10px); }
 
-@keyframes shimmer {
-  100% { transform: translateX(100%); }
-}
-.animate-shimmer {
-  animation: shimmer 1.5s infinite linear;
-}
+.modal-enter-active, .modal-leave-active { transition: opacity 0.3s ease; }
+.modal-enter-from, .modal-leave-to { opacity: 0; }
 
 @keyframes bounce-in {
-  0% { transform: scale(0.8); opacity: 0; }
-  60% { transform: scale(1.05); opacity: 1; }
+  0% { transform: scale(0.9); opacity: 0; }
+  60% { transform: scale(1.02); opacity: 1; }
   100% { transform: scale(1); opacity: 1; }
 }
-.animate-bounce-in {
-  animation: bounce-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
+.animate-bounce-in { animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
 </style>
