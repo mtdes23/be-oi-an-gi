@@ -1,4 +1,4 @@
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -12,8 +12,13 @@ import { auth, googleProvider } from '../firebase.js'
 const currentUser = ref(null)
 const isLoading = ref(true)
 const FREE_SPINS = 10
+const spinsLeft = ref(FREE_SPINS)
+
+let authInitialized = false
 
 function initAuth() {
+  if (authInitialized) return Promise.resolve()
+  authInitialized = true
   return new Promise((resolve) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -26,6 +31,7 @@ function initAuth() {
         loadSpinData(user.uid)
       } else {
         currentUser.value = null
+        spinsLeft.value = FREE_SPINS
       }
       isLoading.value = false
       unsubscribe()
@@ -35,20 +41,24 @@ function initAuth() {
 }
 
 function loadSpinData(uid) {
-  const data = localStorage.getItem(`be-oi-spins-${uid}`)
-  if (data) {
-    const parsed = JSON.parse(data)
-    const now = Date.now()
-    const dayMs = 24 * 60 * 60 * 1000
-    if (now - parsed.lastReset > dayMs) {
+  try {
+    const data = localStorage.getItem(`be-oi-spins-${uid}`)
+    if (data) {
+      const parsed = JSON.parse(data)
+      const now = Date.now()
+      const dayMs = 24 * 60 * 60 * 1000
+      if (now - parsed.lastReset > dayMs) {
+        spinsLeft.value = FREE_SPINS
+        saveSpinData(uid)
+      } else {
+        spinsLeft.value = parsed.spinsLeft
+      }
+    } else {
       spinsLeft.value = FREE_SPINS
       saveSpinData(uid)
-    } else {
-      spinsLeft.value = parsed.spinsLeft
     }
-  } else {
+  } catch {
     spinsLeft.value = FREE_SPINS
-    saveSpinData(uid)
   }
 }
 
@@ -58,8 +68,6 @@ function saveSpinData(uid) {
     lastReset: Date.now()
   }))
 }
-
-const spinsLeft = ref(FREE_SPINS)
 
 const isLoggedIn = computed(() => !!currentUser.value)
 const hasSpins = computed(() => spinsLeft.value > 0)
@@ -96,6 +104,7 @@ async function loginWithGoogle() {
     await signInWithPopup(auth, googleProvider)
     return { ok: true }
   } catch (err) {
+    if (err.code === 'auth/popup-closed-by-user') return { ok: false, msg: '' }
     return { ok: false, msg: translateError(err.code) }
   }
 }
@@ -124,8 +133,9 @@ function translateError(code) {
     'auth/weak-password': 'Mật khẩu phải có ít nhất 6 ký tự',
     'auth/user-not-found': 'Tài khoản không tồn tại',
     'auth/wrong-password': 'Sai mật khẩu',
+    'auth/invalid-credential': 'Email hoặc mật khẩu không đúng',
     'auth/too-many-requests': 'Thử lại sau vài phút',
-    'auth/popup-closed-by-user': 'Đã đóng popup',
+    'auth/popup-closed-by-user': '',
     'auth/network-request-failed': 'Lỗi mạng, thử lại sau'
   }
   return map[code] || 'Có lỗi xảy ra, thử lại sau'

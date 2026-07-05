@@ -24,6 +24,7 @@ const authMode = ref('login')
 const authForm = ref({ name: '', email: '', password: '' })
 const authError = ref('')
 const authLoading = ref(false)
+const pendingSpin = ref(false)
 
 // Donate modal
 const showDonateModal = ref(false)
@@ -32,8 +33,8 @@ const showDonateModal = ref(false)
 const resultCardRef = ref(null)
 const isCapturing = ref(false)
 
-onMounted(() => {
-  initAuth()
+onMounted(async () => {
+  await initAuth()
   const saved = localStorage.getItem('be-oi-an-gi-history')
   if (saved) history.value = JSON.parse(saved)
   const savedCount = localStorage.getItem('be-oi-an-gi-spin-count')
@@ -91,6 +92,7 @@ const pickRandom = () => {
 
   // Check login
   if (!isLoggedIn.value) {
+    pendingSpin.value = true
     authMode.value = 'login'
     showAuthModal.value = true
     return
@@ -231,6 +233,10 @@ const handleAuth = async () => {
   if (result.ok) {
     showAuthModal.value = false
     authForm.value = { name: '', email: '', password: '' }
+    if (pendingSpin.value) {
+      pendingSpin.value = false
+      setTimeout(() => pickRandom(), 300)
+    }
   } else {
     authError.value = result.msg
   }
@@ -243,7 +249,11 @@ const handleGoogleLogin = async () => {
   authLoading.value = false
   if (result.ok) {
     showAuthModal.value = false
-  } else {
+    if (pendingSpin.value) {
+      pendingSpin.value = false
+      setTimeout(() => pickRandom(), 300)
+    }
+  } else if (result.msg) {
     authError.value = result.msg
   }
 }
@@ -273,7 +283,8 @@ const switchAuthMode = () => {
           </div>
           <div>
             <h2 class="text-sm sm:text-base font-bold text-stone-800 tracking-tight font-display">BÉ ƠI ĂN GÌ</h2>
-            <p v-if="isLoggedIn" class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">
+            <p v-if="isLoading" class="text-[0.65rem] sm:text-xs text-stone-300 font-medium">Đang tải...</p>
+            <p v-else-if="isLoggedIn" class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">
               Xin chào, {{ currentUser.name }} • Còn {{ spinsLeft }} lượt quay
             </p>
             <p v-else class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">{{ resultCount }} quán • {{ spinCount }} lượt quay</p>
@@ -385,19 +396,19 @@ const switchAuthMode = () => {
 
       <!-- Spin Button -->
       <div class="flex flex-col items-center mb-6 w-full">
-        <button @click="pickRandom" :disabled="isSpinning"
+        <button @click="pickRandom" :disabled="isSpinning || isLoading"
           class="group relative px-12 py-4 sm:px-16 sm:py-4.5 rounded-2xl font-bold text-base sm:text-lg tracking-wider uppercase transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto overflow-hidden card-shadow-lg"
           :class="isSpinning ? 'bg-stone-200 text-stone-400' : 'bg-gradient-to-r from-orange-400 to-amber-400 text-white hover:from-orange-500 hover:to-amber-500 hover:shadow-xl hover:shadow-orange-200/50 active:scale-95'">
           <span class="relative z-10 flex items-center justify-center gap-3">
-            <Icon :icon="isSpinning ? 'lucide:loader-2' : 'lucide:sparkles'" :class="{ 'animate-spin': isSpinning }" class="size-5" />
-            {{ isSpinning ? 'Đang quay...' : 'Quay ngay' }}
+            <Icon :icon="isSpinning || isLoading ? 'lucide:loader-2' : 'lucide:sparkles'" :class="{ 'animate-spin': isSpinning || isLoading }" class="size-5" />
+            {{ isSpinning ? 'Đang quay...' : isLoading ? 'Đang tải...' : 'Quay ngay' }}
           </span>
-          <div v-if="!isSpinning" class="absolute inset-0 animate-shimmer rounded-2xl"></div>
+          <div v-if="!isSpinning && !isLoading" class="absolute inset-0 animate-shimmer rounded-2xl"></div>
         </button>
         <p v-if="isLoggedIn && !isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-3 italic">
           Còn {{ spinsLeft }}/{{ FREE_SPINS }} lượt quay miễn phí
         </p>
-        <p v-if="!isLoggedIn && !isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
+        <p v-if="!isLoggedIn && !isSpinning && !randomPlace && !isLoading" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
           ✨ Đang chờ lệnh công chúa ạ...
         </p>
       </div>
