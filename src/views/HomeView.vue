@@ -413,6 +413,13 @@ const formatTime = (ts) => {
           </div>
         </div>
       </transition>
+
+      <!-- Footer -->
+      <footer class="mt-8 sm:mt-12 text-center pb-4">
+        <p class="text-[0.7rem] sm:text-xs text-stone-300 font-medium">
+          Designed by <a href="https://www.mtdes23.id.vn" target="_blank" class="hover:text-orange-400 transition-colors">mtdes23</a> • <a href="https://www.mtdes23.id.vn" target="_blank" class="hover:text-orange-400 transition-colors">www.mtdes23.id.vn</a>
+        </p>
+      </footer>
     </main>
   </div>
 </template>
