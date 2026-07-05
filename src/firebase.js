@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, GoogleAuthProvider } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD___________________________",
+  apiKey: "AIzaSyCrTLPQhhOVQ1D_3Ycrttge93fQKYo8ndY",
   authDomain: "be-oi-an-gi.firebaseapp.com",
   projectId: "be-oi-an-gi",
-  storageBucket: "be-oi-an-gi.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
+  storageBucket: "be-oi-an-gi.firebasestorage.app",
+  messagingSenderId: "142218145015",
+  appId: "1:142218145015:web:52da78486f0fc06d02b7f2"
 }
 
 const app = initializeApp(firebaseConfig)
