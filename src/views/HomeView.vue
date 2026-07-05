@@ -2,7 +2,11 @@
 import { ref, computed, watch, onMounted } from 'vue'
 import { database } from '../data/database.js'
 import { DISTRICT_CATEGORIES, getProvinceDisplay } from '../data/districts.js'
+import { useAuth } from '../composables/useAuth.js'
 import { Icon } from '@iconify/vue'
+import html2canvas from 'html2canvas'
+
+const { currentUser, isLoggedIn, spinsLeft, hasSpins, FREE_SPINS, initAuth, register, login, logout, useSpin, canSpin } = useAuth()
 
 const randomPlace = ref(null)
 const isSpinning = ref(false)
@@ -14,7 +18,21 @@ const showHistory = ref(false)
 const showStats = ref(false)
 const spinCount = ref(0)
 
+// Auth modals
+const showAuthModal = ref(false)
+const authMode = ref('login')
+const authForm = ref({ name: '', phone: '', password: '' })
+const authError = ref('')
+
+// Donate modal
+const showDonateModal = ref(false)
+
+// Screenshot
+const resultCardRef = ref(null)
+const isCapturing = ref(false)
+
 onMounted(() => {
+  initAuth()
   const saved = localStorage.getItem('be-oi-an-gi-history')
   if (saved) history.value = JSON.parse(saved)
   const savedCount = localStorage.getItem('be-oi-an-gi-spin-count')
@@ -69,6 +87,20 @@ watch(filteredDatabase, resetWheel, { immediate: true })
 
 const pickRandom = () => {
   if (isSpinning.value) return
+
+  // Check login
+  if (!isLoggedIn.value) {
+    authMode.value = 'login'
+    showAuthModal.value = true
+    return
+  }
+
+  // Check spins
+  if (!canSpin()) {
+    showDonateModal.value = true
+    return
+  }
+
   const currentList = filteredDatabase.value
   if (currentList.length === 0) return
 
@@ -93,6 +125,7 @@ const pickRandom = () => {
   setTimeout(() => {
     isSpinning.value = false
     randomPlace.value = winner
+    useSpin()
     spinCount.value++
     localStorage.setItem('be-oi-an-gi-spin-count', spinCount.value)
     history.value.unshift({ ...winner, timestamp: Date.now() })
@@ -138,6 +171,42 @@ const shareResult = (place) => {
   }
 }
 
+const captureAndShare = async () => {
+  if (!resultCardRef.value || isCapturing.value) return
+  isCapturing.value = true
+  try {
+    const canvas = await html2canvas(resultCardRef.value, {
+      backgroundColor: '#ffffff',
+      scale: 2,
+      useCORS: true,
+      logging: false
+    })
+    canvas.toBlob(async (blob) => {
+      if (!blob) return
+      const file = new File([blob], 'be-oi-an-gi.png', { type: 'image/png' })
+      if (navigator.share && navigator.canShare?.({ files: [file] })) {
+        try {
+          await navigator.share({ title: 'Bé ơi ăn gì?', files: [file] })
+        } catch {
+          downloadImage(canvas)
+        }
+      } else {
+        downloadImage(canvas)
+      }
+      isCapturing.value = false
+    }, 'image/png')
+  } catch {
+    isCapturing.value = false
+  }
+}
+
+const downloadImage = (canvas) => {
+  const link = document.createElement('a')
+  link.download = 'be-oi-an-gi.png'
+  link.href = canvas.toDataURL('image/png')
+  link.click()
+}
+
 const clearHistory = () => {
   history.value = []
   localStorage.removeItem('be-oi-an-gi-history')
@@ -146,6 +215,27 @@ const clearHistory = () => {
 const formatTime = (ts) => {
   const d = new Date(ts)
   return d.toLocaleDateString('vi-VN') + ' ' + d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
+}
+
+const handleAuth = () => {
+  authError.value = ''
+  let result
+  if (authMode.value === 'register') {
+    result = register(authForm.value.name, authForm.value.phone, authForm.value.password)
+  } else {
+    result = login(authForm.value.phone, authForm.value.password)
+  }
+  if (result.ok) {
+    showAuthModal.value = false
+    authForm.value = { name: '', phone: '', password: '' }
+  } else {
+    authError.value = result.msg
+  }
+}
+
+const switchAuthMode = () => {
+  authMode.value = authMode.value === 'login' ? 'register' : 'login'
+  authError.value = ''
 }
 </script>
 
@@ -168,7 +258,10 @@ const formatTime = (ts) => {
           </div>
           <div>
             <h2 class="text-sm sm:text-base font-bold text-stone-800 tracking-tight font-display">BÉ ƠI ĂN GÌ</h2>
-            <p class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">{{ resultCount }} quán • {{ spinCount }} lượt quay</p>
+            <p v-if="isLoggedIn" class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">
+              Xin chào, {{ currentUser.name }} • Còn {{ spinsLeft }} lượt quay
+            </p>
+            <p v-else class="text-[0.65rem] sm:text-xs text-stone-400 font-medium">{{ resultCount }} quán • {{ spinCount }} lượt quay</p>
           </div>
         </div>
         <div class="flex items-center gap-2">
@@ -178,6 +271,9 @@ const formatTime = (ts) => {
           <button @click="showHistory = !showHistory" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/80 border border-orange-100 flex items-center justify-center text-stone-400 hover:text-orange-500 hover:border-orange-200 hover:shadow-md transition-all card-shadow relative">
             <Icon icon="lucide:history" class="size-4 sm:size-5" />
             <span v-if="history.length" class="absolute -top-1 -right-1 w-4 h-4 bg-orange-400 rounded-full text-[0.6rem] font-bold text-white flex items-center justify-center">{{ history.length }}</span>
+          </button>
+          <button v-if="isLoggedIn" @click="logout" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/80 border border-orange-100 flex items-center justify-center text-stone-400 hover:text-orange-500 hover:border-orange-200 hover:shadow-md transition-all card-shadow">
+            <Icon icon="lucide:log-out" class="size-4 sm:size-5" />
           </button>
         </div>
       </div>
@@ -283,7 +379,10 @@ const formatTime = (ts) => {
           </span>
           <div v-if="!isSpinning" class="absolute inset-0 animate-shimmer rounded-2xl"></div>
         </button>
-        <p v-show="!isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
+        <p v-if="isLoggedIn && !isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-3 italic">
+          Còn {{ spinsLeft }}/{{ FREE_SPINS }} lượt quay miễn phí
+        </p>
+        <p v-if="!isLoggedIn && !isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
           ✨ Đang chờ lệnh công chúa ạ...
         </p>
       </div>
@@ -347,16 +446,16 @@ const formatTime = (ts) => {
       <!-- Result Modal -->
       <transition name="modal">
         <div v-if="randomPlace && !isSpinning" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm" @click.self="randomPlace = null">
-          <div class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative overflow-hidden animate-bounce-in border border-stone-100" @click.stop>
+          <div ref="resultCardRef" class="w-full max-w-md bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative overflow-hidden animate-bounce-in border border-stone-100" @click.stop>
 
             <!-- Close -->
             <button @click="randomPlace = null" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
               <Icon icon="lucide:x" class="size-4 sm:size-5" />
             </button>
 
-            <!-- Share -->
-            <button @click="shareResult(randomPlace)" class="absolute top-4 right-14 text-stone-300 hover:text-orange-500 bg-stone-100 hover:bg-orange-50 rounded-full p-2 transition-all z-10">
-              <Icon icon="lucide:share-2" class="size-4 sm:size-5" />
+            <!-- Capture -->
+            <button @click="captureAndShare" :disabled="isCapturing" class="absolute top-4 right-14 text-stone-300 hover:text-orange-500 bg-stone-100 hover:bg-orange-50 rounded-full p-2 transition-all z-10 disabled:opacity-50">
+              <Icon :icon="isCapturing ? 'lucide:loader-2' : 'lucide:camera'" :class="{ 'animate-spin': isCapturing }" class="size-4 sm:size-5" />
             </button>
 
             <!-- Badge -->
@@ -367,7 +466,17 @@ const formatTime = (ts) => {
             </div>
 
             <!-- Name -->
-            <h2 class="text-[1.5rem] sm:text-[1.85rem] font-extrabold text-stone-800 text-center mb-4 leading-tight font-display">{{ randomPlace.name }}</h2>
+            <h2 class="text-[1.5rem] sm:text-[1.85rem] font-extrabold text-stone-800 text-center mb-2 leading-tight font-display">{{ randomPlace.name }}</h2>
+
+            <!-- Rating -->
+            <div v-if="randomPlace.rating" class="flex justify-center mb-4">
+              <div class="flex items-center gap-1">
+                <Icon v-for="s in 5" :key="s" icon="lucide:star"
+                  :class="s <= Math.round(randomPlace.rating) ? 'text-amber-400' : 'text-stone-200'"
+                  class="size-4 fill-current" />
+                <span class="text-xs text-stone-400 ml-1 font-medium">{{ randomPlace.rating }}</span>
+              </div>
+            </div>
 
             <!-- Badges -->
             <div class="flex flex-wrap justify-center gap-2 mb-5">
@@ -406,9 +515,100 @@ const formatTime = (ts) => {
               </div>
             </div>
 
-            <!-- Action -->
-            <button @click="randomPlace = null" class="w-full mt-5 py-3.5 bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-500 hover:to-amber-500 text-white rounded-xl font-bold text-base tracking-wide shadow-lg shadow-orange-200/50 active:scale-[0.98] transition-all">
-              Tuyệt vời, chốt luôn! 🎉
+            <!-- Actions -->
+            <div class="flex gap-3 mt-5">
+              <button @click="shareResult(randomPlace)" class="flex-1 py-3.5 bg-white border-2 border-orange-200 hover:border-orange-400 text-orange-500 rounded-xl font-bold text-sm tracking-wide transition-all active:scale-[0.98]">
+                <span class="flex items-center justify-center gap-2">
+                  <Icon icon="lucide:share-2" class="size-4" />
+                  Chia sẻ
+                </span>
+              </button>
+              <button @click="randomPlace = null" class="flex-1 py-3.5 bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-500 hover:to-amber-500 text-white rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-orange-200/50 active:scale-[0.98] transition-all">
+                Chốt luôn! 🎉
+              </button>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- Auth Modal -->
+      <transition name="modal">
+        <div v-if="showAuthModal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" @click.self="showAuthModal = false">
+          <div class="w-full max-w-sm bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100" @click.stop>
+            <button @click="showAuthModal = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:x" class="size-4 sm:size-5" />
+            </button>
+
+            <div class="text-center mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-orange-400 to-amber-400 flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg shadow-orange-200">
+                🍜
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 font-display">{{ authMode === 'login' ? 'Đăng nhập' : 'Đăng ký' }}</h3>
+              <p class="text-sm text-stone-400 mt-1">{{ authMode === 'login' ? 'Chào mừng bạn quay trở lại!' : 'Tạo tài khoản để nhận 10 lượt quay miễn phí' }}</p>
+            </div>
+
+            <form @submit.prevent="handleAuth" class="space-y-4">
+              <div v-if="authMode === 'register'">
+                <label class="block text-stone-500 text-xs mb-1.5 uppercase font-bold tracking-wider">Họ tên</label>
+                <input v-model="authForm.name" type="text" placeholder="Nguyễn Văn A"
+                  class="w-full bg-stone-50 border border-stone-200 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder:text-stone-300 transition-all outline-none font-medium" />
+              </div>
+              <div>
+                <label class="block text-stone-500 text-xs mb-1.5 uppercase font-bold tracking-wider">Số điện thoại</label>
+                <input v-model="authForm.phone" type="tel" placeholder="0912345678"
+                  class="w-full bg-stone-50 border border-stone-200 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder:text-stone-300 transition-all outline-none font-medium" />
+              </div>
+              <div>
+                <label class="block text-stone-500 text-xs mb-1.5 uppercase font-bold tracking-wider">Mật khẩu</label>
+                <input v-model="authForm.password" type="password" placeholder="Ít nhất 4 ký tự"
+                  class="w-full bg-stone-50 border border-stone-200 focus:border-orange-400 focus:ring-4 focus:ring-orange-100 rounded-xl px-4 py-3 text-sm text-stone-700 placeholder:text-stone-300 transition-all outline-none font-medium" />
+              </div>
+
+              <p v-if="authError" class="text-red-500 text-xs font-medium text-center bg-red-50 rounded-lg py-2">{{ authError }}</p>
+
+              <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-orange-400 to-amber-400 hover:from-orange-500 hover:to-amber-500 text-white rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-orange-200/50 active:scale-[0.98] transition-all">
+                {{ authMode === 'login' ? 'Đăng nhập' : 'Đăng ký' }}
+              </button>
+            </form>
+
+            <p class="text-center text-xs text-stone-400 mt-4">
+              {{ authMode === 'login' ? 'Chưa có tài khoản?' : 'Đã có tài khoản?' }}
+              <button @click="switchAuthMode" class="text-orange-500 font-bold hover:underline">
+                {{ authMode === 'login' ? 'Đăng ký ngay' : 'Đăng nhập' }}
+              </button>
+            </p>
+          </div>
+        </div>
+      </transition>
+
+      <!-- Donate Modal -->
+      <transition name="modal">
+        <div v-if="showDonateModal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" @click.self="showDonateModal = false">
+          <div class="w-full max-w-sm bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100" @click.stop>
+            <button @click="showDonateModal = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:x" class="size-4 sm:size-5" />
+            </button>
+
+            <div class="text-center mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-400 to-rose-400 flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg shadow-pink-200">
+                💖
+              </div>
+              <h3 class="text-xl font-bold text-stone-800 font-display">Hết lượt quay rồi!</h3>
+              <p class="text-sm text-stone-400 mt-2">Bạn đã sử dụng hết {{ FREE_SPINS }} lượt quay miễn phí. Hãy donate để nhận thêm nhé!</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-5 text-center border border-pink-100 mb-5">
+              <p class="text-xs text-stone-400 uppercase font-bold tracking-wider mb-2">Donate qua MoMo</p>
+              <a href="https://me.momo.vn/m8IbTzsVU1soF2FAu2tqt6" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-pink-200/50 active:scale-[0.98] transition-all">
+                <Icon icon="lucide:heart" class="size-4" />
+                Donate ngay
+              </a>
+              <p class="text-[0.7rem] text-stone-400 mt-3">Mỗi donate = 10 lượt quay thêm 🎰</p>
+            </div>
+
+            <button @click="showDonateModal = false" class="w-full py-3 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-xl font-bold text-sm transition-all">
+              Đóng
             </button>
           </div>
         </div>

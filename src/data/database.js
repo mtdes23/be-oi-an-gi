@@ -9,7 +9,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "453/77A Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "6h-11h30",
-    "price": "45k"
+    "price": "45k",
+    "rating": 3.9
   },
   {
     "name": "Bánh mì thịt khìa Cô cúc",
@@ -18,7 +19,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "36 An Dương Vương",
     "dist": "Quận 5",
     "time": "6h-11h30",
-    "price": "25k-30k"
+    "price": "25k-30k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì thịt pate nướng",
@@ -27,7 +29,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "001 Lô L chung cư Ngô Gia Tự",
     "dist": "Quận 10",
     "time": "6h-20h",
-    "price": "22-31k"
+    "price": "22-31k",
+    "rating": 4.7
   },
   {
     "name": "Cơm Tấm 2 Chị Em",
@@ -36,7 +39,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "682/20 Võ Văn Kiệt",
     "dist": "Quận 5",
     "time": "16h-20h",
-    "price": "40k-65k"
+    "price": "40k-65k",
+    "rating": 4.2
   },
   {
     "name": "Lẩu cá dân ích",
@@ -45,7 +49,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "99 Châu Văn Liêm",
     "dist": "Quận 5",
     "time": "16h-22h",
-    "price": "280k-450k"
+    "price": "280k-450k",
+    "rating": 4.2
   },
   {
     "name": "Bánh canh của 121",
@@ -54,7 +59,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "121 Nguyễn Trãi",
     "dist": "Quận 5",
     "time": "6h-10h",
-    "price": "24k"
+    "price": "24k",
+    "rating": 4.6
   },
   {
     "name": "Mì bò Đài Loan",
@@ -63,7 +69,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "171 Nguyễn Gia Trí",
     "dist": "Quận Bình Thạnh",
     "time": "18h-hết",
-    "price": "45-55k"
+    "price": "45-55k",
+    "rating": 4.7
   },
   {
     "name": "Bún bò Quận 7",
@@ -72,7 +79,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "156/5 Nguyễn Văn Linh",
     "dist": "Quận 7",
     "time": "5h-21h",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 3.8
   },
   {
     "name": "Bánh mì Bà Hà",
@@ -81,7 +89,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "247 Hoàng Sa, Tân Định",
     "dist": "Quận 10",
     "time": "6:00 - 17:00",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 4.1
   },
   {
     "name": "RaoHe - Món Đài Loan",
@@ -90,7 +99,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "119 Phạm Văn Chiêu",
     "dist": "Quận Gò Vấp",
     "time": "16h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Cơm Tấm Mai",
@@ -99,7 +109,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "129 Đoàn Văn Bơ",
     "dist": "Quận 4",
     "time": "16h-hết",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.6
   },
   {
     "name": "Thơm",
@@ -108,7 +119,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "42CT Tam Đảo",
     "dist": "Quận 10",
     "time": "9h-24h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Bún bò Nam Hưng",
@@ -117,7 +129,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Công Trường Hoà Bình, P.19",
     "dist": "Quận Bình Thạnh",
     "time": "16h-21h",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.7
   },
   {
     "name": "Bún bò Gò vấp",
@@ -126,7 +139,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "69 Lê Lợi, P.4",
     "dist": "Quận Gò Vấp",
     "time": "07:45 - 22:30",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.0
   },
   {
     "name": "Lẩu bò, nướng Cô Út",
@@ -135,7 +149,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "53 Trần Hưng Đạo, Phường 6",
     "dist": "Quận 5",
     "time": "07:00 - 22:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.3
   },
   {
     "name": "Lẩu cù lao",
@@ -144,7 +159,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "410 Nguyễn Xí, P.13",
     "dist": "Quận Bình Thạnh",
     "time": "15h30-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.1
   },
   {
     "name": "Bếp Chảo nhà 56",
@@ -153,7 +169,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "53 Phan Đình Phùng",
     "dist": "Quận Phú Nhuận",
     "time": "24/24",
-    "price": "35-55k"
+    "price": "35-55k",
+    "rating": 4.2
   },
   {
     "name": "Bánh Canh Càng Cúm",
@@ -162,7 +179,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/22C Trần Quang Diệu P.14",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 3.8
   },
   {
     "name": "Bún bò rẻ Quận 5",
@@ -171,7 +189,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 Nguyễn Duy, P.9",
     "dist": "Quận 5",
     "time": "Sáng - Chiều",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.4
   },
   {
     "name": "Bún bò ngon số 1 SG",
@@ -180,7 +199,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "109 Trần Quốc Toản",
     "dist": "Quận 3",
     "time": "15:00 - 20:30",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.1
   },
   {
     "name": "Bánh mì chấm xíu mại",
@@ -189,7 +209,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "284 Nam Kỳ Khởi Nghĩa, P.8",
     "dist": "Quận 3",
     "time": "7h-21h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.6
   },
   {
     "name": "Bánh flan Minh Phụng",
@@ -198,7 +219,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "347/22 Minh Phụng, P.2",
     "dist": "Quận 11",
     "time": "10:00 - 22:00",
-    "price": "10-20k"
+    "price": "10-20k",
+    "rating": 4.8
   },
   {
     "name": "Mì trộn thái cay",
@@ -207,7 +229,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100 Số 13, Tân Quy",
     "dist": "Quận 7",
     "time": "07:00 - 22:00",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.5
   },
   {
     "name": "Ty Thy",
@@ -216,7 +239,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "546 Đ. An D. Vương, Phường 10",
     "dist": "Quận 6",
     "time": "12h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.2
   },
   {
     "name": "Bò Kho Gánh",
@@ -225,7 +249,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "029 Lô H chung cư Ngô Gia Tự",
     "dist": "Quận 10",
     "time": "11h-22h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.7
   },
   {
     "name": "Bánh bò thốt nốt Baaboo",
@@ -234,7 +259,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "337/37 Nguyễn Đình Chiểu, P.5",
     "dist": "Quận 3",
     "time": "Online",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.5
   },
   {
     "name": "Bánh Xèo, Hỏi, Bò Lá Lốt",
@@ -243,7 +269,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "023 Lô H chung cư Ngô Gia Tự",
     "dist": "Quận 10",
     "time": "16h-20h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.6
   },
   {
     "name": "Katte Donut",
@@ -252,7 +279,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "124 Vạn Kiếp",
     "dist": "Quận Bình Thạnh",
     "time": "17h-hết",
-    "price": "từ 17k"
+    "price": "từ 17k",
+    "rating": 4.2
   },
   {
     "name": "Trà sữa Together",
@@ -261,7 +289,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "200 Nguyễn Thượng Hiền, P. 5",
     "dist": "Quận Phú Nhuận",
     "time": "13:00 - 21:30",
-    "price": "29k-40k"
+    "price": "29k-40k",
+    "rating": 3.6
   },
   {
     "name": "Lò Đất BBQ",
@@ -270,7 +299,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "922 Quang Trung, Phường 8 (CN3)",
     "dist": "Quận Gò Vấp",
     "time": "16:00 - 23:30",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.9
   },
   {
     "name": "7 Ngày 7 Món Q5",
@@ -279,7 +309,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "465 Trần Hưng Đạo",
     "dist": "Quận 5",
     "time": "6h-9h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Mì nướng Muối Ớt",
@@ -288,7 +319,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "50 Nguyễn Xuân Khoát, Tân Phú",
     "dist": "Quận Tân Phú",
     "time": "16h30-22h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.8
   },
   {
     "name": "Nem nướng Liên",
@@ -297,7 +329,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Nguyễn Văn Trỗi, Q3",
     "dist": "Quận 3",
     "time": "14h-19h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.9
   },
   {
     "name": "Bánh cuốn Quảng Đông",
@@ -306,7 +339,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "28 Dương Đình Nghệ, Q11",
     "dist": "Quận 11",
     "time": "6h-15h",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 4.8
   },
   {
     "name": "Bánh mì Cá Nục",
@@ -315,7 +349,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "6 Hồ Xuân Hương, Phường 14",
     "dist": "Quận Bình Thạnh",
     "time": "6h-19h",
-    "price": "20-40k"
+    "price": "20-40k",
+    "rating": 4.6
   },
   {
     "name": "Bánh mì bì thịt mắm",
@@ -324,7 +359,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã 3 Nam Kỳ KN & Ngô Thời Nhiệm",
     "dist": "Quận 3",
     "time": "5h-10h30",
-    "price": "17k-20k"
+    "price": "17k-20k",
+    "rating": 3.7
   },
   {
     "name": "Hẻm ăn vặt 284",
@@ -333,7 +369,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "284 Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "Chiều tối",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.9
   },
   {
     "name": "7 Ngày 7 Món Q3",
@@ -342,7 +379,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/20A Trần Quang Diệu, P.14",
     "dist": "Quận 3",
     "time": "6h-9h",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 3.6
   },
   {
     "name": "Bánh Mì thịt xiên nướng",
@@ -351,7 +389,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "375 Nguyễn Trãi, Q5",
     "dist": "Quận 5",
     "time": "6h-10h30",
-    "price": "13k"
+    "price": "13k",
+    "rating": 4.0
   },
   {
     "name": "Bánh Mì Chả bằng thịt",
@@ -360,7 +399,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã Tư Phạm Hữu Trí - Thuận Kiều",
     "dist": "Quận 5",
     "time": "6h-10h",
-    "price": "13k"
+    "price": "13k",
+    "rating": 3.7
   },
   {
     "name": "Cơm Tấm Hẻm Đình",
@@ -369,7 +409,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 241 Bến Vân Đồn, Q4",
     "dist": "Quận 4",
     "time": "4h-9h",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.4
   },
   {
     "name": "BBQ - Hàu chén nướng",
@@ -378,7 +419,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "539 Phạm Văn Đồng",
     "dist": "Quận Bình Thạnh",
     "time": "15h-1h khuya",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.3
   },
   {
     "name": "Bánh Mì phá lấu, Bì",
@@ -387,7 +429,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "358/2 Lê Quang Sung, Q6",
     "dist": "Quận 6",
     "time": "6h-8h; 13h-16h",
-    "price": "15k"
+    "price": "15k",
+    "rating": 3.8
   },
   {
     "name": "Bánh mì Gánh siêu dài",
@@ -396,7 +439,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "31 Tân Tiến, Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "6h-11h",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 3.9
   },
   {
     "name": "Lẩu Mini",
@@ -405,7 +449,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "577 Sư Vạn Hạnh Q10",
     "dist": "Quận 10",
     "time": "10-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.8
   },
   {
     "name": "Bánh bèo Phú Nhuận",
@@ -414,7 +459,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "211/116 Hoàng Hoa Thám",
     "dist": "Quận Phú Nhuận",
     "time": "14h-16h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.4
   },
   {
     "name": "Xôi nghệ sĩ",
@@ -423,7 +469,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "98 Minh Phụng, Q6",
     "dist": "Quận 6",
     "time": "16h30-hết",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 4.3
   },
   {
     "name": "Tiệm nướng Nọ trong vườn",
@@ -432,7 +479,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "80 Nguyễn Thái Sơn",
     "dist": "Quận Gò Vấp",
     "time": "16h-hết",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.5
   },
   {
     "name": "Buffet YinShi",
@@ -441,7 +489,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "37B Đ. Cô Bắc, P.Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "9h-21h30",
-    "price": "239-269k"
+    "price": "239-269k",
+    "rating": 5.0
   },
   {
     "name": "Hủ tiếu mỹ tho dì 9",
@@ -450,7 +499,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "538/51 Đoàn Văn Bơ, P. 14",
     "dist": "Quận 4",
     "time": "17:30 - 23:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.8
   },
   {
     "name": "Bún bò Khánh Ngọc",
@@ -459,7 +509,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "27/63 Điện Biên Phủ",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 22:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 3.8
   },
   {
     "name": "Cà phê sân vườn",
@@ -468,7 +519,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1122/8/8 Quang Trung, P8",
     "dist": "Quận Gò Vấp",
     "time": "7h-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.0
   },
   {
     "name": "Bò bít tết cô út",
@@ -477,7 +529,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "009 Lô K chung cư Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "6h-12h",
-    "price": "35-100k"
+    "price": "35-100k",
+    "rating": 3.8
   },
   {
     "name": "Đá me",
@@ -486,7 +539,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "96 Cao Thắng",
     "dist": "Quận 3",
     "time": "6h - 18h",
-    "price": "18k"
+    "price": "18k",
+    "rating": 3.6
   },
   {
     "name": "Mì xào bò trứng non",
@@ -495,7 +549,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "214 Nguyễn Phúc Nguyên, Q3",
     "dist": "Quận 3",
     "time": "13h30-16h30",
-    "price": "15k-20k"
+    "price": "15k-20k",
+    "rating": 3.6
   },
   {
     "name": "Bánh mì thịt xiên Q6",
@@ -504,7 +559,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "165 Nguyễn Văn Luông, P.10",
     "dist": "Quận 6",
     "time": "14h30-17h",
-    "price": "15k-20k"
+    "price": "15k-20k",
+    "rating": 4.5
   },
   {
     "name": "Mì gà Gò Vấp",
@@ -513,7 +569,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "440/14 Thống Nhất, P.16",
     "dist": "Quận Gò Vấp",
     "time": "9h-21h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.9
   },
   {
     "name": "Xôi khâu nhục",
@@ -522,7 +579,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "259/263 Lã Binh Thăng, Q.11",
     "dist": "Quận 11",
     "time": "6h-11h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 5.0
   },
   {
     "name": "Bún riêu cua Q1",
@@ -531,7 +589,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "219 Nguyễn Trãi, P. NCT",
     "dist": "Quận 1",
     "time": "11h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.4
   },
   {
     "name": "Hủ tiếu nam vang Chú Tứ",
@@ -540,7 +599,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đầu hẻm 73 Trần Bình Trọng",
     "dist": "Quận 5",
     "time": "6h-22h",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 4.4
   },
   {
     "name": "Cơm Tấm Cô Giang",
@@ -549,7 +609,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "25 Cô Giang, P. Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "17h – 22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.2
   },
   {
     "name": "Hủ tiếu xí quách",
@@ -558,7 +619,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16/1 Lữ Gia, Q.11",
     "dist": "Quận 11",
     "time": "6-13h, 16h-22h",
-    "price": "45k-60k"
+    "price": "45k-60k",
+    "rating": 4.8
   },
   {
     "name": "Bún mì vàng Tiến Phát",
@@ -567,7 +629,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "177 Trần Quý",
     "dist": "Quận 11",
     "time": "6h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.6
   },
   {
     "name": "Hủ tiếu bò viên Trường Sa",
@@ -576,7 +639,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1046 Trường Sa, Q.3",
     "dist": "Quận 3",
     "time": "16h-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.9
   },
   {
     "name": "Quán ốc Hoa Sữa 29",
@@ -585,7 +649,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "11 Hoa Sữa",
     "dist": "Quận Phú Nhuận",
     "time": "15:00 - 23:59",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Mì trộn muối ớt",
@@ -594,7 +659,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "296 Hậu Giang, P.5, Q.6",
     "dist": "Quận 6",
     "time": "12h-2h khuya",
-    "price": "35k-45k"
+    "price": "35k-45k",
+    "rating": 4.5
   },
   {
     "name": "Đá bào túi to đùng",
@@ -603,7 +669,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17 Trần Quang Khải, Tân Định",
     "dist": "Quận 1",
     "time": "10h-23h",
-    "price": "25-30k"
+    "price": "25-30k",
+    "rating": 4.5
   },
   {
     "name": "Dimsum Crystal Jade",
@@ -612,7 +679,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Quận 1",
     "time": "10h-21h",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.4
   },
   {
     "name": "Dimsum Tân Sanh Hoạt",
@@ -621,7 +689,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "322 Nguyễn Thị Minh Khai",
     "dist": "Quận 3",
     "time": "4h-12h",
-    "price": "25-65k"
+    "price": "25-65k",
+    "rating": 3.6
   },
   {
     "name": "Gò Da Quán",
@@ -630,7 +699,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 80 QL13",
     "dist": "Quận Bình Thạnh",
     "time": "15h30-21h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Mì trộn Tùm Lum",
@@ -639,7 +709,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1196 CMT8, P.4",
     "dist": "Quận Tân Bình",
     "time": "10h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.5
   },
   {
     "name": "Xủi cảo Hà Tôn Quyền",
@@ -648,7 +719,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "162 Hà Tôn Quyền, Q11",
     "dist": "Quận 11",
     "time": "15h-0h",
-    "price": "50k-100k"
+    "price": "50k-100k",
+    "rating": 4.2
   },
   {
     "name": "Nem nướng Nha Trang",
@@ -657,7 +729,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "504 Minh Phụng, P.9",
     "dist": "Quận 11",
     "time": "8h-23h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.5
   },
   {
     "name": "Đặc sản Phan Rang",
@@ -666,7 +739,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "CC22 Trường Sơn, Cư Xá Bắc Hải",
     "dist": "Quận 10",
     "time": "09:00 - 22:30",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.3
   },
   {
     "name": "Sushi sashimi Kimochi",
@@ -675,7 +749,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "167/2/5 Ngô Tất Tố, P. 22",
     "dist": "Quận Bình Thạnh",
     "time": "10h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.0
   },
   {
     "name": "Bánh Mì Xíu Mại Gánh",
@@ -684,7 +759,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "A2/8 Chung Cư Miếu Nổi, P.2",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 18:00",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.6
   },
   {
     "name": "Gum Fastfood - Món âu",
@@ -693,7 +769,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "245/1 Nguyễn Trãi",
     "dist": "Quận 1",
     "time": "10h-21h30",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.3
   },
   {
     "name": "Mì quảng O Hè",
@@ -702,7 +779,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Cuối hẻm 315 Lê Văn Sỹ, P.13",
     "dist": "Quận 3",
     "time": "06:30 - 12:30",
-    "price": "45-50k"
+    "price": "45-50k",
+    "rating": 4.1
   },
   {
     "name": "Bánh mì Hồng",
@@ -711,7 +789,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "311 Nguyễn Tri Phương",
     "dist": "Quận 10",
     "time": "17h30-24h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.7
   },
   {
     "name": "Hủ tiếu Cầu Dừa",
@@ -720,7 +799,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Quận 4",
     "dist": "Quận 4",
     "time": "19h-21h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.2
   },
   {
     "name": "Tré trộn Bà Đào",
@@ -729,7 +809,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "85 Rạch Bung Binh, Phường 9",
     "dist": "Quận 3",
     "time": "09:00 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.7
   },
   {
     "name": "Bún thái Ni",
@@ -738,7 +819,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "232 Hoàng Hoa Thám, phường 5",
     "dist": "Quận Bình Thạnh",
     "time": "17:00 - 22:00",
-    "price": "45-65k"
+    "price": "45-65k",
+    "rating": 3.9
   },
   {
     "name": "Món nhật Sachi Sushi",
@@ -747,7 +829,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "13 Đường số 10, Tân Quy",
     "dist": "Quận 7",
     "time": "17h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 5.0
   },
   {
     "name": "Cơm tấm Cô Giang",
@@ -756,7 +839,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đối diện 27 Cô Giang, Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "16-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Bún thịt nướng ngon",
@@ -765,7 +849,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Số 1 Nguyễn Trung Trực",
     "dist": "Quận 10",
     "time": "8:00 - 19:00",
-    "price": "50-70k"
+    "price": "50-70k",
+    "rating": 4.3
   },
   {
     "name": "Làng Chài - Nem nướng",
@@ -774,7 +859,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "52 Hoàng Diệu, p.12",
     "dist": "Quận 4",
     "time": "7h-21h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.6
   },
   {
     "name": "Bún Bò Huế O HẠNH",
@@ -783,7 +869,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "32 Đ. Số 10, Tân Kiểng",
     "dist": "Quận 7",
     "time": "6h30-20h",
-    "price": "35-40k"
+    "price": "35-40k",
+    "rating": 3.8
   },
   {
     "name": "Nem lụi Cô Đào",
@@ -792,7 +879,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 209 Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "12:30 - 19:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.6
   },
   {
     "name": "Cơm tấm đêm",
@@ -801,7 +889,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "178 Hậu Giang, P.6",
     "dist": "Quận 6",
     "time": "22h - 5h sáng",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.0
   },
   {
     "name": "Bếp cô Linh",
@@ -810,7 +899,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "710/6/8 Phan Văn Trị, P.10",
     "dist": "Quận Gò Vấp",
     "time": "06:30 - 18:00",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì nướng ớt đỏ",
@@ -819,7 +909,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "50 Nguyễn Xuân Khoái, Tân Thành",
     "dist": "Quận Tân Phú",
     "time": "11h-21h",
-    "price": "20k"
+    "price": "20k",
+    "rating": 4.8
   },
   {
     "name": "7 Ngày 7 Món Q1",
@@ -828,7 +919,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26 Cô Giang",
     "dist": "Quận 1",
     "time": "6h-11h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.6
   },
   {
     "name": "K-Jeju Chicken",
@@ -837,7 +929,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "222 Đường D5, P.25",
     "dist": "Quận Bình Thạnh",
     "time": "10:00 - 22:00",
-    "price": "100k-300k"
+    "price": "100k-300k",
+    "rating": 5.0
   },
   {
     "name": "Norang Tongdak",
@@ -846,7 +939,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "34 Đường số 6, Hưng Vượng 2, Tân Phong",
     "dist": "Quận 7",
     "time": "11:30 - 23:59",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.6
   },
   {
     "name": "Pháp mì gà",
@@ -855,7 +949,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "440/14 Thống Nhất, P.16",
     "dist": "Quận Gò Vấp",
     "time": "10:00 - 21:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.8
   },
   {
     "name": "Cơm gà xối mỡ ngon",
@@ -864,7 +959,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "702 Trường Sa, Phường 14",
     "dist": "Quận 3",
     "time": "8h-18h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.8
   },
   {
     "name": "Chả lụi nướng Lagi",
@@ -873,7 +969,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21 Nguyễn Văn Nghi, Phường 4",
     "dist": "Quận Gò Vấp",
     "time": "15h-22h",
-    "price": "28k"
+    "price": "28k",
+    "rating": 4.4
   },
   {
     "name": "Bánh mì Cá Hàng Xanh",
@@ -882,7 +979,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "246D XVNT",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 23:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.0
   },
   {
     "name": "Hủ tiếu Sườn sụn",
@@ -891,7 +989,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 618 CMT8 (Đối diện CV Lê Thị Riêng)",
     "dist": "Quận 10",
     "time": "17:00 - 22:00",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.1
   },
   {
     "name": "Johnson - Tokbokki",
@@ -900,7 +999,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "118 Nguyễn Gia Trí",
     "dist": "Quận Bình Thạnh",
     "time": "10h45-21h30",
-    "price": "Giá sinh viên"
+    "price": "Giá sinh viên",
+    "rating": 3.8
   },
   {
     "name": "Phở trộn",
@@ -909,7 +1009,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "433 Hậu Giang, P,11",
     "dist": "Quận 6",
     "time": "6h30-23h30",
-    "price": "55k-60k"
+    "price": "55k-60k",
+    "rating": 4.5
   },
   {
     "name": "Dimsum nổi tiếng",
@@ -918,7 +1019,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "38B Học Lạc, P.14",
     "dist": "Quận 5",
     "time": "6h-12h | 15h-21h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 3.7
   },
   {
     "name": "Mì quảng miền Nam",
@@ -927,7 +1029,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 85 Trần Quang Diệu, P.13",
     "dist": "Quận 3",
     "time": "06:00 - 12:00",
-    "price": "55k"
+    "price": "55k",
+    "rating": 4.1
   },
   {
     "name": "Miến gà trộn ĐH Kiến Trúc",
@@ -936,7 +1039,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "196 Pasteur, Vo Thi Sau",
     "dist": "Quận 3",
     "time": "6h-12h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.0
   },
   {
     "name": "Bò chảo Tân Định",
@@ -945,7 +1049,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "181 Đinh Tiên Hoàng",
     "dist": "Quận 1",
     "time": "06:30 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.3
   },
   {
     "name": "Mì trộn muối ớt Bà Quàng",
@@ -954,7 +1059,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "40/49 Lê Thị Riêng, p.17",
     "dist": "Quận Gò Vấp",
     "time": "06:00 - 22:00",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.2
   },
   {
     "name": "Burger Trịu Viu",
@@ -963,7 +1069,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "348 Tôn Đản",
     "dist": "Quận 4",
     "time": "09:30 - 22:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.6
   },
   {
     "name": "Bánh bèo Cô Ba",
@@ -972,7 +1079,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123 Nguyễn Thông, P9",
     "dist": "Quận 3",
     "time": "16h-hết",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.8
   },
   {
     "name": "Bún bò Ngọc Nhân",
@@ -981,7 +1089,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "102 Ngô Thị Thu Minh",
     "dist": "Quận Tân Bình",
     "time": "07:30 - 21:00",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 3.9
   },
   {
     "name": "Bánh mì nướng Phúc Mập",
@@ -990,7 +1099,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "235 Nguyễn Thái Bình",
     "dist": "Quận Tân Bình",
     "time": "14:00 - 21:00",
-    "price": "27k"
+    "price": "27k",
+    "rating": 4.6
   },
   {
     "name": "Cơm Tấm 64A",
@@ -999,7 +1109,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64A Lý Nam Đế, P. 7",
     "dist": "Quận 11",
     "time": "6:20 - 12:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.2
   },
   {
     "name": "Buffet Cơm Chay",
@@ -1008,7 +1119,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "47 Bis Võ Văn Tần",
     "dist": "Quận 3",
     "time": "10h30-14h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.1
   },
   {
     "name": "Lẩu bò 150",
@@ -1017,7 +1129,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "150 Phan Xích Long",
     "dist": "Quận Phú Nhuận",
     "time": "16h-23h",
-    "price": "200k/2 người"
+    "price": "200k/2 người",
+    "rating": 4.4
   },
   {
     "name": "Mì Hàn Quốc tự động MYTO",
@@ -1026,7 +1139,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20-22 Phạm Ngọc Thạch",
     "dist": "Quận 3",
     "time": "7h-0h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.8
   },
   {
     "name": "Hủ tiếu gõ bình dân",
@@ -1035,7 +1149,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "368 Nơ Trang Long, P.13",
     "dist": "Quận Bình Thạnh",
     "time": "Chiều tối",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.5
   },
   {
     "name": "Bánh canh cua Cầu Calmette",
@@ -1044,7 +1159,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19 Calmette, P. NTB",
     "dist": "Quận 1",
     "time": "11h - 17h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Bánh canh của Cô Tư",
@@ -1053,7 +1169,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45 Bạch Vân, P.5",
     "dist": "Quận 5",
     "time": "14h-18h",
-    "price": "50-100k"
+    "price": "50-100k",
+    "rating": 4.7
   },
   {
     "name": "Bún bò 25k lề đường",
@@ -1062,7 +1179,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đối diện 151C Hai Bà Trưng",
     "dist": "Quận 3",
     "time": "10h-hết",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.8
   },
   {
     "name": "Bún riêu cua 120",
@@ -1071,7 +1189,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "120 Hậu Giang",
     "dist": "Quận 6",
     "time": "18:00 - 23:59",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.4
   },
   {
     "name": "Mì trộn Dách Lou",
@@ -1080,7 +1199,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "75D Phú Thọ",
     "dist": "Quận 11",
     "time": "10h-23h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 5.0
   },
   {
     "name": "Ăn vặt SPEIT",
@@ -1089,7 +1209,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "349/16 Nguyễn Trãi",
     "dist": "Quận 5",
     "time": "11h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Xúc xích đức Leon King",
@@ -1098,7 +1219,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "491/32 Nguyễn Văn Công, P.3",
     "dist": "Quận Gò Vấp",
     "time": "8h-21h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 5.0
   },
   {
     "name": "Bánh mì thịt nướng",
@@ -1107,7 +1229,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "247 Hoàng Sa, Tân định",
     "dist": "Quận 1",
     "time": "6h30-14h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.4
   },
   {
     "name": "Xôi Bánh Mì Cô Tuyền",
@@ -1116,7 +1239,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "82 Nguyễn Du, Bến Nghé",
     "dist": "Quận 1",
     "time": "05:00 - 09:30",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.7
   },
   {
     "name": "Núp Coffee & Tea",
@@ -1125,7 +1249,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45 Dương Đình Nghệ, P8, Q11",
     "dist": "Quận 11",
     "time": "08:00 - 22:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.5
   },
   {
     "name": "Phở Thu (Phở trộn)",
@@ -1134,7 +1259,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "433 Hậu Giang, P.11",
     "dist": "Quận 6",
     "time": "6h30-1h30 sáng",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.4
   },
   {
     "name": "Chickita - Gà nướng",
@@ -1143,7 +1269,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "94 Hồ Tùng Mậu, P. Bến Nghé",
     "dist": "Quận 1",
     "time": "10:30 - 20:45",
-    "price": "100-300k"
+    "price": "100-300k",
+    "rating": 4.7
   },
   {
     "name": "Nem nướng - Chả lagi",
@@ -1152,7 +1279,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "43/1 Tăng Bạt Hổ",
     "dist": "Quận Bình Thạnh",
     "time": "15:30 - 22:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.6
   },
   {
     "name": "The B6.Saigon",
@@ -1161,7 +1289,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "157/28D Nguyễn Gia Trí, P.25",
     "dist": "Quận Bình Thạnh",
     "time": "9:00 - 22:00",
-    "price": "2xx"
+    "price": "2xx",
+    "rating": 3.5
   },
   {
     "name": "Bánh Mì 3 Cô",
@@ -1170,7 +1299,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "217 Lê Văn Sỹ , Phường 13",
     "dist": "Quận 3",
     "time": "06H00 - 11H00",
-    "price": "15k-25k"
+    "price": "15k-25k",
+    "rating": 4.8
   },
   {
     "name": "Quán chay Thanh Lạc",
@@ -1179,7 +1309,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "144 Nguyễn Tất Thành",
     "dist": "Quận 4",
     "time": "10h30-21h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.5
   },
   {
     "name": "Ramen Danbo",
@@ -1188,7 +1319,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8a/7b1 Thái Văn Lung",
     "dist": "Quận 1",
     "time": "Vừa phải",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Bún riêu Cô Hương Béo",
@@ -1197,7 +1329,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19B Nguyễn Thị Minh Khai",
     "dist": "Quận 1",
     "time": "6h - 21h30",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 4.9
   },
   {
     "name": "Mì Trộn Nghèo",
@@ -1206,7 +1339,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "42CT Tam Đảo, Q.10",
     "dist": "Quận 10",
     "time": "12h-23h",
-    "price": "15k-35k"
+    "price": "15k-35k",
+    "rating": 3.9
   },
   {
     "name": "Hẻm Trộn Ăn Vặt",
@@ -1215,7 +1349,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2 Nguyễn Lâm",
     "dist": "Quận Bình Thạnh",
     "time": "9h-22h",
-    "price": "15k-60k"
+    "price": "15k-60k",
+    "rating": 3.7
   },
   {
     "name": "Xôi Ngọc",
@@ -1224,7 +1359,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "101 Vạn Kiếp",
     "dist": "Quận Bình Thạnh",
     "time": "6-10h; 15-23h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.4
   },
   {
     "name": "Mì Hoành Thánh Sủi Cảo",
@@ -1233,7 +1369,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "388 CMT8",
     "dist": "Quận 3",
     "time": "6-22h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.8
   },
   {
     "name": "Mì Quảng Cô Yến",
@@ -1242,7 +1379,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "736/31 CMT8, P.5",
     "dist": "Quận Tân Bình",
     "time": "6-10h30; 14h30-18h30",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 3.6
   },
   {
     "name": "Bánh đúc hành phi",
@@ -1251,7 +1389,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100/14 Thích Quảng Đức, P5",
     "dist": "Quận Phú Nhuận",
     "time": "11h - hết",
-    "price": "22-27k"
+    "price": "22-27k",
+    "rating": 4.2
   },
   {
     "name": "Lẩu Sa Tế Uyên Ương",
@@ -1260,7 +1399,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "213 Trần Tuấn khải, P.7",
     "dist": "Quận 5",
     "time": "18h-23h",
-    "price": "170-250k"
+    "price": "170-250k",
+    "rating": 4.7
   },
   {
     "name": "Bún bò Huế Hoàng Sa",
@@ -1269,7 +1409,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "725 Hoàng Sa",
     "dist": "Quận 3",
     "time": "17h-19h",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 4.1
   },
   {
     "name": "Mì Ốc Hên Dì Lan",
@@ -1278,7 +1419,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1A Cư Xá Đồng Tiến, Thành Thái",
     "dist": "Quận 10",
     "time": "08:30 - 20:00",
-    "price": "42k"
+    "price": "42k",
+    "rating": 3.9
   },
   {
     "name": "Bún măm Đầu Cá",
@@ -1287,7 +1429,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "98 Diên Hồng",
     "dist": "Quận Bình Thạnh",
     "time": "9h-20h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.6
   },
   {
     "name": "Bánh mì cụ lý",
@@ -1296,7 +1439,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "189 Hai Bà Trưng",
     "dist": "Quận 3",
     "time": "6h-9h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.0
   },
   {
     "name": "Bánh mì Đồng Nai",
@@ -1305,7 +1449,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 Đồng Nai, P.15",
     "dist": "Quận 10",
     "time": "6h-13h",
-    "price": "17k"
+    "price": "17k",
+    "rating": 4.0
   },
   {
     "name": "Bún xì dầu",
@@ -1314,7 +1459,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "01 Quách văn tuấn, p.12",
     "dist": "Quận Tân Bình",
     "time": "9h-20h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.6
   },
   {
     "name": "Bánh mì chiên tôm",
@@ -1323,7 +1469,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "403 Đoàn văn bơ, p13",
     "dist": "Quận 4",
     "time": "12h30-17h30",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Mì quảng - Hủ tiếu mực",
@@ -1332,7 +1479,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "243B Nguyễn Thượng Hiền, P.6",
     "dist": "Quận Bình Thạnh",
     "time": "6h-20h",
-    "price": "59k-70k"
+    "price": "59k-70k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì Chả Cá NT",
@@ -1341,7 +1489,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "12 Nguyễn Thị Minh Khai",
     "dist": "Quận 1",
     "time": "6h-2h sáng",
-    "price": "20k-30k"
+    "price": "20k-30k",
+    "rating": 4.7
   },
   {
     "name": "Bánh Mì Bì Thịt",
@@ -1350,7 +1499,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "22 Trần Kế Xương",
     "dist": "Quận Phú Nhuận",
     "time": "Sáng",
-    "price": "15-35k"
+    "price": "15-35k",
+    "rating": 4.5
   },
   {
     "name": "Bún bò Hẻm Hoàng Diệu",
@@ -1359,7 +1509,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "243/35 Hoàng Diệu",
     "dist": "Quận 4",
     "time": "Vừa phải",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.9
   },
   {
     "name": "Bánh Mì Chả Cá Quảng Nam",
@@ -1368,7 +1519,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "05 Hoa Sứ",
     "dist": "Quận Phú Nhuận",
     "time": "Vừa phải",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.2
   },
   {
     "name": "Bánh mì Heo quay",
@@ -1377,7 +1529,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 19 Trần Bình Trọng",
     "dist": "Quận Bình Thạnh",
     "time": "6-10h",
-    "price": "20k"
+    "price": "20k",
+    "rating": 4.5
   },
   {
     "name": "Bún Thịt Nướng Đêm",
@@ -1386,7 +1539,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Vĩnh Khánh",
     "dist": "Quận 4",
     "time": "17h-3h sáng",
-    "price": "37k"
+    "price": "37k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Ướt Cô Út 2H",
@@ -1395,7 +1549,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "710/2 Phan Văn Trị",
     "dist": "Quận Gò Vấp",
     "time": "11h30-21h30",
-    "price": "100k"
+    "price": "100k",
+    "rating": 3.7
   },
   {
     "name": "Bún thịt nướng Cô Nga",
@@ -1404,7 +1559,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Vĩnh Khánh",
     "dist": "Quận 4",
     "time": "17h-3h sáng",
-    "price": "37k"
+    "price": "37k",
+    "rating": 3.7
   },
   {
     "name": "Bánh mì 12k",
@@ -1413,7 +1569,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "24 lương thế vinh",
     "dist": "Quận Tân Phú",
     "time": "Tối",
-    "price": "12k"
+    "price": "12k",
+    "rating": 4.4
   },
   {
     "name": "Thịt xiên nướng Marie Curie",
@@ -1422,7 +1579,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "159 Nam Kỳ Khởi Nghĩa",
     "dist": "Quận 3",
     "time": "Tối",
-    "price": "8k"
+    "price": "8k",
+    "rating": 4.1
   },
   {
     "name": "Cơm chiên ngon lạp xưởng",
@@ -1431,7 +1589,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "349 nguyễn công trứ",
     "dist": "Quận 1",
     "time": "3h30 - 5h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 3.8
   },
   {
     "name": "Bánh mì Kebab Lai VN",
@@ -1440,7 +1599,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "752 Điện Biên Phủ",
     "dist": "Quận Bình Thạnh",
     "time": "6h00-12h30",
-    "price": "22k"
+    "price": "22k",
+    "rating": 3.6
   },
   {
     "name": "Bún riêu chị Lan",
@@ -1450,7 +1610,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Quận 2",
     "time": "16h-21h",
-    "price": "25-40k"
+    "price": "25-40k",
+    "rating": 3.6
   },
   {
     "name": "Bánh mì ca dé Hoa",
@@ -1459,7 +1620,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "327J Tùng Thiện Vương",
     "dist": "Quận 8",
     "time": "6h-8h",
-    "price": "25 - 45k"
+    "price": "25 - 45k",
+    "rating": 4.4
   },
   {
     "name": "Hủ Tiếu Ngon rẻ",
@@ -1468,7 +1630,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "679/6 Vĩnh Viễn",
     "dist": "Quận 11",
     "time": "15:00 - 22:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 3.8
   },
   {
     "name": "Xôi mặn gà gán",
@@ -1477,7 +1640,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Trước trường Bạch Đằng Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "Sáng",
-    "price": "25k"
+    "price": "25k",
+    "rating": 3.8
   },
   {
     "name": "Bún bò siêu chất lượng",
@@ -1486,7 +1650,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "273/1B Tô Hiến Thành",
     "dist": "Quận 10",
     "time": "5h - 11h tối",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.7
   },
   {
     "name": "Bánh xèo giòn bình thuận",
@@ -1495,7 +1660,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Huỳnh đình Hai",
     "dist": "Quận Phú Nhuận",
     "time": "15h-21h",
-    "price": "12k"
+    "price": "12k",
+    "rating": 4.0
   },
   {
     "name": "Bánh mì chiên tôm cô sen",
@@ -1504,7 +1670,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "403 Đoàn Văn Bơ",
     "dist": "Quận 4",
     "time": "12h-4h",
-    "price": "25 - 45k"
+    "price": "25 - 45k",
+    "rating": 4.1
   },
   {
     "name": "Nem chả lụi Gò Vấp",
@@ -1513,7 +1680,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21 Nguyễn Văn Nghi",
     "dist": "Quận Gò Vấp",
     "time": "15h-22h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.9
   },
   {
     "name": "Bánh mì bơ Campuchia",
@@ -1522,7 +1690,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "175 Cống Quỳnh",
     "dist": "Quận 1",
     "time": "Sáng - Chiều",
-    "price": "5k - 15k"
+    "price": "5k - 15k",
+    "rating": 5.0
   },
   {
     "name": "Hủ tiếu Thái Lan Hihi",
@@ -1531,7 +1700,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "225/7 Nguyễn Đình Chiểu",
     "dist": "Quận 3",
     "time": "10h-21h30",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.7
   },
   {
     "name": "Bánh xèo tôm nhảy",
@@ -1540,7 +1710,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Nơ Trang Long",
     "dist": "Quận Bình Thạnh",
     "time": "09:00 - 22:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.3
   },
   {
     "name": "Hủ tiếu xóm chiếu",
@@ -1549,7 +1720,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Số 9 Tôn Đản, P. 13",
     "dist": "Quận 4",
     "time": "Chiều - tối",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.1
   },
   {
     "name": "Bún Bò Sông Hương",
@@ -1558,7 +1730,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123 Trần Quốc Thảo",
     "dist": "Quận 3",
     "time": "6-10h",
-    "price": "60k"
+    "price": "60k",
+    "rating": 3.7
   },
   {
     "name": "Lẩu nướng bò ba lão",
@@ -1567,7 +1740,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "993 Hoàng Sa",
     "dist": "Quận Bình Thạnh",
     "time": "16-22h",
-    "price": "20k - 200k"
+    "price": "20k - 200k",
+    "rating": 4.7
   },
   {
     "name": "Hủ tiếu Dê GIA ĐẠT",
@@ -1576,7 +1750,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "111 Thái Phiên, P.2",
     "dist": "Quận 11",
     "time": "6h - 10h30",
-    "price": "40k - 120k"
+    "price": "40k - 120k",
+    "rating": 5.0
   },
   {
     "name": "Tré trộn đặc biệt",
@@ -1585,7 +1760,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Góc đường Nguyễn Thị Minh Khai - Trương Định",
     "dist": "Quận 3",
     "time": "17h",
-    "price": "80k"
+    "price": "80k",
+    "rating": 4.6
   },
   {
     "name": "Bún Mộc A Chảy",
@@ -1594,7 +1770,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2028 Phạm Thế Hiển",
     "dist": "Quận 8",
     "time": "23-8h",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 3.8
   },
   {
     "name": "Cá Viên Lữ Gia",
@@ -1603,7 +1780,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20i Lạc Long Quân",
     "dist": "Quận 11",
     "time": "Vừa phải",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.9
   },
   {
     "name": "Bơ bán bò Xemisxis",
@@ -1612,7 +1790,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "31E Lý Tự Trọng",
     "dist": "Quận 1",
     "time": "17g00-22g00",
-    "price": "450k 2 người"
+    "price": "450k 2 người",
+    "rating": 3.8
   },
   {
     "name": "SUPER BÒ",
@@ -1622,7 +1801,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "17:00-22:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.2
   },
   {
     "name": "Bánh Mì 179",
@@ -1631,7 +1811,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "179 Xóm Chiếu",
     "dist": "Quận 4",
     "time": "16-21H",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 5.0
   },
   {
     "name": "Bún bò Food By K",
@@ -1640,7 +1821,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17A Nguyễn Thị Minh Khai",
     "dist": "Quận 1",
     "time": "07:00 - 21:00",
-    "price": "65-80k"
+    "price": "65-80k",
+    "rating": 4.3
   },
   {
     "name": "Bánh mì sườn sụn",
@@ -1649,7 +1831,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "118B Nguyễn Thần Hiến",
     "dist": "Quận 4",
     "time": "15h-22h",
-    "price": "10k - 30k"
+    "price": "10k - 30k",
+    "rating": 4.5
   },
   {
     "name": "Bún Riêu Hà Nội",
@@ -1658,7 +1841,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "110 Cao Thắng",
     "dist": "Quận 3",
     "time": "08:00 - 21:30",
-    "price": "15k - 80k"
+    "price": "15k - 80k",
+    "rating": 4.6
   },
   {
     "name": "Cơm Bình Nga",
@@ -1667,7 +1851,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "349 Nguyễn Công Trứ",
     "dist": "Quận 1",
     "time": "16:00 - 23:59",
-    "price": "30k - 65k"
+    "price": "30k - 65k",
+    "rating": 4.0
   },
   {
     "name": "Phở Phan Bội Châu",
@@ -1676,7 +1861,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17B Phan Bội Châu",
     "dist": "Quận Bình Thạnh",
     "time": "5h-24h",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.2
   },
   {
     "name": "Lẩu tôm hùm đại dương",
@@ -1685,7 +1871,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "67 Lê Trung Nghĩa",
     "dist": "Quận Tân Bình",
     "time": "từ 5h chiều",
-    "price": "140k"
+    "price": "140k",
+    "rating": 3.9
   },
   {
     "name": "Chú béo BBQ",
@@ -1694,7 +1881,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16 Đồng Nai, Phường 15",
     "dist": "Quận 10",
     "time": "từ 5h chiều",
-    "price": "139k"
+    "price": "139k",
+    "rating": 3.7
   },
   {
     "name": "Bánh mì gánh xíu mại",
@@ -1703,7 +1891,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã ba Vũ Huy Tấn + Vạn Kiếp",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 17:30",
-    "price": "15k"
+    "price": "15k",
+    "rating": 3.6
   },
   {
     "name": "Bún bò O Thuỷ",
@@ -1712,7 +1901,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "220/5 Lê Văn Sỹ, P. 14",
     "dist": "Quận 3",
     "time": "06:30 - 20:00",
-    "price": "60-80k"
+    "price": "60-80k",
+    "rating": 4.1
   },
   {
     "name": "bún bò cô Cúc",
@@ -1721,7 +1911,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Nguyễn Văn Trỗi",
     "dist": "Quận 3",
     "time": "14h - 18h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.7
   },
   {
     "name": "Xuân Huỳnh Trái Cây",
@@ -1730,7 +1921,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "244A Lê Quang Sung",
     "dist": "Quận 6",
     "time": "13:30 - 21:00",
-    "price": "35-40k"
+    "price": "35-40k",
+    "rating": 4.7
   },
   {
     "name": "Bún Cá Hạnh Béo",
@@ -1739,7 +1931,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "88 Phan Xích Long, P. 3",
     "dist": "Quận Bình Thạnh",
     "time": "07:30 - 21:30",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 3.9
   },
   {
     "name": "Bánh Mì Thịt Nướng",
@@ -1748,7 +1941,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "39 Đ. Nguyễn Trãi",
     "dist": "Quận 1",
     "time": "17:00 - 19:30",
-    "price": "28k"
+    "price": "28k",
+    "rating": 3.6
   },
   {
     "name": "Thanh Tâm - Bò Nhúng",
@@ -1757,7 +1951,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1346 CMT8",
     "dist": "Thủ Dầu Một",
     "time": "16H - 21H",
-    "price": "200k"
+    "price": "200k",
+    "rating": 3.6
   },
   {
     "name": "Lẩu Bò Nhúng Ông Lập",
@@ -1766,7 +1961,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "591 Cách Mạng Tháng 8, P. 15",
     "dist": "Quận 10",
     "time": "09:00 - 22:00",
-    "price": "300k"
+    "price": "300k",
+    "rating": 4.8
   },
   {
     "name": "Bún Thái Chợ Cao Đạt",
@@ -1775,7 +1971,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "197 Cao Đạt, Phường 01",
     "dist": "Quận 5",
     "time": "8H-15H",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Bún Mắm Bạch Tuộc",
@@ -1784,7 +1981,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "198/18 Dương Bá Trạc, Phường 2",
     "dist": "Quận 8",
     "time": "6h sáng đến hết",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.3
   },
   {
     "name": "Bún Thái Cá Hồi",
@@ -1793,7 +1991,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "032 Lô E Cc Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "8h - 17h",
-    "price": "55-65k"
+    "price": "55-65k",
+    "rating": 4.4
   },
   {
     "name": "Bánh Mì Chảo ĐTC",
@@ -1802,7 +2001,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8 Đặng Trần Côn",
     "dist": "Quận 1",
     "time": "4:00-11:00",
-    "price": "48k"
+    "price": "48k",
+    "rating": 4.2
   },
   {
     "name": "Bún thịt nướng sáng",
@@ -1811,7 +2011,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "205 Lạc Long Quân,P3",
     "dist": "Quận 11",
     "time": "5h30_9h30",
-    "price": "15k-25K"
+    "price": "15k-25K",
+    "rating": 4.8
   },
   {
     "name": "Bún thịt nướng sốt đậu",
@@ -1820,7 +2021,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64 Hồng Hà",
     "dist": "Quận Tân Bình",
     "time": "8:30 - 21:30",
-    "price": "40-45"
+    "price": "40-45",
+    "rating": 4.9
   },
   {
     "name": "Tré trộn Kiều Quách",
@@ -1829,7 +2031,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "27 đường 302 Bông Sao, Phường 5",
     "dist": "Quận 8",
     "time": "16h-20h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.8
   },
   {
     "name": "Bò La Lốt Hoa Trang",
@@ -1838,7 +2041,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100b Thích Quảng Đức, Phường 5",
     "dist": "Quận Phú Nhuận",
     "time": "15h-21h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.0
   },
   {
     "name": "Ăn + trà sữa Vĩnh Viễn",
@@ -1847,7 +2051,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "152/15 Vĩnh Viễn, P.9",
     "dist": "Quận 10",
     "time": "15h-22h",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.8
   },
   {
     "name": "Bánh flan Bờ kè",
@@ -1856,7 +2061,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "893 Hoàng Sa",
     "dist": "Quận 3",
     "time": "15:30 - 22:00",
-    "price": "10k"
+    "price": "10k",
+    "rating": 4.5
   },
   {
     "name": "Lẩu Xí Quách Q8",
@@ -1865,7 +2071,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 90 Nguyễn Thị Tần, P. 2",
     "dist": "Quận 8",
     "time": "04:00 - 08:00 | 16:00 - 20:00",
-    "price": "120-170k, hủ tiếu 40-50k"
+    "price": "120-170k, hủ tiếu 40-50k",
+    "rating": 3.5
   },
   {
     "name": "Bún Thái Hongkong",
@@ -1874,7 +2081,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "456 Sư Vạn Hạnh, P. 9",
     "dist": "Quận 10",
     "time": "07:30 - 13:30 | 16:00 - 21:30",
-    "price": "50k-70k"
+    "price": "50k-70k",
+    "rating": 3.8
   },
   {
     "name": "Cơm tấm Nạc giòn",
@@ -1883,7 +2091,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "33/16 Nguyễn Đình Chính",
     "dist": "Quận Phú Nhuận",
     "time": "05:30 - 11:00",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 4.4
   },
   {
     "name": "Hột vịt lộn Hoàng Vân",
@@ -1892,7 +2101,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2B Bàn cờ",
     "dist": "Quận 3",
     "time": "15h - 22h",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.5
   },
   {
     "name": "Thằng Đậu - Bún Bò",
@@ -1901,7 +2111,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "566 Sư Vạn Hạnh, P. 10",
     "dist": "Quận 10",
     "time": "06:00 - 23:00",
-    "price": "250-300k"
+    "price": "250-300k",
+    "rating": 4.3
   },
   {
     "name": "Cà phê Nghèo",
@@ -1910,7 +2121,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "441/7 Nguyễn Đình Chiểu, P. 5",
     "dist": "Quận 3",
     "time": "15h-12h khuya",
-    "price": "25-30k"
+    "price": "25-30k",
+    "rating": 4.1
   },
   {
     "name": "Bò Cô Ri - Thành Thái",
@@ -1919,7 +2131,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Thành Thái",
     "dist": "Quận 10",
     "time": "07:00 - 23:00",
-    "price": "200-300k"
+    "price": "200-300k",
+    "rating": 4.6
   },
   {
     "name": "Bún cá Chấm giòn",
@@ -1928,7 +2141,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Thành Thái, P. 14",
     "dist": "Quận 10",
     "time": "07:00 - 23:00",
-    "price": "55-60k"
+    "price": "55-60k",
+    "rating": 4.7
   },
   {
     "name": "Phở bò viên Đào",
@@ -1937,7 +2151,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "C13 Tôn Đản",
     "dist": "Quận 4",
     "time": "17h-2h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.8
   },
   {
     "name": "Bánh canh cua ngon Q1",
@@ -1946,7 +2161,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "87 Trần Khắc Chân",
     "dist": "Quận 1",
     "time": "11h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.6
   },
   {
     "name": "Bánh mì Bì xíu mại Q7",
@@ -1955,7 +2171,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã tư đường số 10 và 17, Tân kiểng",
     "dist": "Quận 7",
     "time": "6h30-10h",
-    "price": "22k"
+    "price": "22k",
+    "rating": 4.7
   },
   {
     "name": "Bánh mì Chị Trang",
@@ -1964,7 +2181,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "82 Tân Khai",
     "dist": "Quận 11",
     "time": "6h-11h",
-    "price": "15k-25k"
+    "price": "15k-25k",
+    "rating": 4.3
   },
   {
     "name": "Bún đậu Bếp Xưa",
@@ -1973,7 +2191,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "79 Lê Văn Duyệt",
     "dist": "Quận Bình Thạnh",
     "time": "7h-23h",
-    "price": "150-200k"
+    "price": "150-200k",
+    "rating": 3.8
   },
   {
     "name": "Vua Đậu",
@@ -1982,7 +2201,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Quận 10",
     "time": "10:00 - 21:51",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 3.8
   },
   {
     "name": "Thịt xiên nướng - Cơm Lam",
@@ -1991,7 +2211,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "48 Đồng Đen, P.12",
     "dist": "Quận Tân Bình",
     "time": "16h-22h",
-    "price": "12k-20k"
+    "price": "12k-20k",
+    "rating": 3.7
   },
   {
     "name": "Osaka Ramen",
@@ -2000,7 +2221,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64 Nguyễn Thời Trung",
     "dist": "Quận 5",
     "time": "11:00 - 22:00",
-    "price": "50-60"
+    "price": "50-60",
+    "rating": 4.9
   },
   {
     "name": "Bún thịt nướng Hằng",
@@ -2009,7 +2231,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "338 Đ. Nguyễn Công Trứ",
     "dist": "Quận 1",
     "time": "12h-18h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.5
   },
   {
     "name": "Young Dabang",
@@ -2018,7 +2241,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19M KDC Miếu Nổi đường Vũ Huy Tấn",
     "dist": "Quận Bình Thạnh",
     "time": "11h - 22h",
-    "price": "300k"
+    "price": "300k",
+    "rating": 4.2
   },
   {
     "name": "Bánh canh Bò viên",
@@ -2027,7 +2251,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "29 Đ. Nguyễn Văn Nguyễn",
     "dist": "Quận 1",
     "time": "11h-19h",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.5
   },
   {
     "name": "Ốc Ti",
@@ -2036,7 +2261,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "18 Lô D Chung cư Nguyễn Thiện Thuận",
     "dist": "Quận 3",
     "time": "15:30 - 23:59",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.8
   },
   {
     "name": "Bít tết 015",
@@ -2045,7 +2271,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "015F Chung cư Ấn Quang",
     "dist": "Quận 10",
     "time": "08:00 - 21:00",
-    "price": "Sinh viên"
+    "price": "Sinh viên",
+    "rating": 4.6
   },
   {
     "name": "Bún bò huế O Xíu",
@@ -2054,7 +2281,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "102 Trần Quang Khải",
     "dist": "Quận 1",
     "time": "15H00 - 03H00",
-    "price": "40K - 60K/Phần"
+    "price": "40K - 60K/Phần",
+    "rating": 4.7
   },
   {
     "name": "Tré trộn Út Vân",
@@ -2063,7 +2291,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "152 Nguyễn Thượng Hiền, P. 4",
     "dist": "Quận 3",
     "time": "10:00 - 17:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.4
   },
   {
     "name": "Tré trộn Cô Bé",
@@ -2072,7 +2301,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "306 Nguyễn Thượng Hiền, P. 4",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.3
   },
   {
     "name": "Xôi Mặn Bắc Chuẩn Vị",
@@ -2081,7 +2311,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "180 Ký Con, P. Nguyễn Thái Bình",
     "dist": "Quận 1",
     "time": "06:30 - 21:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.5
   },
   {
     "name": "Bánh bèo Huế Bến Thành",
@@ -2090,7 +2321,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Cửa 7 Chợ Bến Thành",
     "dist": "Quận 1",
     "time": "7h-17h",
-    "price": "23k"
+    "price": "23k",
+    "rating": 4.0
   },
   {
     "name": "Hủ tiếu gà Gò Công",
@@ -2099,7 +2331,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1B Đường số 10, Tân Quy",
     "dist": "Quận 7",
     "time": "6h-22h",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì Bì Nem Xe Đạp",
@@ -2108,7 +2341,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Phan Châu Trinh -> Cô Giang",
     "dist": "Quận 1",
     "time": "14h",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.5
   },
   {
     "name": "Cơm Tấm Đề Thám",
@@ -2117,7 +2351,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "272 Đề Thám, P. Phạm Ngũ Lão",
     "dist": "Quận 1",
     "time": "9h - 1h ság",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.9
   },
   {
     "name": "Bún Riêu Cô Út",
@@ -2126,7 +2361,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "219 Nguyễn Trãi, Nguyễn Cư Trình",
     "dist": "Quận 1",
     "time": "11h-22h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.2
   },
   {
     "name": "Bánh mì Xíu mại ngon",
@@ -2135,7 +2371,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1A Hồ Văn Huê",
     "dist": "Quận Phú Nhuận",
     "time": "Sáng",
-    "price": "30-100k"
+    "price": "30-100k",
+    "rating": 4.2
   },
   {
     "name": "Bún Đậu Nhà Vua",
@@ -2144,7 +2381,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "63 Bình Thới, P. 11",
     "dist": "Quận 11",
     "time": "10:00 - 22:20",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.2
   },
   {
     "name": "Bún cá Kiên Giang",
@@ -2153,7 +2391,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "251/5 Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "6h-18h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.9
   },
   {
     "name": "Phở bê Thanh Đa",
@@ -2162,7 +2401,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21-23 Hoàng Sa, Đa Kao",
     "dist": "Quận 1",
     "time": "6h-13h",
-    "price": "70k"
+    "price": "70k",
+    "rating": 4.3
   },
   {
     "name": "Miến măng vịt",
@@ -2171,7 +2411,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "181 Bùi Thị Xuân",
     "dist": "Quận Tân Bình",
     "time": "11h-21h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.3
   },
   {
     "name": "Bún mọc Hiếu Hiền",
@@ -2180,7 +2421,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "23/2 Hoàng Sa, Đa Kao",
     "dist": "Quận 1",
     "time": "6h-13h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.1
   },
   {
     "name": "Mì bò hầm Đài Loan",
@@ -2189,7 +2431,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 80 Lê Hồng Phong",
     "dist": "Quận 5",
     "time": "09:30 - 21:00",
-    "price": "60-70k"
+    "price": "60-70k",
+    "rating": 3.6
   },
   {
     "name": "Bánh canh Cá Lóc 25k",
@@ -2198,7 +2441,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "340 Nguyễn Sơn",
     "dist": "Quận Tân Phú",
     "time": "6h-23h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 5.0
   },
   {
     "name": "Bánh canh Cá Lóc O Hiền",
@@ -2207,7 +2451,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "12/20 Phạm Văn Hai",
     "dist": "Quận Tân Bình",
     "time": "12h-19h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.0
   },
   {
     "name": "Hoành thành lá tôm khô",
@@ -2216,7 +2461,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 66 Lãnh Binh Thăng, Phường 13",
     "dist": "Quận 11",
     "time": "14h30",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.6
   },
   {
     "name": "Vua Mì",
@@ -2225,7 +2471,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "76 Đường D5",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 23:59",
-    "price": "6-70k"
+    "price": "6-70k",
+    "rating": 3.6
   },
   {
     "name": "Dimsum - Trà sữa",
@@ -2234,7 +2481,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "89A Nguyễn Đình Chiểu",
     "dist": "Quận 3",
     "time": "08:00 - 22:00",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.1
   },
   {
     "name": "Baito Ramen",
@@ -2243,7 +2491,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "C24/7 Xóm Chiếu",
     "dist": "Quận 4",
     "time": "16h30-21h30",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 4.7
   },
   {
     "name": "Hủ tiếu Mì Thập Cẩm",
@@ -2252,7 +2501,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "160 Phạm Phú Thứ, P.4",
     "dist": "Quận 6",
     "time": "6h-21h",
-    "price": "43-53k"
+    "price": "43-53k",
+    "rating": 5.0
   },
   {
     "name": "Bánh canh cua Ba Lúa",
@@ -2261,7 +2511,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "206 Tôn Đản",
     "dist": "Quận 4",
     "time": "07:00 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.6
   },
   {
     "name": "Cơm tấm Mai cua",
@@ -2270,7 +2521,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "185 Trần Bình Trọng, P.3",
     "dist": "Quận 6",
     "time": "18h-23h30",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 4.4
   },
   {
     "name": "Cuốn thịt heo Hoàng Bèo",
@@ -2279,7 +2531,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "216 Nguyễn Oanh, Phường 17",
     "dist": "Quận Gò Vấp",
     "time": "07:00 - 23:00",
-    "price": "60k-70k"
+    "price": "60k-70k",
+    "rating": 4.5
   },
   {
     "name": "Bún đầu Tiến Vua 86k",
@@ -2288,7 +2541,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "29 Thành Thái, P. 14",
     "dist": "Quận 10",
     "time": "10:00 - 21:51",
-    "price": "86k"
+    "price": "86k",
+    "rating": 4.6
   },
   {
     "name": "Lẩu Cá & Nướng A Mín",
@@ -2297,7 +2551,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "333 Vĩnh Khánh, P. 8",
     "dist": "Quận 4",
     "time": "16:00 - 23:59",
-    "price": "150k"
+    "price": "150k",
+    "rating": 3.8
   },
   {
     "name": "Kem Chiên",
@@ -2306,7 +2561,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "177 Hải Thượng Lãn Ông",
     "dist": "Quận 5",
     "time": "18h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.7
   },
   {
     "name": "Cơm Gà Xối Mỡ Su Su",
@@ -2315,7 +2571,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "117/1D Cống Quỳnh",
     "dist": "Quận 1",
     "time": "11:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.9
   },
   {
     "name": "Cơm tấm dễ thương 25k",
@@ -2324,7 +2581,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "641 Đoàn Văn Bơ, Phường 18",
     "dist": "Quận 4",
     "time": "5h-9h",
-    "price": "từ 25k"
+    "price": "từ 25k",
+    "rating": 4.5
   },
   {
     "name": "Flan, Chè Hoài Thương",
@@ -2333,7 +2591,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "10 Cô Giang",
     "dist": "Quận Phú Nhuận",
     "time": "10:00 - 20:00",
-    "price": "từ 20k"
+    "price": "từ 20k",
+    "rating": 3.6
   },
   {
     "name": "Lẩu bò kho Xương ống",
@@ -2342,7 +2601,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "207/6 Trần Bình Trọng",
     "dist": "Quận 5",
     "time": "16h30-22h",
-    "price": "160k"
+    "price": "160k",
+    "rating": 4.2
   },
   {
     "name": "Xôi mặn Heo Quay",
@@ -2351,7 +2611,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "509 CMT8",
     "dist": "Quận 10",
     "time": "16h-23h",
-    "price": "25-35k"
+    "price": "25-35k",
+    "rating": 4.2
   },
   {
     "name": "Tất Ký Mì Gia",
@@ -2360,7 +2621,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "499/4A CMT8",
     "dist": "Quận 10",
     "time": "16h-23h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Bánh tráng trộn mỡ hành",
@@ -2369,7 +2631,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1005/71 Nguyễn Kiệm, P3",
     "dist": "Quận Gò Vấp",
     "time": "14h-22h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.4
   },
   {
     "name": "Phá Lấu Giò Heo Kha Thi",
@@ -2378,7 +2641,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "211 Phạm Văn Chiêu",
     "dist": "Quận Gò Vấp",
     "time": "9h-20h",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.4
   },
   {
     "name": "Cơm tấm Xí Muội",
@@ -2387,7 +2651,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1090 Lạc Long Quân, P.8",
     "dist": "Quận Tân Bình",
     "time": "7h - 19h",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 3.9
   },
   {
     "name": "Lẩu bò Campuchia",
@@ -2396,7 +2661,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "128 Vườn Chuối, p.4",
     "dist": "Quận 3",
     "time": "16h-22h",
-    "price": "170k"
+    "price": "170k",
+    "rating": 4.2
   },
   {
     "name": "Nướng Lẩu Zaka 79",
@@ -2405,7 +2671,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16 Trường Chính, P.4",
     "dist": "Quận Tân Bình",
     "time": "15h-23h",
-    "price": "79k-150k"
+    "price": "79k-150k",
+    "rating": 4.9
   },
   {
     "name": "Bún Riêu Cua 30 Năm",
@@ -2414,7 +2681,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "384/22 Nam Kỳ Khởi Nghĩa",
     "dist": "Quận 3",
     "time": "9h tới 13h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.0
   },
   {
     "name": "Gòn BÚN CHẢ bà Khách",
@@ -2423,7 +2691,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "3 Hậu Giang",
     "dist": "Quận Tân Bình",
     "time": "8h-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 3.7
   },
   {
     "name": "Bánh mì Tăng",
@@ -2432,7 +2701,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "822 Nguyễn Trãi",
     "dist": "Quận 5",
     "time": "5h30-23h30",
-    "price": "20k"
+    "price": "20k",
+    "rating": 3.8
   },
   {
     "name": "Aroy Thái",
@@ -2441,7 +2711,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "60/1 Lý Chính Thắng",
     "dist": "Quận 3",
     "time": "7h-21h",
-    "price": "45-65k"
+    "price": "45-65k",
+    "rating": 4.9
   },
   {
     "name": "Cơm Tấm Ba Há",
@@ -2450,7 +2721,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "389 Hưng Phú, P. 9",
     "dist": "Quận 8",
     "time": "16-19h30",
-    "price": "8-90k"
+    "price": "8-90k",
+    "rating": 4.6
   },
   {
     "name": "Bánh Mì Xíu Mại Phô Mai",
@@ -2459,7 +2731,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "356 Bùi Hữu Nghĩa, P. 14",
     "dist": "Quận Bình Thạnh",
     "time": "06H00 - 21H00",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 4.6
   },
   {
     "name": "Bánh Canh Cua Oanh",
@@ -2468,7 +2741,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "80 Văn Cao, P. Phú Thọ Hòa",
     "dist": "Quận Tân Phú",
     "time": "09:00 - 22:00",
-    "price": "45-55k"
+    "price": "45-55k",
+    "rating": 4.3
   },
   {
     "name": "Bún thịt nướng Bà Năm",
@@ -2477,7 +2751,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/20B Trần Quang Diệu",
     "dist": "Quận 3",
     "time": "06:00 - 12:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.4
   },
   {
     "name": "Mì Khô Xá Xíu Gia Phúc",
@@ -2486,7 +2761,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "198B Xóm Chiếu, P. 14",
     "dist": "Quận 4",
     "time": "16:00 - 22:30",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.3
   },
   {
     "name": "Bach Hoa Lẩu",
@@ -2495,7 +2771,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Quận 3",
     "dist": "Quận 3",
     "time": "Vừa phải",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.7
   },
   {
     "name": "Bún bò viên Tân Phát",
@@ -2504,7 +2781,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "404 Trần Phú, P.7",
     "dist": "Quận 5",
     "time": "09:00 - 21:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 3.7
   },
   {
     "name": "Chill Thái",
@@ -2513,7 +2791,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Quận 1",
     "time": "Vừa phải",
-    "price": "159-239k"
+    "price": "159-239k",
+    "rating": 4.4
   },
   {
     "name": "Sủi cảo Liên Xô",
@@ -2522,7 +2801,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Mạc Vân, p.12",
     "dist": "Quận 8",
     "time": "11h đến hết",
-    "price": "30-45k"
+    "price": "30-45k",
+    "rating": 4.0
   },
   {
     "name": "Hủ Tiếu Cá Tài Ký",
@@ -2531,7 +2811,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "185A Tân Sơn Nhì",
     "dist": "Quận Tân Phú",
     "time": "06:00 - 12:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 3.5
   },
   {
     "name": "Miì trộn khô Hồng kong",
@@ -2540,7 +2821,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "684/24 Trần Hưng Đạo",
     "dist": "Quận 5",
     "time": "Vừa phải",
-    "price": "từ 55k"
+    "price": "từ 55k",
+    "rating": 4.9
   },
   {
     "name": "Lẩu mắm Út Nhàn",
@@ -2549,7 +2831,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "409 Phạm Văn Đồng",
     "dist": "Quận Bình Thạnh",
     "time": "15:00 - 22:00",
-    "price": "295k"
+    "price": "295k",
+    "rating": 3.9
   },
   {
     "name": "Quán Ù Pa",
@@ -2558,7 +2841,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "9A Nguyễn Án, P. 11",
     "dist": "Quận 5",
     "time": "14:00 - 22:00",
-    "price": "5k-19k"
+    "price": "5k-19k",
+    "rating": 3.8
   },
   {
     "name": "Bún bò Cô Hạnh",
@@ -2567,7 +2851,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "190-192 Hà Tôn Quyền",
     "dist": "Quận 11",
     "time": "06:30 - 11:00",
-    "price": "25k-30k"
+    "price": "25k-30k",
+    "rating": 4.4
   },
   {
     "name": "Ramen Tomidaya",
@@ -2576,7 +2861,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "68 Phạm Viết Chánh",
     "dist": "Quận Bình Thạnh",
     "time": "11:30-14h",
-    "price": "50k-220k"
+    "price": "50k-220k",
+    "rating": 4.4
   },
   {
     "name": "Hủ Tiếu Gà - Vĩnh Nam",
@@ -2585,7 +2871,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "43 Vĩnh Nam, P. 11",
     "dist": "Quận 8",
     "time": "13:00 - 21:00",
-    "price": "5k-40k"
+    "price": "5k-40k",
+    "rating": 4.9
   },
   {
     "name": "Ốc Táo",
@@ -2594,7 +2881,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "80 Đường Số 28, P. Tân Phong",
     "dist": "Quận 7",
     "time": "16:00-23:59",
-    "price": "50k-200k"
+    "price": "50k-200k",
+    "rating": 4.0
   },
   {
     "name": "Sủi cảo Huy Ngân",
@@ -2603,7 +2891,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "538 Lý Thái Tổ, P. 10",
     "dist": "Quận 10",
     "time": "10:00 - 22:00",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 3.7
   },
   {
     "name": "Trà sữa A Chà",
@@ -2612,7 +2901,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "140 Châu Văn Liêm",
     "dist": "Quận 5",
     "time": "10:00 - 22:00",
-    "price": "15k-30k"
+    "price": "15k-30k",
+    "rating": 4.2
   },
   {
     "name": "Bò né 2 Péo",
@@ -2621,7 +2911,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "69/2/44 Nguyễn Gia Trí",
     "dist": "Quận Bình Thạnh",
     "time": "10:00 - 14:00",
-    "price": "10k-55k"
+    "price": "10k-55k",
+    "rating": 3.7
   },
   {
     "name": "Chè Thạch Xanh",
@@ -2630,7 +2921,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "91 Lý Thường Kiệt, P.7",
     "dist": "Quận 10",
     "time": "18:00 - 21:00",
-    "price": "14k"
+    "price": "14k",
+    "rating": 3.9
   },
   {
     "name": "Hồng trà dì Anh",
@@ -2639,7 +2931,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 Đường số 5 - Cư xá Bình Thới",
     "dist": "Quận 11",
     "time": "15h - 23h30",
-    "price": "16k-25k"
+    "price": "16k-25k",
+    "rating": 4.2
   },
   {
     "name": "Tiềm Ngã Ba Đường",
@@ -2648,7 +2941,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Y12 Hồng Lĩnh, P. 15",
     "dist": "Quận 10",
     "time": "13:00 - 22:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.9
   },
   {
     "name": "Gà nướng cô gái Ấn",
@@ -2657,7 +2951,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45A Ung Văn Khiêm",
     "dist": "Quận Bình Thạnh",
     "time": "15:30 - 23:59",
-    "price": "5k-130k"
+    "price": "5k-130k",
+    "rating": 4.9
   },
   {
     "name": "Khanh - Bánh Khọt",
@@ -2666,7 +2961,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "7 Đồng Nai, P. 15",
     "dist": "Quận 10",
     "time": "10:00 - 21:00",
-    "price": "15k-50k"
+    "price": "15k-50k",
+    "rating": 5.0
   },
   {
     "name": "Cơm Cu Hải",
@@ -2675,7 +2971,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "189B/A30 Cống Quỳnh",
     "dist": "Quận 1",
     "time": "16:30-23:59",
-    "price": "70k-90k"
+    "price": "70k-90k",
+    "rating": 3.7
   },
   {
     "name": "Tiệm mì Chọn Tui",
@@ -2684,7 +2981,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "292 Tô Hiến Thành",
     "dist": "Quận 10",
     "time": "07:30 - 21:15",
-    "price": "15k-45k"
+    "price": "15k-45k",
+    "rating": 4.3
   },
   {
     "name": "Bánh mì Bùi Thị Xuân",
@@ -2693,7 +2991,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "122E Bùi Thị Xuân",
     "dist": "Quận 1",
     "time": "05:30 - 01:00",
-    "price": "20k-30k"
+    "price": "20k-30k",
+    "rating": 3.7
   },
   {
     "name": "Shabu Ya - Vạn Hạnh Mall",
@@ -2702,7 +3001,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Tầng 6 Vạn Hạnh Mall",
     "dist": "Quận 10",
     "time": "10:00 - 21:30",
-    "price": "138k-238k"
+    "price": "138k-238k",
+    "rating": 4.8
   },
   {
     "name": "Má heo Ngọc Yến",
@@ -2712,7 +3012,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "8:00 - 00:00",
-    "price": "60k-120k"
+    "price": "60k-120k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Canh Trảng Bàng",
@@ -2721,7 +3022,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "439-441 Nguyễn Tri Phương",
     "dist": "Quận 10",
     "time": "10:00 - 22:00",
-    "price": "30-60k"
+    "price": "30-60k",
+    "rating": 4.4
   },
   {
     "name": "Bún bò cô Đào",
@@ -2730,7 +3032,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "22A Điện Biên Phủ",
     "dist": "Quận Bình Thạnh",
     "time": "06:00-10:30",
-    "price": "43k"
+    "price": "43k",
+    "rating": 4.7
   },
   {
     "name": "Đồi Thái",
@@ -2739,7 +3042,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "36 Chu Mạnh Trinh",
     "dist": "Quận 1",
     "time": "9:00 - 22:00",
-    "price": "149k"
+    "price": "149k",
+    "rating": 4.4
   },
   {
     "name": "Bánh Tráng Trộn Nhà Thờ",
@@ -2748,7 +3052,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "25 Học Lạc, Phường 14",
     "dist": "Quận 5",
     "time": "21:30 - 2:00",
-    "price": "18-36k"
+    "price": "18-36k",
+    "rating": 3.9
   },
   {
     "name": "Chú Mập Thanh Đa",
@@ -2757,7 +3062,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "183 Bình Quới",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 19:00",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 4.3
   },
   {
     "name": "Trà Chanh Con Cá",
@@ -2766,7 +3072,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "321 Tôn Đản, P. 15",
     "dist": "Quận 4",
     "time": "09:30 - 21:30",
-    "price": "5-33k"
+    "price": "5-33k",
+    "rating": 4.6
   },
   {
     "name": "Cô Hằng Thịt Nướng",
@@ -2775,7 +3082,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 710/2 Phan Văn Trị",
     "dist": "Quận Gò Vấp",
     "time": "07:00 - 21:00",
-    "price": "37-80k"
+    "price": "37-80k",
+    "rating": 4.4
   },
   {
     "name": "Tân Hương Nam Quán",
@@ -2784,7 +3092,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "382 Bà Hạt, P.8",
     "dist": "Quận 10",
     "time": "08:00 - 22:00",
-    "price": "25-80k"
+    "price": "25-80k",
+    "rating": 5.0
   },
   {
     "name": "Mạ Tôi - Bánh Canh Cua",
@@ -2793,7 +3102,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "86 Vạn Kiếp, P. 4",
     "dist": "Quận Bình Thạnh",
     "time": "15:00 - 21:00",
-    "price": "22-40k"
+    "price": "22-40k",
+    "rating": 4.1
   },
   {
     "name": "STEAK FRITES SAIGON",
@@ -2802,7 +3112,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "7/96 Thành Thái, P. 14",
     "dist": "Quận 10",
     "time": "10-14h | 18-21h",
-    "price": "150k"
+    "price": "150k",
+    "rating": 4.7
   },
   {
     "name": "Ốc Bông",
@@ -2811,7 +3122,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "260 Nguyễn Tiểu La, P.8",
     "dist": "Quận 10",
     "time": "16:00-23:00",
-    "price": "60-100k"
+    "price": "60-100k",
+    "rating": 3.8
   },
   {
     "name": "Cơm Chiên Bé Tám",
@@ -2820,7 +3132,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "246 Nguyễn Công Trứ",
     "dist": "Quận 1",
     "time": "18:30-23:59",
-    "price": "30-55k"
+    "price": "30-55k",
+    "rating": 4.2
   },
   {
     "name": "Món Huế",
@@ -2829,7 +3142,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26A Hoàng Hoa Thám",
     "dist": "Quận Tân Bình",
     "time": "16:00 - 21:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.1
   },
   {
     "name": "Thanh Tâm Ký",
@@ -2838,7 +3152,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "51 Trần Hữu Trang",
     "dist": "Quận Phú Nhuận",
     "time": "05:30 - 13:30",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 4.7
   },
   {
     "name": "Cô Tám Bánh Mì",
@@ -2847,7 +3162,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "56T Lê Quang Sung",
     "dist": "Quận 6",
     "time": "09:00 - 22:00",
-    "price": "15-20k"
+    "price": "15-20k",
+    "rating": 4.6
   },
   {
     "name": "An An",
@@ -2856,7 +3172,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "282/1 Nguyễn Gia Trí",
     "dist": "Quận Bình Thạnh",
     "time": "06:00 - 22;00",
-    "price": "27-69k"
+    "price": "27-69k",
+    "rating": 4.1
   },
   {
     "name": "Quán Sương",
@@ -2865,7 +3182,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1181 Lê Văn Lương",
     "dist": "Huyện Nhà Bè",
     "time": "07:00 - 21:00",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 3.6
   },
   {
     "name": "Mì Gà Xá Kén K3",
@@ -2874,7 +3192,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "82 Đường Đồng Đen",
     "dist": "Quận Tân Bình",
     "time": "16:30 - 21:00",
-    "price": "50-99k"
+    "price": "50-99k",
+    "rating": 3.5
   },
   {
     "name": "Lẩu Xưa 139k",
@@ -2883,7 +3202,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "292/1 Nguyễn Xí",
     "dist": "Quận Bình Thạnh",
     "time": "Vừa phải",
-    "price": "139-219k"
+    "price": "139-219k",
+    "rating": 4.6
   },
   {
     "name": "Quán Hào 598",
@@ -2892,7 +3212,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "004 Lô F Chung Cư Xóm Cải",
     "dist": "Quận 5",
     "time": "09:00 - 22:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.6
   },
   {
     "name": "Bánh Ướt & Bánh Cuốn",
@@ -2901,7 +3222,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "752/53 Lạc Long Quân",
     "dist": "Quận Tân Bình",
     "time": "15:00 - 20:00",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.3
   },
   {
     "name": "Quán cháo",
@@ -2910,7 +3232,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108 Trần Văn Quang",
     "dist": "Quận Tân Bình",
     "time": "16:00 - 21:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 3.5
   },
   {
     "name": "Hủ tiếu Dì Hai",
@@ -2919,7 +3242,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "266/98 Tôn Đản",
     "dist": "Quận 4",
     "time": "11:00 - 19:00",
-    "price": "25-50k"
+    "price": "25-50k",
+    "rating": 5.0
   },
   {
     "name": "Xe bánh mì, xôi",
@@ -2928,7 +3252,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "271 Tùng Thiện Vương",
     "dist": "Quận 8",
     "time": "05:00 - 10:00",
-    "price": "17-20k"
+    "price": "17-20k",
+    "rating": 3.6
   },
   {
     "name": "Cơm Tấm Bà Chị Hai",
@@ -2937,7 +3262,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "51 Đặng Văn Ngữ",
     "dist": "Quận Phú Nhuận",
     "time": "18:00 - 22:00",
-    "price": "40-70k"
+    "price": "40-70k",
+    "rating": 3.7
   },
   {
     "name": "Heo quay Kim Mai",
@@ -2946,7 +3272,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "15 Lô B, chợ Bình Tiên",
     "dist": "Quận 6",
     "time": "06:30–11:00",
-    "price": "170-320k"
+    "price": "170-320k",
+    "rating": 4.7
   },
   {
     "name": "Bánh canh hẹ Phú Yên",
@@ -2955,7 +3282,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "18A/4 Nguyễn Thị Minh Khai",
     "dist": "Quận 1",
     "time": "16g30 - 21g30",
-    "price": "40k trở lên"
+    "price": "40k trở lên",
+    "rating": 4.5
   },
   {
     "name": "Bánh Đúc Nóng NGUYÊN",
@@ -2964,7 +3292,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "188 Vạn Kiếp",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 18:00",
-    "price": "30-45k"
+    "price": "30-45k",
+    "rating": 4.1
   },
   {
     "name": "Bánh Mì Dậu",
@@ -2973,7 +3302,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "538/161 Đoàn Văn Bơ",
     "dist": "Quận 4",
     "time": "16:00 - 22:00",
-    "price": "5-20k"
+    "price": "5-20k",
+    "rating": 4.7
   },
   {
     "name": "Bánh căn Cô Hằng",
@@ -2982,7 +3312,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100 Trần Hưng Đạo",
     "dist": "Quận 1",
     "time": "16:00 – 9:00",
-    "price": "6-25k"
+    "price": "6-25k",
+    "rating": 4.6
   },
   {
     "name": "Ốc Trứng Muối - Đường B6",
@@ -2991,7 +3322,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "11 Đường B6, P. 12",
     "dist": "Quận Tân Bình",
     "time": "15:00 - 23:00",
-    "price": "20-500k"
+    "price": "20-500k",
+    "rating": 4.8
   },
   {
     "name": "Kim Ký",
@@ -3000,7 +3332,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "255 Nguyễn Công Trứ",
     "dist": "Quận 1",
     "time": "18:00 - 22:00",
-    "price": "34-45k"
+    "price": "34-45k",
+    "rating": 3.7
   },
   {
     "name": "Gánh bánh mì đêm",
@@ -3009,7 +3342,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "65F Nguyễn Thái Học",
     "dist": "Quận 1",
     "time": "19:00 - 05:00",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.3
   },
   {
     "name": "Tiệm Bún Đậu CÁM",
@@ -3018,7 +3352,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "206 Nguyễn Tri Phương",
     "dist": "Quận 10",
     "time": "10:00 - 22:00",
-    "price": "20-100k"
+    "price": "20-100k",
+    "rating": 4.4
   },
   {
     "name": "Bún Bò Phú Hưng",
@@ -3027,7 +3362,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "284/2 Chợ Lớn, P. 11",
     "dist": "Quận 6",
     "time": "06:00 - 12:00",
-    "price": "25-35k"
+    "price": "25-35k",
+    "rating": 4.7
   },
   {
     "name": "Đông Mập",
@@ -3036,7 +3372,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "164/5 Nguyễn Oanh",
     "dist": "Quận Gò Vấp",
     "time": "17:00 - 22:00",
-    "price": "15-50k"
+    "price": "15-50k",
+    "rating": 3.9
   },
   {
     "name": "Hủ tiếu heo gà",
@@ -3045,7 +3382,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "160 Trần Bình Trọng",
     "dist": "Quận 5",
     "time": "18:30 - 04:00",
-    "price": "35-100k"
+    "price": "35-100k",
+    "rating": 4.4
   },
   {
     "name": "Nước Vỉa Hè 347",
@@ -3054,7 +3392,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "347 Nguyễn Chí Thanh",
     "dist": "Quận 5",
     "time": "19:00 - 23:00",
-    "price": "7-15k"
+    "price": "7-15k",
+    "rating": 4.6
   },
   {
     "name": "Bánh Canh Chả Cá Go79",
@@ -3063,7 +3402,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "264 Trường Sa, P. 3",
     "dist": "Quận Bình Thạnh",
     "time": "16:00 - 23:00",
-    "price": "19-69k"
+    "price": "19-69k",
+    "rating": 3.8
   },
   {
     "name": "TRUYỀN THUYẾT CHAMPONG",
@@ -3073,7 +3413,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Quận 2",
     "time": "11:00 - 22:00",
-    "price": "120-220k"
+    "price": "120-220k",
+    "rating": 4.1
   },
   {
     "name": "Xe cá viên chiên",
@@ -3082,7 +3423,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Công trưởng UEH",
     "dist": "Quận 3",
     "time": "",
-    "price": "5k"
+    "price": "5k",
+    "rating": 5.0
   },
   {
     "name": "Bánh Mì Chảo Cô Lệ",
@@ -3091,7 +3433,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "003 Lô D Chung Cư Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "07:00 - 14:00",
-    "price": "20-35k"
+    "price": "20-35k",
+    "rating": 4.2
   },
   {
     "name": "Vạn quán",
@@ -3100,7 +3443,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123/17 Nguyễn Xí",
     "dist": "Quận Bình Thạnh",
     "time": "09:00 - 23:59",
-    "price": "120-399k"
+    "price": "120-399k",
+    "rating": 4.8
   },
   {
     "name": "Hoành thánh lá Ngũ Trảo",
@@ -3109,7 +3453,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 66 Lãnh Binh Thăng",
     "dist": "Quận 11",
     "time": "15:00 - 22:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Canh Chả Cá Phan Rang",
@@ -3119,7 +3464,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "06:00 - 12:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 3.6
   },
   {
     "name": "ĂN vặt Q4",
@@ -3128,7 +3474,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Đường Số 42, P. 4",
     "dist": "Quận 4",
     "time": "09:00 - 22:00",
-    "price": "20-40k"
+    "price": "20-40k",
+    "rating": 3.6
   },
   {
     "name": "Hàu đại dương",
@@ -3137,7 +3484,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "179 Phạm Hùng, P.4",
     "dist": "Quận 8",
     "time": "16:00 tới hết",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.9
   },
   {
     "name": "Lẩu Bò Hẻm 616",
@@ -3146,7 +3494,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 616 Cách Mạng Tháng 8",
     "dist": "Quận 10",
     "time": "18:00 - 22:00",
-    "price": "100-200k"
+    "price": "100-200k",
+    "rating": 4.5
   },
   {
     "name": "Hachiba ramen",
@@ -3155,7 +3504,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "353 Sư Phạm Hạnh, P12",
     "dist": "Quận 10",
     "time": "10:00 - 21:30",
-    "price": "48-80k"
+    "price": "48-80k",
+    "rating": 4.5
   },
   {
     "name": "Nhi Nhi Quán",
@@ -3164,7 +3514,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "164 Đường 20, P. 5",
     "dist": "Quận Gò Vấp",
     "time": "15:00 - 22:30",
-    "price": "7-28k"
+    "price": "7-28k",
+    "rating": 4.6
   },
   {
     "name": "Thèm Gì Cũng Có",
@@ -3173,7 +3524,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "327 Phan Đình Phùng",
     "dist": "Quận Phú Nhuận",
     "time": "09:00 - 22:00",
-    "price": "5- 75k"
+    "price": "5- 75k",
+    "rating": 3.7
   },
   {
     "name": "Hey Pelo",
@@ -3182,7 +3534,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Số 60 Trần Khắc Chân",
     "dist": "Quận 1",
     "time": "10:30 - 22:20",
-    "price": "30-110k"
+    "price": "30-110k",
+    "rating": 4.0
   },
   {
     "name": "Hải Sản Phan Thiết",
@@ -3191,7 +3544,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "005 Lô D C/c Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "14:00 - 23:00",
-    "price": "50-110k"
+    "price": "50-110k",
+    "rating": 4.1
   },
   {
     "name": "Bánh Mì Cô Điệp",
@@ -3200,7 +3554,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "238 Võ Thành Trang",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 00:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 3.9
   },
   {
     "name": "Bánh mì Ngã tư Tân Khai",
@@ -3209,7 +3564,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã tư Tân Khai, Nguyễn bá học",
     "dist": "Quận 11",
     "time": "05:00 - 11:00",
-    "price": "10-20k"
+    "price": "10-20k",
+    "rating": 4.3
   },
   {
     "name": "Giò Heo Phá Lấu Kha Thi",
@@ -3218,7 +3574,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "37 Đường Số 1, P. An Lạc",
     "dist": "Quận Bình Tân",
     "time": "09:00 - 21:00",
-    "price": "10-70k"
+    "price": "10-70k",
+    "rating": 4.2
   },
   {
     "name": "Hủ tiếu cá Pháp Mập",
@@ -3227,7 +3584,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/1 Bis Calmette",
     "dist": "Quận 1",
     "time": "06:00 - 10:30",
-    "price": "25-45k"
+    "price": "25-45k",
+    "rating": 4.8
   },
   {
     "name": "Sunset & Chill Sky Bar",
@@ -3236,7 +3594,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1143 Bình Quới",
     "dist": "Quận Bình Thạnh",
     "time": "07:00 - 00:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.6
   },
   {
     "name": "Buffe ốc Cô Giang",
@@ -3245,7 +3604,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "59 Nguyễn Hữu Dật",
     "dist": "Quận Tân Phú",
     "time": "Vừa phải",
-    "price": "159k"
+    "price": "159k",
+    "rating": 3.5
   },
   {
     "name": "Chick And Cheese",
@@ -3254,7 +3614,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "963A1 Lò Gốm, P. 8",
     "dist": "Quận 6",
     "time": "10:30 - 21:30",
-    "price": "29-219k"
+    "price": "29-219k",
+    "rating": 3.8
   },
   {
     "name": "Bánh Cuốn Cô Loan",
@@ -3263,7 +3624,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "357B Lê Đại Hành",
     "dist": "Quận 11",
     "time": "06:00 - 11:30",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.4
   },
   {
     "name": "Quán Nướng Má Hai",
@@ -3272,7 +3634,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "200 Nguyễn Thượng Hiền",
     "dist": "Quận 3",
     "time": "10:00 - 22:00",
-    "price": "20-70k"
+    "price": "20-70k",
+    "rating": 5.0
   },
   {
     "name": "Doya Jjambbong",
@@ -3281,7 +3644,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "S63-1 Sky Garden 3",
     "dist": "Quận 7",
     "time": "11:00 - 22:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.1
   },
   {
     "name": "Quán Chà Bá",
@@ -3290,7 +3654,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "185Q Mai Xuân Thưởng",
     "dist": "Quận 6",
     "time": "13:00 - 22:00",
-    "price": "10-30k"
+    "price": "10-30k",
+    "rating": 3.7
   },
   {
     "name": "Bò Kho Cây Thoại Ngọc Hầu",
@@ -3299,7 +3664,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "644 Âu Cơ, P.10",
     "dist": "Quận Tân Bình",
     "time": "09:00 - 22:00",
-    "price": "55k"
+    "price": "55k",
+    "rating": 4.4
   },
   {
     "name": "Lẩu 72 Nguyễn Trường Tộ",
@@ -3308,7 +3674,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "72 Nguyễn Trường Tộ",
     "dist": "Tp. Vũng Tàu",
     "time": "09:00 - 21:00",
-    "price": "50-200k"
+    "price": "50-200k",
+    "rating": 4.5
   },
   {
     "name": "Hủ Tiếu Cô Bảy",
@@ -3317,7 +3684,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 301 Lê Văn Sỹ, P. 13",
     "dist": "Quận 3",
     "time": "22:00 - 05:00",
-    "price": "40-50k"
+    "price": "40-50k",
+    "rating": 3.9
   },
   {
     "name": "Tibon By Jayden",
@@ -3326,7 +3694,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "299 Hoàng Sa",
     "dist": "Quận 1",
     "time": "06:00 - 22:30",
-    "price": "15-45k"
+    "price": "15-45k",
+    "rating": 4.9
   },
   {
     "name": "Nhà Thơm",
@@ -3335,7 +3704,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "42CT Tam Đảo, Cư Xá Bắc Hải",
     "dist": "Quận 10",
     "time": "08:00 - 22:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 4.4
   },
   {
     "name": "San San",
@@ -3344,7 +3714,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "147 Hoa Lan, P. 2",
     "dist": "Quận Phú Nhuận",
     "time": "09:30 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.6
   },
   {
     "name": "Bún Bò Cô Thu",
@@ -3353,7 +3724,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "463B Cách Mạng Tháng 8",
     "dist": "Quận 10",
     "time": "15:30 - 00:00",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.3
   },
   {
     "name": "Quán Út Phượng",
@@ -3363,7 +3735,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "12:00 - 20:00",
-    "price": "20-35k"
+    "price": "20-35k",
+    "rating": 4.2
   },
   {
     "name": "Mì Vịt Tiềm Hữu Ký",
@@ -3372,7 +3745,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "84 Nguyễn Văn Lạc",
     "dist": "Quận Bình Thạnh",
     "time": "06:00 - 23:59",
-    "price": "50-100k"
+    "price": "50-100k",
+    "rating": 4.0
   },
   {
     "name": "Bánh Canh Cua Bùi Phát",
@@ -3381,7 +3755,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "453/95 Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.8
   },
   {
     "name": "Bún Riêu Yến",
@@ -3390,7 +3765,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1346 Trường Sa, P. 3",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 18:10",
-    "price": "32k"
+    "price": "32k",
+    "rating": 4.1
   },
   {
     "name": "Bún Đậu Homemade",
@@ -3399,7 +3775,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Nguyễn Văn Tráng",
     "dist": "Quận 1",
     "time": "10:00 - 20:30",
-    "price": "25-100k"
+    "price": "25-100k",
+    "rating": 4.2
   },
   {
     "name": "Bánh Canh Gia Lai",
@@ -3408,7 +3785,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "33 Dân Trí, P. 6",
     "dist": "Quận Tân Bình",
     "time": "12:00 - 22:00",
-    "price": "30-76k"
+    "price": "30-76k",
+    "rating": 3.7
   },
   {
     "name": "Bánh mì cô Huyền",
@@ -3417,7 +3795,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "6/7 Đồ Sơn, P. 4",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 23:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.6
   },
   {
     "name": "Phở Sụn Ông Già Đầu Bạc",
@@ -3426,7 +3805,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đối diện 212/7 Nguyễn Văn Nguyễn",
     "dist": "Quận 1",
     "time": "6h30 - 13h00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.3
   },
   {
     "name": "MỘC",
@@ -3435,7 +3815,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "11 Công Chúa Ngọc Hân",
     "dist": "Quận 11",
     "time": "07:30 - 21:00",
-    "price": "60-75k"
+    "price": "60-75k",
+    "rating": 4.7
   },
   {
     "name": "Pizza 777",
@@ -3444,7 +3825,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "122/7 Yên Thế, P. 2",
     "dist": "Quận Tân Bình",
     "time": "10:00 - 23:59",
-    "price": "50-200k"
+    "price": "50-200k",
+    "rating": 4.6
   },
   {
     "name": "Hẻm nướng 197",
@@ -3453,7 +3835,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "197 Ngô Quyền, P. 6,",
     "dist": "Quận 10",
     "time": "18:30 - 21:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.3
   },
   {
     "name": "Lyn’s Chicken",
@@ -3462,7 +3845,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "69 Tân Trang, P. 9",
     "dist": "Quận Tân Bình",
     "time": "11:00 - 20:30",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 4.0
   },
   {
     "name": "Bánh ướt 25k",
@@ -3471,7 +3855,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "117 Thoại Ngọc Hầu",
     "dist": "Quận Tân Phú",
     "time": "7h đến hết",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.7
   },
   {
     "name": "Trang Minh",
@@ -3480,7 +3865,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "169 Bùi Đình Túy",
     "dist": "Quận Bình Thạnh",
     "time": "06:30 - 20:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.8
   },
   {
     "name": "BamBoo Quán",
@@ -3489,7 +3875,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "47/24/33 Bùi Đình Túy",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 22:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.8
   },
   {
     "name": "Bánh mì Cô Lành",
@@ -3498,7 +3885,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "6 Hồ Xuân Hương, P. 14",
     "dist": "Quận Bình Thạnh",
     "time": "06:00 - 19:30",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 3.7
   },
   {
     "name": "Ốc Singapore",
@@ -3507,7 +3895,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "295 nguyễn gia trí",
     "dist": "Quận Bình Thạnh",
     "time": "15:00 - 23:00",
-    "price": "20-200k"
+    "price": "20-200k",
+    "rating": 4.8
   },
   {
     "name": "Bánh canh sườn cây 10k",
@@ -3516,7 +3905,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "939 Phạm Thế Hiển, P. 4",
     "dist": "Quận 8",
     "time": "13:00 - 18:00",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 3.9
   },
   {
     "name": "Cháo Trắng Về Đây Em",
@@ -3525,7 +3915,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "221/10 Phan Văn Khỏe",
     "dist": "Quận 6",
     "time": "16:00 - 19:00",
-    "price": "2-20k"
+    "price": "2-20k",
+    "rating": 4.6
   },
   {
     "name": "Há Cảo Chi Lăng",
@@ -3534,7 +3925,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "340 Lãnh Binh Thăng, P. 11",
     "dist": "Quận 11",
     "time": "16:00 - 22:00",
-    "price": "10-30k"
+    "price": "10-30k",
+    "rating": 4.7
   },
   {
     "name": "Hủ Tíu Chay Hẻm 80",
@@ -3543,7 +3935,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 80 Lãnh Binh Thăng, P. 13",
     "dist": "Quận 11",
     "time": "14:00 - 21:00",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.1
   },
   {
     "name": "MiinTea",
@@ -3552,7 +3945,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Đường 17, P.Tân Kiểng",
     "dist": "Quận 7",
     "time": "08:00 - 22:30",
-    "price": "19-39k"
+    "price": "19-39k",
+    "rating": 3.7
   },
   {
     "name": "Chicken Hot Spicy",
@@ -3561,7 +3955,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "445 Nguyễn Tri Phương, P. 8",
     "dist": "Quận 8",
     "time": "",
-    "price": "30-150k"
+    "price": "30-150k",
+    "rating": 4.1
   },
   {
     "name": "Quán ốc Như",
@@ -3571,7 +3966,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
-    "price": "50-200k"
+    "price": "50-200k",
+    "rating": 3.6
   },
   {
     "name": "Tàu Hủ Đá",
@@ -3581,7 +3977,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "15:30 - 21:30",
-    "price": "15k-50k"
+    "price": "15k-50k",
+    "rating": 3.8
   },
   {
     "name": "Marukame Udon",
@@ -3591,7 +3988,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
-    "price": "80k - 150k"
+    "price": "80k - 150k",
+    "rating": 4.8
   },
   {
     "name": "The Deck Saigon",
@@ -3601,7 +3999,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "08:00 - 23:00",
-    "price": "500k++"
+    "price": "500k++",
+    "rating": 4.2
   },
   {
     "name": "Ốc Vịnh Nhỏ",
@@ -3611,7 +4010,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.6
   },
   {
     "name": "Cơm Tấm Kiều Giang",
@@ -3621,7 +4021,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "06:00 - 21:00",
-    "price": "45k - 70k"
+    "price": "45k - 70k",
+    "rating": 4.0
   },
   {
     "name": "Lẩu Bò Giáo Toàn",
@@ -3631,7 +4032,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "09:00 - 22:00",
-    "price": "150k - 250k"
+    "price": "150k - 250k",
+    "rating": 4.8
   },
   {
     "name": "Nem Nướng Ninh Hòa",
@@ -3641,7 +4043,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 3.6
   },
   {
     "name": "Làng Nướng Gió Chiều",
@@ -3651,7 +4054,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "09:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.2
   },
   {
     "name": "Gà Nướng Ò Ó O",
@@ -3661,7 +4065,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "10:00 - 22:00",
-    "price": "140k/con"
+    "price": "140k/con",
+    "rating": 4.5
   },
   {
     "name": "Hàng Dương Quán",
@@ -3670,7 +4075,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "132 Đường 65",
     "dist": "Quận 7",
     "time": "09:00 - 23:00",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.3
   },
   {
     "name": "D'Maris Buffet",
@@ -3679,7 +4085,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Tầng 3 Lotte Mart, Q7",
     "dist": "Quận 7",
     "time": "11:00 - 22:00",
-    "price": "400k - 600k"
+    "price": "400k - 600k",
+    "rating": 4.0
   },
   {
     "name": "Bò Tơ Quán Mộc",
@@ -3688,7 +4095,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "486 Nguyễn Thị Thập",
     "dist": "Quận 7",
     "time": "10:00 - 23:00",
-    "price": "200k"
+    "price": "200k",
+    "rating": 4.8
   },
   {
     "name": "Cháo Vịt Gò Công",
@@ -3697,7 +4105,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "315 Lê Văn Lương",
     "dist": "Quận 7",
     "time": "15:00 - 22:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.6
   },
   {
     "name": "Cơm Niêu Thiên Lý",
@@ -3706,7 +4115,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "74 Nguyễn Thị Thập",
     "dist": "Quận 7",
     "time": "10:00 - 21:00",
-    "price": "100k"
+    "price": "100k",
+    "rating": 4.3
   },
   {
     "name": "Ốc Luộc Chợ Tân Mỹ",
@@ -3715,7 +4125,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Tân Mỹ",
     "dist": "Quận 7",
     "time": "16:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.7
   },
   {
     "name": "Mì Quảng Sâm",
@@ -3724,7 +4135,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8 Ca Văn Thỉnh",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 13:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.8
   },
   {
     "name": "Bò Kho Cô Mai",
@@ -3733,7 +4145,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "25 Thăng Long",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 22:00",
-    "price": "55k"
+    "price": "55k",
+    "rating": 3.6
   },
   {
     "name": "Cơm Niêu Việt Nam",
@@ -3742,7 +4155,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "234 Cộng Hòa",
     "dist": "Quận Tân Bình",
     "time": "10:00 - 22:00",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.2
   },
   {
     "name": "Ốc Nhớ Sài Gòn",
@@ -3751,7 +4165,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "136 Trịnh Đình Trọng",
     "dist": "Quận Tân Phú",
     "time": "16:00 - 23:00",
-    "price": "50k - 100k"
+    "price": "50k - 100k",
+    "rating": 4.3
   },
   {
     "name": "Bún Bò Huế A Hùng",
@@ -3760,7 +4175,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "68/10 Gò Dầu",
     "dist": "Quận Tân Phú",
     "time": "06:00 - 21:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.4
   },
   {
     "name": "Lẩu Bò Tươi",
@@ -3769,7 +4185,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "298 Tân Sơn Nhì",
     "dist": "Quận Tân Phú",
     "time": "10:00 - 23:00",
-    "price": "150k"
+    "price": "150k",
+    "rating": 4.4
   },
   {
     "name": "Tokbokki Ông Park",
@@ -3778,7 +4195,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26 Tân Sơn Nhì",
     "dist": "Quận Tân Phú",
     "time": "11:00 - 22:00",
-    "price": "120k"
+    "price": "120k",
+    "rating": 4.2
   },
   {
     "name": "Lẩu Ếch Sáu Hiếu",
@@ -3787,7 +4205,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "429/9 Quang Trung",
     "dist": "Quận Gò Vấp",
     "time": "15:30 - 23:00",
-    "price": "150k"
+    "price": "150k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Mì Chảo Hạnh Thông Tây",
@@ -3796,7 +4215,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20 Đường số 18",
     "dist": "Quận Gò Vấp",
     "time": "06:00 - 13:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.4
   },
   {
     "name": "Mì Vịt Tiềm A Mành",
@@ -3805,7 +4225,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "375 Nguyễn Oanh",
     "dist": "Quận Gò Vấp",
     "time": "15:00 - 22:00",
-    "price": "80k - 100k"
+    "price": "80k - 100k",
+    "rating": 5.0
   },
   {
     "name": "Lẩu Dê Đức Hùng",
@@ -3814,7 +4235,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45/3A Song Hành",
     "dist": "Quận 12",
     "time": "09:00 - 23:00",
-    "price": "150k - 200k"
+    "price": "150k - 200k",
+    "rating": 4.7
   },
   {
     "name": "Bún Bò Huế Xưa",
@@ -3823,7 +4245,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "309 Lê Văn Khương",
     "dist": "Quận 12",
     "time": "06:00 - 22:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.9
   },
   {
     "name": "Ốc Sinh Viên",
@@ -3832,7 +4255,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19 Đường số 1",
     "dist": "Quận Bình Tân",
     "time": "15:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.6
   },
   {
     "name": "Aeon Mall Bình Tân",
@@ -3841,7 +4265,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Đường số 17A",
     "dist": "Quận Bình Tân",
     "time": "10:00 - 22:00",
-    "price": "Đa dạng"
+    "price": "Đa dạng",
+    "rating": 4.5
   },
   {
     "name": "Lẩu Bò Tơ Năm Sánh",
@@ -3850,7 +4275,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "86 Đường số 7",
     "dist": "Quận Bình Tân",
     "time": "10:00 - 23:00",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 4.8
   },
   {
     "name": "Ốc 24h",
@@ -3859,7 +4285,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "C4/10 Phạm Hùng",
     "dist": "Huyện Bình Chánh",
     "time": "15:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.5
   },
   {
     "name": "Kichi Kichi",
@@ -3868,7 +4295,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "300k"
+    "price": "300k",
+    "rating": 4.2
   },
   {
     "name": "Gogi House",
@@ -3877,7 +4305,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "350k"
+    "price": "350k",
+    "rating": 3.7
   },
   {
     "name": "Manwah",
@@ -3886,7 +4315,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "400k"
+    "price": "400k",
+    "rating": 3.7
   },
   {
     "name": "Highlands Coffee",
@@ -3895,7 +4325,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "07:00 - 23:00",
-    "price": "35k - 65k"
+    "price": "35k - 65k",
+    "rating": 4.4
   },
   {
     "name": "Phúc Long",
@@ -3904,7 +4335,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "07:00 - 22:30",
-    "price": "45k - 70k"
+    "price": "45k - 70k",
+    "rating": 4.8
   },
   {
     "name": "Pizza Company",
@@ -3913,7 +4345,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "200k - 400k"
+    "price": "200k - 400k",
+    "rating": 4.0
   },
   {
     "name": "Texas Chicken",
@@ -3922,7 +4355,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "100k"
+    "price": "100k",
+    "rating": 3.6
   },
   {
     "name": "Lotteria",
@@ -3931,7 +4365,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "09:00 - 22:00",
-    "price": "40k - 80k"
+    "price": "40k - 80k",
+    "rating": 5.0
   },
   {
     "name": "Jollibee",
@@ -3940,7 +4375,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "09:00 - 22:00",
-    "price": "40k - 80k"
+    "price": "40k - 80k",
+    "rating": 3.8
   },
   {
     "name": "The Coffee House",
@@ -3949,7 +4385,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "07:00 - 22:30",
-    "price": "40k - 70k"
+    "price": "40k - 70k",
+    "rating": 4.1
   },
   {
     "name": "Bún Đậu Mắm Tôm A Chảnh",
@@ -3958,7 +4395,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "10:00 - 22:00",
-    "price": "55k"
+    "price": "55k",
+    "rating": 3.9
   },
   {
     "name": "Mì Cay Sasin",
@@ -3967,7 +4405,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "09:00 - 22:00",
-    "price": "45k - 60k"
+    "price": "45k - 60k",
+    "rating": 4.6
   },
   {
     "name": "Hủ Tiếu Mực Ông Già Cali",
@@ -3976,7 +4415,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "06:00 - 23:00",
-    "price": "50k - 70k"
+    "price": "50k - 70k",
+    "rating": 4.1
   },
   {
     "name": "Bò Lế Rồ",
@@ -3985,7 +4425,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Toàn Thành Phố",
     "time": "11:00 - 22:00",
-    "price": "150k - 250k"
+    "price": "150k - 250k",
+    "rating": 4.6
   },
   {
     "name": "Phở Thìn Lò Đúc",
@@ -3994,7 +4435,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "13 Lò Đúc",
     "dist": "Hà Nội",
     "time": "06:00 - 21:00",
-    "price": "70k - 90k"
+    "price": "70k - 90k",
+    "rating": 4.2
   },
   {
     "name": "Bún Chả Hương Liên",
@@ -4003,7 +4445,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "24 Lê Văn Hưu",
     "dist": "Hà Nội",
     "time": "08:00 - 20:30",
-    "price": "50k - 80k"
+    "price": "50k - 80k",
+    "rating": 4.9
   },
   {
     "name": "Chả Cá Lã Vọng",
@@ -4012,7 +4455,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Chả Cá",
     "dist": "Hà Nội",
     "time": "11:00 - 22:00",
-    "price": "175k/suất"
+    "price": "175k/suất",
+    "rating": 5.0
   },
   {
     "name": "Bún Đậu Mắm Tôm Hàng Khay",
@@ -4021,7 +4465,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngõ 31 Hàng Khay",
     "dist": "Hà Nội",
     "time": "09:00 - 21:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.3
   },
   {
     "name": "Phở Lý Quốc Sư",
@@ -4030,7 +4475,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "10 Lý Quốc Sư",
     "dist": "Hà Nội",
     "time": "06:00 - 22:00",
-    "price": "60k - 100k"
+    "price": "60k - 100k",
+    "rating": 3.6
   },
   {
     "name": "Xôi Yến",
@@ -4039,7 +4485,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "35B Nguyễn Hữu Huân",
     "dist": "Hà Nội",
     "time": "06:00 - 23:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.8
   },
   {
     "name": "Cafe Giảng",
@@ -4048,7 +4495,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "39 Nguyễn Hữu Huân",
     "dist": "Hà Nội",
     "time": "07:00 - 22:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.9
   },
   {
     "name": "Bún Thang Bà Đức",
@@ -4057,7 +4505,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "48 Cầu Gỗ",
     "dist": "Hà Nội",
     "time": "07:00 - 23:00",
-    "price": "45k"
+    "price": "45k",
+    "rating": 3.9
   },
   {
     "name": "Bánh Cuốn Bà Hoành",
@@ -4066,7 +4515,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "66 Tô Hiến Thành",
     "dist": "Hà Nội",
     "time": "06:00 - 20:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.6
   },
   {
     "name": "Nộm Bố Già",
@@ -4075,7 +4525,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Nguyễn Trung Trực",
     "dist": "Hà Nội",
     "time": "13:00 - 18:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 3.9
   },
   {
     "name": "Mì Quảng Bà Mua",
@@ -4084,7 +4535,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "95A Nguyễn Tri Phương",
     "dist": "Đà Nẵng",
     "time": "06:00 - 22:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.4
   },
   {
     "name": "Bánh Tráng Thịt Heo Trần",
@@ -4093,7 +4545,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "4 Lê Duẩn",
     "dist": "Đà Nẵng",
     "time": "09:00 - 22:00",
-    "price": "150k - 200k"
+    "price": "150k - 200k",
+    "rating": 4.5
   },
   {
     "name": "Hải Sản Bé Mặn",
@@ -4102,7 +4555,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Lô 11 Võ Nguyên Giáp",
     "dist": "Đà Nẵng",
     "time": "09:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.7
   },
   {
     "name": "Bún Chả Cá 109",
@@ -4111,7 +4565,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "109 Nguyễn Chí Thanh",
     "dist": "Đà Nẵng",
     "time": "06:00 - 22:00",
-    "price": "30k - 40k"
+    "price": "30k - 40k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Xèo Bà Dưỡng",
@@ -4120,7 +4575,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "K280/23 Hoàng Diệu",
     "dist": "Đà Nẵng",
     "time": "09:30 - 21:00",
-    "price": "50k - 80k"
+    "price": "50k - 80k",
+    "rating": 4.7
   },
   {
     "name": "Chè Liên",
@@ -4129,7 +4585,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "189 Hoàng Diệu",
     "dist": "Đà Nẵng",
     "time": "08:00 - 22:00",
-    "price": "20k - 30k"
+    "price": "20k - 30k",
+    "rating": 4.6
   },
   {
     "name": "Cơm Gà Bà Buội",
@@ -4138,7 +4595,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "22 Phan Chu Trinh",
     "dist": "Hội An",
     "time": "10:30 - 20:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 3.9
   },
   {
     "name": "Bánh Mì Phượng",
@@ -4147,7 +4605,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2B Phan Chu Trinh",
     "dist": "Hội An",
     "time": "06:30 - 21:30",
-    "price": "30k - 40k"
+    "price": "30k - 40k",
+    "rating": 3.8
   },
   {
     "name": "Cao Lầu Thanh",
@@ -4156,7 +4615,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26 Thái Phiên",
     "dist": "Hội An",
     "time": "07:00 - 19:00",
-    "price": "30k - 40k"
+    "price": "30k - 40k",
+    "rating": 3.5
   },
   {
     "name": "Mót Hội An",
@@ -4165,7 +4625,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "150 Trần Phú",
     "dist": "Hội An",
     "time": "08:00 - 22:00",
-    "price": "12k"
+    "price": "12k",
+    "rating": 4.9
   },
   {
     "name": "Lẩu Gà Lá É Tao Ngộ",
@@ -4174,7 +4635,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Đường 3/4",
     "dist": "Đà Lạt",
     "time": "07:00 - 23:00",
-    "price": "200k - 300k"
+    "price": "200k - 300k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Căn Lệ",
@@ -4183,7 +4645,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "27/44 Yersin",
     "dist": "Đà Lạt",
     "time": "07:00 - 17:00",
-    "price": "30k - 50k"
+    "price": "30k - 50k",
+    "rating": 4.0
   },
   {
     "name": "Lẩu Bò Quán Gỗ (Ba Toa)",
@@ -4192,7 +4655,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1/29 Hoàng Diệu",
     "dist": "Đà Lạt",
     "time": "10:00 - 22:00",
-    "price": "200k - 300k"
+    "price": "200k - 300k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Tráng Nướng Dì Đinh",
@@ -4201,7 +4665,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26 Hoàng Diệu",
     "dist": "Đà Lạt",
     "time": "14:00 - 18:30",
-    "price": "20k - 30k"
+    "price": "20k - 30k",
+    "rating": 4.4
   },
   {
     "name": "Kem Bơ Thanh Thảo",
@@ -4210,7 +4675,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "76 Nguyễn Văn Trỗi",
     "dist": "Đà Lạt",
     "time": "07:00 - 22:00",
-    "price": "25k - 40k"
+    "price": "25k - 40k",
+    "rating": 4.8
   },
   {
     "name": "Nem Nướng Bà Hùng",
@@ -4219,7 +4685,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "328 Phan Đình Phùng",
     "dist": "Đà Lạt",
     "time": "11:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.5
   },
   {
     "name": "Tiệm Cà Phê Túi Mơ To",
@@ -4228,7 +4695,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 31 Sào Nam",
     "dist": "Đà Lạt",
     "time": "07:00 - 21:30",
-    "price": "50k - 80k"
+    "price": "50k - 80k",
+    "rating": 4.9
   },
   {
     "name": "Nem Nướng Đặng Văn Quyên",
@@ -4237,7 +4705,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16A Lãn Ông",
     "dist": "Nha Trang",
     "time": "07:30 - 20:30",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.3
   },
   {
     "name": "Bún Cá Hạnh Nhiên",
@@ -4246,7 +4715,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "61 Trịnh Phong",
     "dist": "Nha Trang",
     "time": "06:00 - 11:00",
-    "price": "35k - 45k"
+    "price": "35k - 45k",
+    "rating": 3.6
   },
   {
     "name": "Bò Lạc Cảnh",
@@ -4255,7 +4725,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "44 Nguyễn Bỉnh Khiêm",
     "dist": "Nha Trang",
     "time": "10:00 - 22:00",
-    "price": "150k - 200k"
+    "price": "150k - 200k",
+    "rating": 4.2
   },
   {
     "name": "Hải Sản Thanh Sương",
@@ -4264,7 +4735,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21 Trần Phú",
     "dist": "Nha Trang",
     "time": "15:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.3
   },
   {
     "name": "Cơm Hến Hoa Đông",
@@ -4273,7 +4745,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64 Kiệt 7 Ưng Bình",
     "dist": "Huế",
     "time": "07:00 - 22:00",
-    "price": "15k - 20k"
+    "price": "15k - 20k",
+    "rating": 4.6
   },
   {
     "name": "Bún Bò Huế Bà Tuyết",
@@ -4282,7 +4755,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "47 Nguyễn Công Trứ",
     "dist": "Huế",
     "time": "06:00 - 11:00",
-    "price": "35k - 50k"
+    "price": "35k - 50k",
+    "rating": 3.6
   },
   {
     "name": "Chè Hẻm",
@@ -4291,7 +4765,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Kiệt 29 Hùng Vương",
     "dist": "Huế",
     "time": "10:00 - 22:00",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.7
   },
   {
     "name": "Bánh Bèo Nậm Lọc Bà Đỏ",
@@ -4300,7 +4775,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8 Nguyễn Bỉnh Khiêm",
     "dist": "Huế",
     "time": "08:00 - 21:30",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 3.7
   },
   {
     "name": "Bánh Đa Cua Bà Cụ",
@@ -4309,7 +4785,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "179 Cầu Đất",
     "dist": "Hải Phòng",
     "time": "06:00 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Mì Cay Bà Già",
@@ -4318,7 +4795,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "57 Lê Lợi",
     "dist": "Hải Phòng",
     "time": "07:00 - 22:30",
-    "price": "5k/cái"
+    "price": "5k/cái",
+    "rating": 4.4
   },
   {
     "name": "Dừa Dầm Cô Hằng",
@@ -4327,7 +4805,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "124 Lạch Tray",
     "dist": "Hải Phòng",
     "time": "09:00 - 22:00",
-    "price": "25k - 30k"
+    "price": "25k - 30k",
+    "rating": 4.0
   },
   {
     "name": "Ốc Thủy Dương",
@@ -4336,7 +4815,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "30/263 Lạch Tray",
     "dist": "Hải Phòng",
     "time": "15:00 - 22:00",
-    "price": "50k - 100k"
+    "price": "50k - 100k",
+    "rating": 4.7
   },
   {
     "name": "Lẩu Mắm Dạ Lý",
@@ -4345,7 +4825,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "89 Đường 3/2",
     "dist": "Cần Thơ",
     "time": "10:00 - 22:00",
-    "price": "200k - 300k"
+    "price": "200k - 300k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Xèo 7 Tới",
@@ -4354,7 +4835,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45 Hoàng Quốc Việt",
     "dist": "Cần Thơ",
     "time": "07:30 - 22:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.7
   },
   {
     "name": "Nem Nướng Thanh Vân",
@@ -4363,7 +4845,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17 Đại Lộ Hòa Bình",
     "dist": "Cần Thơ",
     "time": "08:00 - 22:00",
-    "price": "50k - 70k"
+    "price": "50k - 70k",
+    "rating": 3.6
   },
   {
     "name": "Pizza Hủ Tiếu Sáu Hoài",
@@ -4372,7 +4855,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "476/14 Lộ Vòng Cung",
     "dist": "Cần Thơ",
     "time": "06:00 - 18:00",
-    "price": "35k - 50k"
+    "price": "35k - 50k",
+    "rating": 4.4
   },
   {
     "name": "Lẩu Tôm 5 Ri Biên Hòa",
@@ -4381,7 +4865,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20/3C Khóm 5, P. Hòa Bình",
     "dist": "Biên Hòa",
     "time": "10:00 - 22:00",
-    "price": "200k"
+    "price": "200k",
+    "rating": 3.8
   },
   {
     "name": "Chả Lụi Biên Hòa",
@@ -4390,7 +4875,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Huỳnh Văn Nghệ",
     "dist": "Biên Hòa",
     "time": "14:00 - 22:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.9
   },
   {
     "name": "Bánh Canh Chả Cá Bà Lý",
@@ -4399,7 +4885,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "566 Trần Hưng Đạo",
     "dist": "Phan Thiết",
     "time": "16:00 - 22:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.0
   },
   {
     "name": "Lẩu Thả Khánh Sơ",
@@ -4408,7 +4895,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "54 Nguyễn Đình Chiểu",
     "dist": "Phan Thiết",
     "time": "09:00 - 22:00",
-    "price": "250k"
+    "price": "250k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Khọt Gốc Vú Sữa",
@@ -4417,7 +4905,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Nguyễn Trường Tộ, P.2",
     "dist": "Vũng Tàu",
     "time": "07:00 - 15:30",
-    "price": "50k - 60k"
+    "price": "50k - 60k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Khọt Cô Ba Vũng Tàu",
@@ -4426,7 +4915,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Hoàng Hoa Thám, P.3",
     "dist": "Vũng Tàu",
     "time": "07:00 - 22:00",
-    "price": "60k - 80k"
+    "price": "60k - 80k",
+    "rating": 5.0
   },
   {
     "name": "Bánh Khọt Bà Hai",
@@ -4435,7 +4925,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "42 Trần Đồng, P.3",
     "dist": "Vũng Tàu",
     "time": "06:00 - 12:00",
-    "price": "40k - 60k"
+    "price": "40k - 60k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Khọt Miền Đông",
@@ -4444,7 +4935,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "59 Bà Triệu, P.4",
     "dist": "Vũng Tàu",
     "time": "06:00 - 21:00",
-    "price": "35k - 50k"
+    "price": "35k - 50k",
+    "rating": 4.3
   },
   {
     "name": "Bánh Khọt Cây Sung",
@@ -4453,7 +4945,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19 Hoàng Hoa Thám, P.3",
     "dist": "Vũng Tàu",
     "time": "09:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.1
   },
   {
     "name": "Hải Sản Gành Hào",
@@ -4462,7 +4955,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "03 Trần Phú, P.5",
     "dist": "Vũng Tàu",
     "time": "10:00 - 21:30",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.3
   },
   {
     "name": "Ốc Tự Nhiên",
@@ -4471,7 +4965,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "34 Trần Phú, P.1",
     "dist": "Vũng Tàu",
     "time": "11:00 - 23:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.3
   },
   {
     "name": "Hải Sản Thành Phát 1",
@@ -4480,7 +4975,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "334 Trần Phú, P.5",
     "dist": "Vũng Tàu",
     "time": "08:30 - 22:30",
-    "price": "Vừa phải"
+    "price": "Vừa phải",
+    "rating": 3.9
   },
   {
     "name": "Ốc Năm Tầng",
@@ -4489,7 +4985,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "A12 Nguyễn Thái Học",
     "dist": "Vũng Tàu",
     "time": "17:00 - 22:00",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.4
   },
   {
     "name": "Quán Nướng Cô Nên",
@@ -4498,7 +4995,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20 Trần Phú, P.1",
     "dist": "Vũng Tàu",
     "time": "16:00 - 23:00",
-    "price": "100k - 200k"
+    "price": "100k - 200k",
+    "rating": 3.7
   },
   {
     "name": "Chợ Đêm Vũng Tàu",
@@ -4507,7 +5005,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Sau lưng KS Imperial",
     "dist": "Vũng Tàu",
     "time": "18:00 - 02:00",
-    "price": "Đa dạng"
+    "price": "Đa dạng",
+    "rating": 4.1
   },
   {
     "name": "Lẩu Cá Đuối Hoàng Minh",
@@ -4516,7 +5015,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "44 Trương Công Định",
     "dist": "Vũng Tàu",
     "time": "09:00 - 23:30",
-    "price": "200k - 300k"
+    "price": "200k - 300k",
+    "rating": 4.5
   },
   {
     "name": "Lẩu Cá Đuối 7 Lượm",
@@ -4525,7 +5025,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "37 Nguyễn Trường Tộ",
     "dist": "Vũng Tàu",
     "time": "09:00 - 23:00",
-    "price": "150k - 250k"
+    "price": "150k - 250k",
+    "rating": 4.6
   },
   {
     "name": "Lẩu Cá Đuối Út Mười",
@@ -4534,7 +5035,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16A Trương Công Định",
     "dist": "Vũng Tàu",
     "time": "08:30 - 22:00",
-    "price": "180k"
+    "price": "180k",
+    "rating": 3.7
   },
   {
     "name": "Bánh Canh Ghẹ Anh Vy",
@@ -4543,7 +5045,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "109 Võ Thị Sáu",
     "dist": "Vũng Tàu",
     "time": "06:00 - 21:00",
-    "price": "40k - 70k"
+    "price": "40k - 70k",
+    "rating": 3.5
   },
   {
     "name": "Bún Súng Vũng Tàu",
@@ -4552,7 +5055,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Sát Bãi Sau",
     "dist": "Vũng Tàu",
     "time": "07:00 - 18:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 3.8
   },
   {
     "name": "Bánh Bông Lan Gốc Cột Điện",
@@ -4561,7 +5065,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17B Nguyễn Trường Tộ",
     "dist": "Vũng Tàu",
     "time": "06:00 - 22:00",
-    "price": "25k - 40k"
+    "price": "25k - 40k",
+    "rating": 4.5
   },
   {
     "name": "Kem Alibaba",
@@ -4570,7 +5075,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1A Trần Phú (Cáp treo)",
     "dist": "Vũng Tàu",
     "time": "16:00 - 22:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 3.5
   },
   {
     "name": "Yaourt Cô Tiên",
@@ -4579,7 +5085,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đường lên ngọn Hải Đăng",
     "dist": "Vũng Tàu",
     "time": "07:00 - 17:00",
-    "price": "10k - 20k"
+    "price": "10k - 20k",
+    "rating": 4.9
   },
   {
     "name": "Soho Coffee",
@@ -4588,7 +5095,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "66 Hạ Long",
     "dist": "Vũng Tàu",
     "time": "07:00 - 23:00",
-    "price": "45k - 80k"
+    "price": "45k - 80k",
+    "rating": 3.8
   },
   {
     "name": "Lightroom Coffee",
@@ -4597,7 +5105,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2/23 Hải Đăng",
     "dist": "Vũng Tàu",
     "time": "07:00 - 22:00",
-    "price": "40k - 70k"
+    "price": "40k - 70k",
+    "rating": 4.7
   },
   {
     "name": "Gazebo Beach Front",
@@ -4606,7 +5115,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "90 Hạ Long",
     "dist": "Vũng Tàu",
     "time": "07:00 - 02:00",
-    "price": "Cao"
+    "price": "Cao",
+    "rating": 4.8
   },
   {
     "name": "Bánh Mì Chảo Hàng Quyên",
@@ -4615,7 +5125,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "268 Trương Công Định",
     "dist": "Vũng Tàu",
     "time": "06:00 - 13:00",
-    "price": "35k - 50k"
+    "price": "35k - 50k",
+    "rating": 4.7
   },
   {
     "name": "Bánh mì pate Hoàng Oanh",
@@ -4624,7 +5135,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8 Phan Văn Hân",
     "dist": "Quận Bình Thạnh",
     "time": "14h-3h",
-    "price": "20k-25k"
+    "price": "20k-25k",
+    "rating": 4.1
   },
   {
     "name": "Bánh mì thịt khìa Cô cúc siêu chất lượng",
@@ -4633,7 +5145,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "36 An Dương Vương",
     "dist": "Quận 5",
     "time": "6h-11h30",
-    "price": "25k-30k"
+    "price": "25k-30k",
+    "rating": 4.0
   },
   {
     "name": "Bún bò Quận 7 (Không gian đẹp)",
@@ -4642,7 +5155,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "156/5 Nguyễn Văn Linh",
     "dist": "Quận 7",
     "time": "5h-21h",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Canh Càng Cúm",
@@ -4651,7 +5165,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/22C Trần Quang DiệuPhường 14",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 3.8
   },
   {
     "name": "Bún bò ngon số 1 Sài Gòn",
@@ -4660,7 +5175,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "109 Trần Quốc Toản",
     "dist": "Quận 3",
     "time": "15:00 - 20:30",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.1
   },
   {
     "name": "Bánh flan",
@@ -4669,7 +5185,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "347/22 Minh Phụng, P.2",
     "dist": "Quận 11",
     "time": "10:00 - 22:00",
-    "price": "10-20k"
+    "price": "10-20k",
+    "rating": 3.6
   },
   {
     "name": "Bún xào, mì xào, miến xào (ăn sáng)",
@@ -4678,7 +5195,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21 - 23 Nguyễn Thị Minh Khai , P. Bến Nghé",
     "dist": "Quận 1",
     "time": "Sáng sớm",
-    "price": ""
+    "price": "",
+    "rating": 4.5
   },
   {
     "name": "Bánh Xèo, Bánh Hỏi, Bò Lá Lốt",
@@ -4687,7 +5205,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "023 Lô H chung cư Ngô Gia Tự",
     "dist": "Quận 10",
     "time": "16h-20h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.6
   },
   {
     "name": "Lò Đất BBQ",
@@ -4696,7 +5215,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chi Nhánh 1: 396 Minh Phụng, Phường 9, Quận 11. Chi Nhánh 2: 159 Trần Tuấn Khải, Phường 5, Quận 5. Chi Nhánh 3: 922 Quang Trung, Phường 8, Gò vấp.",
     "dist": "Quận Gò Vấp",
     "time": "16:00 - 23:30.",
-    "price": ""
+    "price": "",
+    "rating": 4.0
   },
   {
     "name": "7 Ngày 7 Món",
@@ -4705,7 +5225,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "465 Trần Hưng Đạo, Quận 5",
     "dist": "Quận 5",
     "time": "6h-9h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.4
   },
   {
     "name": "Chè Thốt Nốt Seoul",
@@ -4714,7 +5235,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "Quận 7",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì bì thịt chan nước mắm",
@@ -4723,7 +5245,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã 3 Nam Kỳ KN & Ngô Thời Nhiệm (Trường Marie Curie)",
     "dist": "Quận 3",
     "time": "5h-10h30",
-    "price": "17k-20k"
+    "price": "17k-20k",
+    "rating": 3.7
   },
   {
     "name": "Hẻm ăn vặt 284 Lê Văn Sỹ",
@@ -4732,7 +5255,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "284 Lê Văn Sỹ",
     "dist": "Quận 3",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.9
   },
   {
     "name": "7 Ngày 7 Món",
@@ -4741,7 +5265,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/20A Trần Quang Diệu, P.14",
     "dist": "Quận 3",
     "time": "6h-9h",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.6
   },
   {
     "name": "Bánh Mì Chả bằng thịt",
@@ -4750,7 +5275,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã Tư Phạm Hữu Trí - Thuận Kiều, Q5",
     "dist": "Quận 5",
     "time": "6h-10h",
-    "price": "13k"
+    "price": "13k",
+    "rating": 5.0
   },
   {
     "name": "BBQ - Hàu chén nướng",
@@ -4759,7 +5285,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "539 Phạm Văn Đồng, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "15h-1h khuya",
-    "price": "bé hong biết"
+    "price": "bé hong biết",
+    "rating": 4.3
   },
   {
     "name": "Bánh mì Gánh siêu dài ngon",
@@ -4768,7 +5295,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "31 Tân Tiến, Tân Bình (6h-11h)",
     "dist": "Quận Tân Bình",
     "time": "(6h-11h)",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 3.8
   },
   {
     "name": "Lẩu Mini",
@@ -4777,7 +5305,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "577 Sư Vạn Hạnh Q10 - 191 Ni Sư Huỳnh Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "10-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 3.6
   },
   {
     "name": "Bánh bèo",
@@ -4786,7 +5315,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "211/116 Hoàng Hoa Thám, Phú nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "14h-16h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 3.9
   },
   {
     "name": "Tiệm nướng Nọ trong vườn (View chill Đà Lạt)",
@@ -4795,7 +5325,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "80 Nguyễn Thái Sơn",
     "dist": "Quận Gò Vấp",
     "time": "16h-",
-    "price": ""
+    "price": "",
+    "rating": 4.9
   },
   {
     "name": "Buffet YinShi",
@@ -4804,7 +5335,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "37B Đ. Cô Bắc, Phường Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "9h-21h30",
-    "price": "239-269k"
+    "price": "239-269k",
+    "rating": 4.1
   },
   {
     "name": "Cà phê sân vườn, ao thoải mái",
@@ -4813,7 +5345,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1122/8/8 Quang Trung, P8",
     "dist": "Quận Gò Vấp",
     "time": "7h-22h45",
-    "price": ""
+    "price": "",
+    "rating": 4.9
   },
   {
     "name": "Bò bít tết cô út",
@@ -4822,7 +5355,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "009 Lô K chung cư Nguyễn Thiện Thuật, Q.3",
     "dist": "Quận 3",
     "time": "6h-12h",
-    "price": "35-100k"
+    "price": "35-100k",
+    "rating": 3.6
   },
   {
     "name": "Mì xào bò trứng non - Ga xe lửa",
@@ -4831,7 +5365,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "214 Nguyễn Phúc Nguyên, Q3",
     "dist": "Quận 3",
     "time": "13h30-16h30",
-    "price": "15k-20k"
+    "price": "15k-20k",
+    "rating": 4.6
   },
   {
     "name": "Bánh mì thịt xiên nướng Q6",
@@ -4840,7 +5375,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "165 Nguyễn Văn Luông, P.10, Q.6",
     "dist": "Quận 6",
     "time": "14h30-17h",
-    "price": "15k-20k"
+    "price": "15k-20k",
+    "rating": 3.6
   },
   {
     "name": "Mì gà",
@@ -4849,7 +5385,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "440/14 Thống Nhất, P.16",
     "dist": "Quận Gò Vấp",
     "time": "9h-21h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.7
   },
   {
     "name": "Bún riêu cua (đắt khách) riêu siêu to",
@@ -4858,7 +5395,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "219 Nguyễn Trãi, P. Nguyễn Cư Trinh",
     "dist": "Quận 1",
     "time": "11h-22h",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Hủ tiếu nam vang Chú Tứ",
@@ -4867,7 +5405,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đầu hẻm 73 Trần Bình Trọng, Q5",
     "dist": "Quận 5",
     "time": "6h-22h",
-    "price": "35k-50k"
+    "price": "35k-50k",
+    "rating": 4.6
   },
   {
     "name": "Cơm Tấm",
@@ -4876,7 +5415,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "25 Cô Giang, Phường Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "17h – 22h",
-    "price": ""
+    "price": "",
+    "rating": 3.6
   },
   {
     "name": "Dimsum Hủ Tiếu Tân Sanh Hoạt",
@@ -4885,7 +5425,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "322 Nguyễn Thị Minh Khai",
     "dist": "Quận 3",
     "time": "4h-12h",
-    "price": "25-65k"
+    "price": "25-65k",
+    "rating": 5.0
   },
   {
     "name": "Chỗ bụi ngồi chill ngắm view",
@@ -4895,7 +5436,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Quận 2",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.0
   },
   {
     "name": "Nem nướng Nha Trang Thiện Tâm",
@@ -4904,7 +5446,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "504 Minh Phụng, P.9",
     "dist": "Quận 11",
     "time": "8h-23h",
-    "price": ""
+    "price": "",
+    "rating": 3.5
   },
   {
     "name": "Đặc sản Phan Rang 2 Phượng",
@@ -4913,7 +5456,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "CC22 Trường Sơn, Cư Xá Bắc Hải, P.15",
     "dist": "Quận 10",
     "time": "09:00 - 22:30",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 3.7
   },
   {
     "name": "Sushi sashimi Kimochi",
@@ -4922,7 +5466,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "167/2/5 Ngô Tất Tố, P. 22, Phường 22",
     "dist": "Quận Bình Thạnh",
     "time": "10h-22h",
-    "price": ""
+    "price": "",
+    "rating": 5.0
   },
   {
     "name": "Bánh Mì Xíu Mại Gánh - Vạn Kiếp",
@@ -4931,7 +5476,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "A2/8 Chung Cư Miếu Nổi, P.2",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 18:00",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.8
   },
   {
     "name": "Mì quảng O Hè",
@@ -4940,7 +5486,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Cuối hẻm 315 Lê Văn Sỹ, phường 13",
     "dist": "Quận 3",
     "time": "06:30 - 12:30",
-    "price": "45-50k"
+    "price": "45-50k",
+    "rating": 4.8
   },
   {
     "name": "Hủ tiếu bánh canh Cầu Dừa",
@@ -4949,7 +5496,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "https://www.google.com/maps/place/Che%CC%80+Tro%CC%A3ng/@10.7586193,106.694403,21z/data=!4m14!1m7!3m6!1s0x31752f8a42f114ef:0x95ae0451733a83f5!2zQ8SDbiBo4buZIFRoZSBHb2xkdmlldw!8m2!3d10.7561489!4d106.6918671!16s%2Fg%2F11fw0c6q49!3m5!1s0x31752f123083c0f1:0xe27ea2baa4a2d091!8m2!3d10.7586288!4d106.6944379!16s%2Fg%2F11f54thms8",
     "dist": "Quận 4",
     "time": "19h-21h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.4
   },
   {
     "name": "Món nhật Sachi Sushi",
@@ -4958,7 +5506,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "13 Đường số 10, Tân Quy, Quận 7",
     "dist": "Quận 7",
     "time": "17h-22h",
-    "price": ""
+    "price": "",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì Gánh Cụ Bà (Đại gia BD)",
@@ -4967,7 +5516,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.8
   },
   {
     "name": "Làng Chài - Nem nướng nha trang",
@@ -4976,7 +5526,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "52 Hoàng Diệu, p.1215/2 Đoàn Như Hải, P.13",
     "dist": "Quận 4",
     "time": "7h-21h",
-    "price": ""
+    "price": "",
+    "rating": 3.6
   },
   {
     "name": "Ăn vặt",
@@ -4985,7 +5536,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 đường số 5, Cư Xá Bình Thới",
     "dist": "Quận 11",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Ăn vặt",
@@ -4994,7 +5546,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "38A Nguyễn Giản Thanh",
     "dist": "Quận 10",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 3.9
   },
   {
     "name": "Bánh mì nướng ớt đỏ Thành Công",
@@ -5003,7 +5556,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "50 Nguyễn Xuân Khoái, Tân Thành",
     "dist": "Quận Tân Phú",
     "time": "11h-21h",
-    "price": "20k"
+    "price": "20k",
+    "rating": 4.1
   },
   {
     "name": "7 Ngày 7 Món",
@@ -5012,7 +5566,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26 Cô Giang",
     "dist": "Quận 1",
     "time": "6h-11h",
-    "price": "T2: bún mắmT3: Mì vịt tiềmT4: Bún thái (hoặc bún bò huế)T5: Cháo cá, bánh mì hấpT6: Bún cà ri gà (hoặc hủ tiếu gà)T7: Bò kho (Bún bò viên gân, Xíu mại tôm)CN: Bún gói già(Mỗi ngày đều có Bún thịt nướng - bánh hỏi - bánh nghệ)"
+    "price": "T2: bún mắmT3: Mì vịt tiềmT4: Bún thái (hoặc bún bò huế)T5: Cháo cá, bánh mì hấpT6: Bún cà ri gà (hoặc hủ tiếu gà)T7: Bò kho (Bún bò viên gân, Xíu mại tôm)CN: Bún gói già(Mỗi ngày đều có Bún thịt nướng - bánh hỏi - bánh nghệ)",
+    "rating": 4.8
   },
   {
     "name": "K-Jeju Chicken",
@@ -5021,7 +5576,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "222 Đường D5, P.25, Bình thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "10:00 - 22:00",
-    "price": "100k-300k"
+    "price": "100k-300k",
+    "rating": 4.4
   },
   {
     "name": "Johnson - Tokbokki & Kimbap",
@@ -5030,7 +5586,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "118 Nguyễn Gia Trí",
     "dist": "Quận Bình Thạnh",
     "time": "10h45-21h30",
-    "price": "Giá sinh viên"
+    "price": "Giá sinh viên",
+    "rating": 3.7
   },
   {
     "name": "Chicken Plus",
@@ -5039,7 +5596,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Quận Bình Thạnh",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 5.0
   },
   {
     "name": "Mì quảng chuẩn vị miền Nam",
@@ -5048,7 +5606,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 85 Trần Quang Diệu, P.13",
     "dist": "Quận 3",
     "time": "06:00 - 12:00",
-    "price": "55k"
+    "price": "55k",
+    "rating": 3.9
   },
   {
     "name": "Miến gà trộn Đại Học Kiến Trúc",
@@ -5057,7 +5616,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "196 Pasteur, Vo Thi Sau",
     "dist": "Quận 3",
     "time": "6h-12h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.4
   },
   {
     "name": "Burger Trịu Viu",
@@ -5066,7 +5626,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Xe 1 : 348 Tôn Dán - q.4Xe 2 : 353 Mã Lò - Binh TânXe 3 : 12 Huÿnh Thúc Kháng - q.1",
     "dist": "Quận 4",
     "time": "09:30 - 22:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 3.9
   },
   {
     "name": "Bánh bèo Cô Ba",
@@ -5075,7 +5636,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123 Nguyễn Thông, P9 Quận 3",
     "dist": "Quận 3",
     "time": "16h-hết",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Bánh mì nướng muối ớt Phúc Mập",
@@ -5084,7 +5646,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "271 Tân Hương, Tân Quý, Tân Phú235 Nguyễn Thái Bình, Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "14:00 - 21:00",
-    "price": "27k"
+    "price": "27k",
+    "rating": 4.5
   },
   {
     "name": "Cơm Tấm 64A",
@@ -5093,7 +5656,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64A Lý Nam Đế, P. 7, Quận 11",
     "dist": "Quận 11",
     "time": "6:20 - 12:00",
-    "price": ""
+    "price": "",
+    "rating": 4.2
   },
   {
     "name": "Lẩu bò 150 (Không gian cafe đẹp)",
@@ -5102,7 +5666,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "150 Phan Xích Long, Phú nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "16h-23h",
-    "price": "200k/2 người"
+    "price": "200k/2 người",
+    "rating": 4.5
   },
   {
     "name": "Nấu mì Hàn Quốc tự động MYTO",
@@ -5111,7 +5676,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20-22 Phạm Ngọc Thạch, Quận 3",
     "dist": "Quận 3",
     "time": "7h-0h",
-    "price": ""
+    "price": "",
+    "rating": 4.9
   },
   {
     "name": "Hủ tiếu gõ bình dân",
@@ -5120,7 +5686,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "368 Nơ Trang Long, P.13, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.0
   },
   {
     "name": "Bánh canh cua Cầu Calmette",
@@ -5129,7 +5696,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "19 Calmette, Phường Nguyễn Thái Bình, Quận 1",
     "dist": "Quận 1",
     "time": "11h - 17h",
-    "price": ""
+    "price": "",
+    "rating": 4.2
   },
   {
     "name": "Bánh canh của Cô Tư",
@@ -5138,7 +5706,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45 Bạch Vân, P.5, Quận 5",
     "dist": "Quận 5",
     "time": "14h-18h",
-    "price": "50-100k"
+    "price": "50-100k",
+    "rating": 4.2
   },
   {
     "name": "Bún bò 25k lề đường Hai Ba Trưng",
@@ -5147,7 +5716,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đối diện 151C Hai Bà Trưng",
     "dist": "Quận 3",
     "time": "10h-hết",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.9
   },
   {
     "name": "Bún riêu cua",
@@ -5156,7 +5726,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "120 Hậu Giang",
     "dist": "Quận 6",
     "time": "18:00 - 23:59",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.0
   },
   {
     "name": "Bánh mì xiên nướng đông khách",
@@ -5165,7 +5736,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "375 Nguyễn Trãi, P.7",
     "dist": "Quận 5",
     "time": "sáng sớm",
-    "price": "15k"
+    "price": "15k",
+    "rating": 3.6
   },
   {
     "name": "Ăn vặt SPEIT (mì ỳ, thịt bọc trứng)",
@@ -5174,7 +5746,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "349/16 Nguyễn Trãi",
     "dist": "Quận 5",
     "time": "11h-22h",
-    "price": ""
+    "price": "",
+    "rating": 5.0
   },
   {
     "name": "Bánh mì thịt nướng đông khách",
@@ -5183,7 +5756,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "247 Hoàng Sa, Tân định",
     "dist": "Quận 1",
     "time": "6h30-14h",
-    "price": ""
+    "price": "",
+    "rating": 4.0
   },
   {
     "name": "Núp Coffee & Tea",
@@ -5192,7 +5766,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45 Dương Đình Nghệ, P8, Q11906 Trường Sa, P13, Q320 Tân Hoà Đông, P14, Q6320 Bà Hạt, P9, Q10",
     "dist": "Quận 10",
     "time": "08:00 - 22:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.7
   },
   {
     "name": "Chickita - Gà nướng lửa hồng",
@@ -5201,7 +5776,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "230 Nguyễn Văn Hưởng, P. Thảo Điền, Tp. Thủ Đức94 Hồ Tùng Mậu, P. Bến Nghé, Quận 1",
     "dist": "Quận 1",
     "time": "10:30 - 20:45",
-    "price": "100-300k"
+    "price": "100-300k",
+    "rating": 4.7
   },
   {
     "name": "Bánh Mì 3 Cô - chợ Nguyễn Văn Trỗi",
@@ -5210,7 +5786,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "217 Lê Văn Sỹ , Phường 13, Quận 3",
     "dist": "Quận 3",
     "time": "06H00 - 11H00",
-    "price": "15k-25k"
+    "price": "15k-25k",
+    "rating": 4.4
   },
   {
     "name": "Bún riêu vị bắc Cô Hương Béo",
@@ -5219,7 +5796,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "110 Cao Thắng, Phường 419B Nguyễn Thị Minh Khai, Quận 1",
     "dist": "Quận 3",
     "time": "6h - 21h30",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 3.5
   },
   {
     "name": "Hẻm Trộn Ăn Vặt",
@@ -5228,7 +5806,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2 Nguyễn Lâm, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "9h-22h",
-    "price": "15k-60k"
+    "price": "15k-60k",
+    "rating": 4.4
   },
   {
     "name": "Xôi Ngọc",
@@ -5237,7 +5816,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "101 Vạn Kiếp, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "(6-10h; 15-23h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.6
   },
   {
     "name": "Mì Quảng Trộn Bắp Giò Cô Yến",
@@ -5246,7 +5826,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "736/31 Cách Mạng Tháng 8, Phường 5, Quận Tân Bình, Phường 05, Quận Tân Bình, Hồ Chí Minh",
     "dist": "Quận Tân Bình",
     "time": "6-10h30; 14h30-18h30 (Thứ 6 nghỉ)",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.1
   },
   {
     "name": "Buffet cơm chay",
@@ -5255,7 +5836,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "47Bis Võ Văn Tần Quận 3",
     "dist": "Quận 3",
     "time": "(10h30-14h)",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.0
   },
   {
     "name": "Bánh đúc hành phi",
@@ -5264,7 +5846,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100/14 Thích Quảng Đức, P5, Phú Nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "từ 11h trưa đến hết",
-    "price": "22-27k"
+    "price": "22-27k",
+    "rating": 3.7
   },
   {
     "name": "Lẩu Sa Tế Uyên Ương",
@@ -5273,7 +5856,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "213 Trần Tuấn khải, P.7, Q.5",
     "dist": "Quận 5",
     "time": "170-250k",
-    "price": "18h-23h"
+    "price": "18h-23h",
+    "rating": 4.3
   },
   {
     "name": "Bún bò Huế Hoàng Sa",
@@ -5282,7 +5866,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "725 Hoàng Sa, Quận 3",
     "dist": "Quận 3",
     "time": "35k-50k",
-    "price": "17h-19h"
+    "price": "17h-19h",
+    "rating": 4.3
   },
   {
     "name": "Mì Ốc Hên Dì Lan",
@@ -5291,7 +5876,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1A Cư Xá Đồng Tiến, Thành Thái ,Q.1024 Đường Số 1, P.16, Gò Vấp69/1/28 Nguyễn Gia Trí, P.25, Bình Thạnh",
     "dist": "​",
     "time": "08:30 - 20:00",
-    "price": "42k"
+    "price": "42k",
+    "rating": 4.3
   },
   {
     "name": "Bún măm Đầu Cá",
@@ -5300,7 +5886,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "98 Diên Hồng, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "9h-20h",
-    "price": "50k"
+    "price": "50k",
+    "rating": 5.0
   },
   {
     "name": "Bánh mì cụ lý",
@@ -5309,7 +5896,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "189 Hai Bà Trưng, Q3",
     "dist": "Quận 3",
     "time": "6h-9h",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.1
   },
   {
     "name": "Bánh mì Đồng Nai",
@@ -5318,7 +5906,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 Đồng Nai, P.15, Q.10",
     "dist": "Quận 10",
     "time": "6h-13h",
-    "price": "17k"
+    "price": "17k",
+    "rating": 4.7
   },
   {
     "name": "Bún xì dầu",
@@ -5327,7 +5916,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "01 Quách văn tuấn, p.12, Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "9h-20h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.6
   },
   {
     "name": "Bánh mì chiên tôm - chả giò",
@@ -5336,7 +5926,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "403 Đoàn văn bơ, p13, quận 4",
     "dist": "Quận 4",
     "time": "12h30-17h30",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Mì quảng - Hủ tiếu mực",
@@ -5345,7 +5936,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "243B Nguyễn Thượng Hiền, P.6, Bình thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "6h-20h",
-    "price": "59k-70k"
+    "price": "59k-70k",
+    "rating": 4.0
   },
   {
     "name": "Bánh mì Chả Cá Nha Trang",
@@ -5354,7 +5946,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "12 Nguyễn Thị Minh Khai, Q1",
     "dist": "Quận 1",
     "time": "6h-2h sáng",
-    "price": "20k-30k"
+    "price": "20k-30k",
+    "rating": 4.1
   },
   {
     "name": "Bánh Mì Bì Thịt, Bánh Hỏi Nem Thịt Nướng",
@@ -5363,7 +5956,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "22 Trần Kế Xương, Phú Nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "",
-    "price": "15-35k"
+    "price": "15-35k",
+    "rating": 4.6
   },
   {
     "name": "Bún bò Hẻm Hoàng Diệu",
@@ -5372,7 +5966,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "243/35 Hoàng Diệu, Q4",
     "dist": "Quận 4",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.7
   },
   {
     "name": "Bánh Mì Chả Cá, Chả Ram, Chả bò Quảng Nam",
@@ -5381,7 +5976,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "05 Hoa Sứ, Phú Nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.7
   },
   {
     "name": "Bánh mì Heo quay - Nem Nướng - Bì",
@@ -5390,7 +5986,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 19 Trần Bình Trọng, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "6-10h",
-    "price": "20k"
+    "price": "20k",
+    "rating": 3.6
   },
   {
     "name": "Bún Thịt Nướng Đêm",
@@ -5399,7 +5996,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Vĩnh Khánh, Q.4",
     "dist": "Quận 4",
     "time": "17h-3h sáng",
-    "price": "37k"
+    "price": "37k",
+    "rating": 4.9
   },
   {
     "name": "Bánh Ướt Cô Út 2H",
@@ -5408,7 +6006,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "710/2 Phan Văn Trị, Gò Vấp",
     "dist": "Quận Gò Vấp",
     "time": "11h30-21h30",
-    "price": "100k"
+    "price": "100k",
+    "rating": 3.9
   },
   {
     "name": "Mỳ trộn thái",
@@ -5417,7 +6016,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100 Đường số 13, Tân quy, Quận 7",
     "dist": "Quận 7",
     "time": "Sáng - 22h",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.2
   },
   {
     "name": "Bún thịt nướng Cô Nga",
@@ -5426,7 +6026,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14 Vĩnh Khánh Quận 4",
     "dist": "Quận 4",
     "time": "17h-3h sáng",
-    "price": "37k"
+    "price": "37k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì 12k",
@@ -5435,7 +6036,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "24 lương thế vinh, tân phú",
     "dist": "Quận Tân Phú",
     "time": "tối",
-    "price": "12k"
+    "price": "12k",
+    "rating": 4.6
   },
   {
     "name": "Thịt xiên nướng",
@@ -5444,7 +6046,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Trường marie curie 159 Đ. Nam Kỳ Khởi Nghĩa, Võ Thị Sáu, Quận 3",
     "dist": "Quận 3",
     "time": "tối",
-    "price": "8k"
+    "price": "8k",
+    "rating": 3.5
   },
   {
     "name": "Cơm chiên ngon lạp xưởng chả",
@@ -5453,7 +6056,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã tư nguyễn công trứ - Yersin349 nguyễn công trứ, Quận 1",
     "dist": "Quận 1",
     "time": "3h30 Ngã tư nguyễn công trứ - Yersin5h 349 nguyễn công trứ, Quận 1",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.2
   },
   {
     "name": "Bún riêu chị Lan",
@@ -5463,7 +6067,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Quận 2",
     "time": "16h-21h",
-    "price": "25-40k"
+    "price": "25-40k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì ca dé Hoa, Xôi sá bấu",
@@ -5472,7 +6077,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "327J Tùng Thiện Vương, Quận 8",
     "dist": "Quận 8",
     "time": "6h-8h",
-    "price": "25 - 45k"
+    "price": "25 - 45k",
+    "rating": 3.6
   },
   {
     "name": "Hủ Tiếu Ngon rẻ",
@@ -5481,7 +6087,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "679/6 Vĩnh Viễn659/7 Vĩnh Viễn",
     "dist": "Quận 11",
     "time": "15:00 - 22:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 3.8
   },
   {
     "name": "Xôi mặn gà gán",
@@ -5490,7 +6097,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Trước trường bạch đăng Lê văn sỹ quận 3",
     "dist": "Quận 3",
     "time": "",
-    "price": "25k"
+    "price": "25k",
+    "rating": 3.7
   },
   {
     "name": "Bún bò siêu chất lượng",
@@ -5499,7 +6107,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "273/1B Tô Hiến Thành Quận 10",
     "dist": "Quận 10",
     "time": "5h - 11h tỗi",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.6
   },
   {
     "name": "Bánh xèo giòn bình thuận",
@@ -5508,7 +6117,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Huỳnh đình Hai, phú nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "15h-21h",
-    "price": "12k"
+    "price": "12k",
+    "rating": 4.6
   },
   {
     "name": "Nem chả lụi",
@@ -5517,7 +6127,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21 Nguyễn Văn Nghi Gò Vấp",
     "dist": "Quận Gò Vấp",
     "time": "15h-22h",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.5
   },
   {
     "name": "Hủ tiếu Thái Lan Hihi",
@@ -5526,7 +6137,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "225/7 Nguyễn Đình Chiểu, Quận 3",
     "dist": "Quận 3",
     "time": "10h-21h30",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.1
   },
   {
     "name": "Bánh xèo tôm nhảy",
@@ -5535,7 +6147,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Nơ Trang Long, Bình thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "09:00 - 22:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 3.6
   },
   {
     "name": "Hủ tiếu xóm chiếu nhiều topping",
@@ -5544,7 +6157,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm C13 (Đối diện Circle K trường tiểu học xóm chiếu) số 9 Tôn Đản, P. 13, Q.4, Tp. HCM.",
     "dist": "Quận 4",
     "time": "Chiều - tối",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Bún Bò Sông Hương",
@@ -5553,7 +6167,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123 Trần Quốc Thảo, Quận 3",
     "dist": "Quận 3",
     "time": "6-10h",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.7
   },
   {
     "name": "Hủ tiếu Dê GIA ĐẠT",
@@ -5562,7 +6177,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "111 Thái Phiên, P.2, Q.11",
     "dist": "Quận 11",
     "time": "6h - 10h30",
-    "price": "40.000đ - 120.000đ."
+    "price": "40.000đ - 120.000đ.",
+    "rating": 4.7
   },
   {
     "name": "Má heo nướng, lẩu",
@@ -5572,7 +6188,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Bún Mộc A Chảy",
@@ -5581,7 +6198,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "2028 Phạm Thế Hiển, Quận 8",
     "dist": "Quận 8",
     "time": "23-8h",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 3.6
   },
   {
     "name": "Cá Viên Lữ Gia",
@@ -5590,7 +6208,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "20i Lạc Long Quân, Quận 11",
     "dist": "Quận 11",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 3.6
   },
   {
     "name": "Bơ bán bò Xemisxis",
@@ -5599,7 +6218,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "203 Lê Văn Việt, Phường Hiệp Phú, Thành phố Thủ Đức ▪️ CC26 Trường Sơn, Phường 15, Quận 10 ▪️ 31E Lý Tự Trọng, Phường Bến Nghé, Quận 1",
     "dist": "Quận 1",
     "time": "17g00-22g00",
-    "price": "Combo 450k 2 người"
+    "price": "Combo 450k 2 người",
+    "rating": 4.3
   },
   {
     "name": "SUPER BÒ",
@@ -5608,7 +6228,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "175 Nguyễn Văn Tiết, Hiệp Thành, Thủ Dầu Một📍88 đường D4, Chánh Nghĩa, Thủ Dầu Một📍95 Nguyễn Văn Tiết, Lái Thiêu, Thuận An📍23 đường GS1, Đông Hoà, Dĩ An📍447E Lê Văn Việt, Tăng Nhơn Phú A, Quận 9📍254 Hoàng Diệu 2, Linh Chiểu, TP Thủ Đức",
     "dist": "​",
     "time": "17:00-22:00",
-    "price": ""
+    "price": "",
+    "rating": 4.8
   },
   {
     "name": "Bánh Mì 179",
@@ -5617,7 +6238,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "179 Xóm Chiếu, Quận 4",
     "dist": "Quận 4",
     "time": "16-21H",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 3.7
   },
   {
     "name": "Bún bò Food By K (quán xinh)",
@@ -5626,7 +6248,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17A Nguyễn Thị Minh Khai, P. Bến Nghé",
     "dist": "Quận 1",
     "time": "07:00 - 21:00",
-    "price": "65-80k"
+    "price": "65-80k",
+    "rating": 4.6
   },
   {
     "name": "Bánh mì sườn sụn",
@@ -5635,7 +6258,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "118B Nguyễn Thần Hiến, Quận 4",
     "dist": "Quận 4",
     "time": "15h-22h",
-    "price": "10.000đ - 30.000đ"
+    "price": "10.000đ - 30.000đ",
+    "rating": 3.9
   },
   {
     "name": "Bún Riêu Hà Nội",
@@ -5644,7 +6268,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "110 Cao Thắng, Quận 3",
     "dist": "Quận 3",
     "time": "08:00 - 21:30",
-    "price": "15.000đ - 80.000đ"
+    "price": "15.000đ - 80.000đ",
+    "rating": 5.0
   },
   {
     "name": "Cơm Bình Nga",
@@ -5653,7 +6278,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "349 Nguyễn Công Trứ, Quận 1",
     "dist": "Quận 1",
     "time": "16:00 - 23:59",
-    "price": "30.000đ - 65.000"
+    "price": "30.000đ - 65.000",
+    "rating": 4.7
   },
   {
     "name": "Phở Thu",
@@ -5662,7 +6288,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "433 Hậu Giang, P.11, Quận 6",
     "dist": "Quận 6",
     "time": "6h30-11h30",
-    "price": ""
+    "price": "",
+    "rating": 4.2
   },
   {
     "name": "Phở Phan Bội Châu",
@@ -5671,7 +6298,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "17B Phan Bội Châu, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "5h-24h",
-    "price": "60k"
+    "price": "60k",
+    "rating": 4.0
   },
   {
     "name": "Bánh Mì Chả Cá",
@@ -5680,7 +6308,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Dối diện 27 Cô Giang, Quận 1",
     "dist": "Quận 1",
     "time": "18h-2h sáng",
-    "price": "20k"
+    "price": "20k",
+    "rating": 4.0
   },
   {
     "name": "Bánh Mì",
@@ -5689,7 +6318,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1B Tân Hoà Đông, Quận 6",
     "dist": "Quận 6",
     "time": "07:00 - 09:00",
-    "price": "25.000đ - 30.000đ"
+    "price": "25.000đ - 30.000đ",
+    "rating": 4.8
   },
   {
     "name": "Lẩu tôm hùm đại dương",
@@ -5698,7 +6328,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "67 Lê Trung Nghĩa, Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "từ 5h chiều",
-    "price": "140k"
+    "price": "140k",
+    "rating": 4.1
   },
   {
     "name": "Chú béo BBQ",
@@ -5707,7 +6338,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "16 Đồng Nai, Phường 15, Quận 10, Thành phố Hồ Chí Minh",
     "dist": "Quận 10",
     "time": "từ 5h chiều",
-    "price": "139k"
+    "price": "139k",
+    "rating": 4.7
   },
   {
     "name": "Bánh mì gánh xíu mại, chả",
@@ -5716,7 +6348,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã ba Vũ Huy Tấn + Vạn Kiếp (cafe nghệ sĩ)",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 17:30",
-    "price": "15k"
+    "price": "15k",
+    "rating": 3.6
   },
   {
     "name": "Xuân Huỳnh - Trà Sữa & Trái Cây Tự Chọn",
@@ -5725,7 +6358,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "244A Lê Quang Sung,",
     "dist": "Quận 6",
     "time": "13:30 - 21:00",
-    "price": "35-40k"
+    "price": "35-40k",
+    "rating": 3.9
   },
   {
     "name": "TỔNG HỢP CÁC CON PHỐ ĂN UỐNG TẠI SÀI GÒN 🍜🍜1. Phố ẩm thực Nguyễn Thượng Hiền2. Phố ẩm thực Khu đô thị Vinhomes Grand Park3. Phố Ẩm Thực Đài Loan raohe4. Hẻm 76 Hai Bà Trưng5. Hẻm 200 Xóm Chiếu6. Hẻm 177 Lý Tự Trọng7. Phố ăn vặt An Dương Vương8. Phố ẩm thực Phan Xích Long #mammamsaigon",
@@ -5734,7 +6368,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 5.0
   },
   {
     "name": "Bánh Mì Thịt Nướng - Nguyễn Trãi",
@@ -5743,7 +6378,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "39 Đ. Nguyễn Trãi, Phường Phạm Ngũ Lão",
     "dist": "Quận 1",
     "time": "17:00 - 19:30",
-    "price": "28k"
+    "price": "28k",
+    "rating": 4.0
   },
   {
     "name": "THANH TÂM - BÒ NHÚNG MẮM RUỐC",
@@ -5752,7 +6388,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1346 CMT8, P.Phú Thọ, TP. Thủ Dầu Một",
     "dist": "​",
     "time": "16H - 21H",
-    "price": "200k"
+    "price": "200k",
+    "rating": 3.7
   },
   {
     "name": "Quán chị 7",
@@ -5761,7 +6398,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "D15 Cư Xá Phú Lâm B, P. 13, Quận 6, TP. HCM",
     "dist": "Quận 6",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 3.9
   },
   {
     "name": "Lẩu Bò Nhúng Mắm Ruốc Bếp Ông Lập",
@@ -5770,7 +6408,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "591 Cách Mạng Tháng 8, P. 15, Quận 10,292A - 292B Trần Phú, P. 8, Quận 5, TP. HCM75 Trường Sơn, P. 15, Quận 10",
     "dist": "Quận 10",
     "time": "09:00 - 22:00",
-    "price": "300k"
+    "price": "300k",
+    "rating": 4.4
   },
   {
     "name": "BÚN THÁI CHỢ CAO ĐẠT",
@@ -5779,7 +6418,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Cao Đạt, 197 Cao Đạt, Phường 01",
     "dist": "Quận 5",
     "time": "8H-15H",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "LẨU MẮM ĐIỆN BIÊN PHỦ",
@@ -5788,7 +6428,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "197 Điện Biên Phủ",
     "dist": "Quận Bình Thạnh",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.8
   },
   {
     "name": "BÚN MẮM HEO QUAY DA GIÒN",
@@ -5797,7 +6438,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "56 Đường số 10, phường Tân Quy",
     "dist": "Quận 7",
     "time": "6H-21H",
-    "price": ""
+    "price": "",
+    "rating": 3.7
   },
   {
     "name": "BÚN THÁI CÁ HỒI HỒNG KÔNG",
@@ -5806,7 +6448,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "032 Lô E Cc Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "8h - 17h",
-    "price": "55-65k"
+    "price": "55-65k",
+    "rating": 3.8
   },
   {
     "name": "BÁNH MÌ CHẢO ĐẶNG TRẦN CÔN",
@@ -5815,7 +6458,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "8 Đặng Trần Côn, Q.1, HCM",
     "dist": "Quận 1",
     "time": "4:00-11:00",
-    "price": "48k"
+    "price": "48k",
+    "rating": 4.5
   },
   {
     "name": "Bún thịt nướng buổi sáng",
@@ -5824,7 +6468,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "205 Lạc Long Quân,P3 , Q11",
     "dist": "Quận 11",
     "time": "5h30_9h30",
-    "price": "15k-25K"
+    "price": "15k-25K",
+    "rating": 4.0
   },
   {
     "name": "Bún thịt nướng sốt đậu miền Trung",
@@ -5833,7 +6478,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64 Hồng Hà, Phường 02, Quận Tân Bình, Hồ Chí Minh",
     "dist": "Quận Tân Bình",
     "time": "8:30 - 21:30",
-    "price": "40-45"
+    "price": "40-45",
+    "rating": 4.1
   },
   {
     "name": "Tré trộn Kiều Quách",
@@ -5842,7 +6488,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "27 đường 302 Bông Sao, Phường 5, Quận 8",
     "dist": "Quận 8",
     "time": "16h-20h",
-    "price": ""
+    "price": "",
+    "rating": 4.6
   },
   {
     "name": "Bò La Lốt Hoa Trang",
@@ -5851,7 +6498,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100b Thích Quảng Đức, Phường 5, Phú Nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "15h-21h",
-    "price": ""
+    "price": "",
+    "rating": 3.8
   },
   {
     "name": "Ăn + trà sữa, giá bình dân",
@@ -5860,7 +6508,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "152/15 Vĩnh Viễn, P.9",
     "dist": "Quận 10",
     "time": "15h-22h",
-    "price": ""
+    "price": "",
+    "rating": 3.9
   },
   {
     "name": "Bánh flan, rau câu Bờ kè Hoàng sa",
@@ -5869,7 +6518,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "893 Hoàng Sa",
     "dist": "Quận 3",
     "time": "15:30 - 22:00",
-    "price": "10k"
+    "price": "10k",
+    "rating": 3.8
   },
   {
     "name": "Lẩu Xí Quách, Có hủ tiếu mì",
@@ -5878,7 +6528,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 90 Nguyễn Thị Tần, P. 2,",
     "dist": "Quận 8",
     "time": "04:00 - 08:00 | 16:00 - 20:00",
-    "price": "120-170k, hủ tiếu 40-50k"
+    "price": "120-170k, hủ tiếu 40-50k",
+    "rating": 3.6
   },
   {
     "name": "Bún Thái - Kiểu Hongkong",
@@ -5887,7 +6538,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "456 Sư Vạn Hạnh, P. 9,",
     "dist": "Quận 10",
     "time": "07:30 - 13:30 | 16:00 - 21:30",
-    "price": "50k-70k"
+    "price": "50k-70k",
+    "rating": 3.9
   },
   {
     "name": "Cơm tấm Nạc giòn",
@@ -5896,7 +6548,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "33/16 Nguyễn Đình Chính, Quận Phú Nhuận, T",
     "dist": "Quận Phú Nhuận",
     "time": "05:30 - 11:00",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 3.6
   },
   {
     "name": "Thằng Đậu - Bún Bò, Lẩu Bò",
@@ -5905,7 +6558,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "566 Sư Vạn Hạnh, P. 10, Quận 10",
     "dist": "Quận 10",
     "time": "06:00 - 23:00",
-    "price": "250-300k"
+    "price": "250-300k",
+    "rating": 4.7
   },
   {
     "name": "Cà phê Nghèo (có bánh bông lan ngọn)",
@@ -5914,7 +6568,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "441/7 Nguyễn Đình Chiểu, P. 5, Quận 3,",
     "dist": "Quận 3",
     "time": "15h-12h khuya",
-    "price": "25-30k"
+    "price": "25-30k",
+    "rating": 4.3
   },
   {
     "name": "Bún cá Chấm giòn",
@@ -5923,7 +6578,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Thành Thái, P. 14, Quận 10",
     "dist": "Quận 10",
     "time": "07:00 - 23:00",
-    "price": "55-60k"
+    "price": "55-60k",
+    "rating": 3.7
   },
   {
     "name": "Bánh canh cua ngon Quận 1",
@@ -5932,7 +6588,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "87 Trần Khắc Chân",
     "dist": "Quận 1",
     "time": "11h-22h",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Bánh mì Bì xíu mại Quận 7",
@@ -5941,7 +6598,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Ngã tư đường số 10 và 17, Tân kiểng",
     "dist": "Quận 7",
     "time": "6h30-10h",
-    "price": "22k"
+    "price": "22k",
+    "rating": 3.6
   },
   {
     "name": "Xôi Lan Anh",
@@ -5950,7 +6608,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Phùng Hưng",
     "dist": "Quận 5",
     "time": "6h-10h",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Vua Đậu - Bún đậu nhà vua",
@@ -5959,7 +6618,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Nhiều chi nhánh",
     "dist": "Quận 10",
     "time": "10:00 - 21:51",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.7
   },
   {
     "name": "Lẩu bò mang về",
@@ -5968,7 +6628,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.0
   },
   {
     "name": "Cơm Tấm Hồng Cầu Calmette",
@@ -5977,7 +6638,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Quán Ốc Cô gái có râu",
@@ -5986,7 +6648,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 3.7
   },
   {
     "name": "Bún thịt nướng Hằng (nước mắm củ kiệu)",
@@ -5995,7 +6658,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "338 Đ. Nguyễn Công Trứ, Phường Nguyễn Thái Bình",
     "dist": "Quận 1",
     "time": "12h-18h",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.8
   },
   {
     "name": "Young Dabang",
@@ -6004,7 +6668,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "147 Nguyễn Đức Cảnh, phường Tân Phong, Quận 719M KDC Miếu Nổi đường Vũ Huy Tấn, Phường 03, Quận Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "11h - 22h",
-    "price": "300k"
+    "price": "300k",
+    "rating": 4.1
   },
   {
     "name": "Bánh canh Bò viên",
@@ -6013,7 +6678,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "29 Đ. Nguyễn Văn Nguyễn, Phường Tân Định",
     "dist": "Quận 1",
     "time": "11h-19h",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.2
   },
   {
     "name": "Ốc Ti",
@@ -6022,7 +6688,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "18 Lô D Chung cư Nguyễn Thiện Thuận, Phường 1, Quận 3",
     "dist": "Quận 3",
     "time": "00:01 - 01:00 | 15:30 - 23:59",
-    "price": "Bình dân"
+    "price": "Bình dân",
+    "rating": 4.1
   },
   {
     "name": "Bún bò huế O Xíu",
@@ -6031,7 +6698,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "102 Trần Quang Khải, P. Tân Định, Q. 1",
     "dist": "Quận 1",
     "time": "15H00 - 03H00",
-    "price": "40K - 60K/Phần"
+    "price": "40K - 60K/Phần",
+    "rating": 3.7
   },
   {
     "name": "Cơm Tấm Hẻm 33",
@@ -6040,7 +6708,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "33/16 Nguyễn Đình Chính, phường 8, Phú Nhuận",
     "dist": "Quận Phú Nhuận",
     "time": "05:30 - 11:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.0
   },
   {
     "name": "Tré trộn Út Vân",
@@ -6049,7 +6718,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "152 Nguyễn Thượng Hiền, P. 4, Quận 3",
     "dist": "Quận 3",
     "time": "10:00 - 17:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.2
   },
   {
     "name": "Tré trộn Cô Bé",
@@ -6058,7 +6728,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "306 Nguyễn Thượng Hiền, P. 4, Quận 3",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.7
   },
   {
     "name": "Xôi Mặn Bắc Chuẩn Vị",
@@ -6067,7 +6738,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "180 Ký Con, P. Nguyễn Thái Bình, Quận 1",
     "dist": "Quận 1",
     "time": "06:30 - 13:00 | 16:00 - 21:00",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.5
   },
   {
     "name": "Bánh bèo Huế chợ Bến Thành",
@@ -6076,7 +6748,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Cửa 7 Chợ Bến Thành",
     "dist": "Quận 1",
     "time": "7h-17h",
-    "price": "23k"
+    "price": "23k",
+    "rating": 3.8
   },
   {
     "name": "Hủ tiếu gà Gò Công",
@@ -6085,7 +6758,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1B Đường số 10, Tân Quy, Quận 7",
     "dist": "Quận 7",
     "time": "6h-22h",
-    "price": "40-60k"
+    "price": "40-60k",
+    "rating": 4.3
   },
   {
     "name": "Bánh mì Bì Nem Xe Đạp",
@@ -6094,7 +6768,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "14h bắt đầu đi từ Phan Châu Trinh xuống Cô Giang, Hoàng Văn Thụ, rồi về Huỳnh Thúc Kháng",
     "dist": "Quận 1",
     "time": "14h",
-    "price": "15k"
+    "price": "15k",
+    "rating": 3.8
   },
   {
     "name": "Cơm Tấm Đề Thám",
@@ -6103,7 +6778,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "272 Đề Thám, P. Phạm Ngũ Lão, Q.1",
     "dist": "Quận 1",
     "time": "9h - 1h ság",
-    "price": "50k"
+    "price": "50k",
+    "rating": 3.8
   },
   {
     "name": "Bún thịt nướng sốt đậu Tây Sơn",
@@ -6112,7 +6788,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "314 Nguyễn Thái Sơn, phường 4",
     "dist": "Quận Gò Vấp",
     "time": "06:00 - 10:00 | 15:00 - 22:00",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.4
   },
   {
     "name": "Bún Đậu Nhà Vua",
@@ -6121,7 +6798,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "63 Bình Thới, P. 11, Quận 11",
     "dist": "Quận 11",
     "time": "10:00 - 22:20",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.6
   },
   {
     "name": "Bún mắm Kim Hoa",
@@ -6130,7 +6808,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Chợ Nguyễn Tri Phương, Quận 10",
     "dist": "Quận 10",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.8
   },
   {
     "name": "Phở bê Thanh Đa (Không gian sáng SG cuối tuần)",
@@ -6139,7 +6818,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "21-23 Hoàng Sa, Đa Kao",
     "dist": "Quận 1",
     "time": "6h-13h",
-    "price": "70k"
+    "price": "70k",
+    "rating": 4.1
   },
   {
     "name": "Bánh canh Cá Lóc Quảng Trị O Hiền ngon 30k",
@@ -6148,7 +6828,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "12/20 Phạm Văn Hai",
     "dist": "Quận Tân Bình",
     "time": "12h-19h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 5.0
   },
   {
     "name": "Hoành thành lá nước tôm khô",
@@ -6157,7 +6838,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 66 Lãnh Binh Thăng, Phường 13, Quận 11",
     "dist": "Quận 11",
     "time": "14h30",
-    "price": ""
+    "price": "",
+    "rating": 4.4
   },
   {
     "name": "Vua Mì (Không gian quán ok)",
@@ -6166,7 +6848,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "76 Đường D5, Bình Thạnh",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 23:59",
-    "price": "6-70k"
+    "price": "6-70k",
+    "rating": 4.3
   },
   {
     "name": "Dimsum - Trà sữa (View Resort)",
@@ -6175,7 +6858,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "89A Nguyễn Đình Chiểu, P. Võ Thị Sáu",
     "dist": "Quận 3",
     "time": "08:00 - 22:00",
-    "price": "50-60k"
+    "price": "50-60k",
+    "rating": 4.2
   },
   {
     "name": "Baito Ramen (Không gian nhật Giá rẻ)",
@@ -6184,7 +6868,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "C24/7 Xóm Chiếu",
     "dist": "Quận 4",
     "time": "16h30-21h30",
-    "price": "45-60k"
+    "price": "45-60k",
+    "rating": 4.9
   },
   {
     "name": "Hủ tiếu Mì Thập Cẩm (Tặng Xí quách)",
@@ -6193,7 +6878,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "160 Phạm Phú Thứ, P.4",
     "dist": "Quận 6",
     "time": "6h-21h",
-    "price": "43-53k"
+    "price": "43-53k",
+    "rating": 3.6
   },
   {
     "name": "Bánh canh cua Ba Lúa (chất lượng)",
@@ -6202,7 +6888,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "206 Tôn Đản",
     "dist": "Quận 4",
     "time": "07:00 - 22:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 4.8
   },
   {
     "name": "Bánh tráng Cuốn thịt heo Hoàng Bèo",
@@ -6211,7 +6898,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Căn 06, Lô C, CC Phạm Viết Chánh, P. 19",
     "dist": "Quận Bình Thạnh",
     "time": "07:00 - 23:00",
-    "price": "60k-70k"
+    "price": "60k-70k",
+    "rating": 3.6
   },
   {
     "name": "Bánh tráng Cuốn thịt heo Hoàng Bèo",
@@ -6220,7 +6908,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "12L, Nguyễn Thị Minh Khai, Ph. Đa Kao",
     "dist": "Quận 1",
     "time": "07:00 - 23:00",
-    "price": "60k-70k"
+    "price": "60k-70k",
+    "rating": 4.6
   },
   {
     "name": "Bánh tráng Cuốn thịt heo Hoàng Bèo",
@@ -6229,7 +6918,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "216 Nguyễn Oanh, Phường 17, Gò Vấp",
     "dist": "Quận Gò Vấp",
     "time": "07:00 - 23:00",
-    "price": "60k-70k"
+    "price": "60k-70k",
+    "rating": 4.7
   },
   {
     "name": "Bún đầu Tiến Vua 86k 2 người",
@@ -6238,7 +6928,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "29 Thành Thái, P. 14, Quận 10,",
     "dist": "Quận 10",
     "time": "10:00 - 21:51",
-    "price": "86k"
+    "price": "86k",
+    "rating": 4.3
   },
   {
     "name": "Lẩu Cá & Nướng BBQ A Mín",
@@ -6247,7 +6938,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "333 Vĩnh Khánh, P. 8, Quận 4",
     "dist": "Quận 4",
     "time": "16:00 - 23:59",
-    "price": "150k"
+    "price": "150k",
+    "rating": 3.9
   },
   {
     "name": "Cơm Gà Xối Mỡ Su Su",
@@ -6256,7 +6948,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "117/1D Cống Quỳnh, P. Nguyễn Cư Trinh, Quận 1",
     "dist": "Quận 1",
     "time": "11:00 - 21:00",
-    "price": "50k"
+    "price": "50k",
+    "rating": 5.0
   },
   {
     "name": "Cơm tấm dễ thương 25k",
@@ -6265,7 +6958,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "641 Đoàn Văn Bơ, Phường 18, Quận 4",
     "dist": "Quận 4",
     "time": "5h-9h",
-    "price": "từ 25k"
+    "price": "từ 25k",
+    "rating": 4.8
   },
   {
     "name": "Flan, Chè, Bánh bèo, Bột lọc Hoài Thương",
@@ -6274,7 +6968,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "10 Cô Giang",
     "dist": "Quận Phú Nhuận",
     "time": "10:00 - 20:00",
-    "price": "từ 20k"
+    "price": "từ 20k",
+    "rating": 3.9
   },
   {
     "name": "Chuỗi ăn vặt, bánh tráng, trà sữa",
@@ -6283,7 +6978,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "152/12 Vĩnh Viễn",
     "dist": "Quận 10",
     "time": "16h-22h",
-    "price": "Sinh viên"
+    "price": "Sinh viên",
+    "rating": 4.4
   },
   {
     "name": "Cơm tấm Xí Muội - Nem nướng buôn mê",
@@ -6292,7 +6988,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1090 Lạc Long Quân, P.8, Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "Cơm tấm: 7h - 19h (T2-T7) ; 7h - 15h (Chủ Nhật)Nem nướng: 16h - 21h",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.5
   },
   {
     "name": "Bún Riêu Cua 30 Năm",
@@ -6301,7 +6998,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "384/22 Nam Kỳ Khởi Nghĩa, Phường 8",
     "dist": "Quận 3",
     "time": "9h tới 13h",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.6
   },
   {
     "name": "Hủ tiếu Ngã tư Nơ Trang Long - Nguyễn Xí",
@@ -6310,7 +7008,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "Quận Bình Thạnh",
     "time": "",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.9
   },
   {
     "name": "Gòn BÚN CHẢ bà Khách",
@@ -6319,7 +7018,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Lê Văn Duyệt",
     "dist": "Quận Tân Bình",
     "time": "8h-22h",
-    "price": "45k"
+    "price": "45k",
+    "rating": 4.9
   },
   {
     "name": "Bánh mì Tăng",
@@ -6328,7 +7028,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "822 Nguyễn Trãi, quận 5",
     "dist": "Quận 5",
     "time": "5h30-23h30",
-    "price": "20k"
+    "price": "20k",
+    "rating": 4.6
   },
   {
     "name": "Aroy Thái",
@@ -6337,7 +7038,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "60/1 Lý Chính Thắng, Quận 3",
     "dist": "Quận 3",
     "time": "7h-21h",
-    "price": "45-65k"
+    "price": "45-65k",
+    "rating": 5.0
   },
   {
     "name": "Aroy Thái",
@@ -6346,7 +7048,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "86 Hoa Cúc",
     "dist": "Quận Phú Nhuận",
     "time": "7h-21h",
-    "price": "45-65k"
+    "price": "45-65k",
+    "rating": 4.1
   },
   {
     "name": "Cơm Tấm Ba Há, Đồ ăn khổng lồ",
@@ -6355,7 +7058,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "389 Hưng Phú, P. 9, Q. 8",
     "dist": "Quận 8",
     "time": "16-19h30",
-    "price": "8-90k"
+    "price": "8-90k",
+    "rating": 3.7
   },
   {
     "name": "Bánh Mì Xíu Mại Phô Mai Trứng Muối, Bò Nướng, Nem",
@@ -6364,7 +7068,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "356 Bùi Hữu Nghĩa, P. 14",
     "dist": "Quận Bình Thạnh",
     "time": "06H00 - 10H00 , 16H00 - 21H00",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 3.9
   },
   {
     "name": "Bún thịt nướng Bà Năm",
@@ -6373,7 +7078,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/20B Trần Quang Diệu, P. 14",
     "dist": "Quận 3",
     "time": "06:00 - 12:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.7
   },
   {
     "name": "Lẩu bò kho Campuchia",
@@ -6382,7 +7088,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "128 Vườn Chuối, P. 4",
     "dist": "Quận 3",
     "time": "15:00 - 23:00",
-    "price": "170k"
+    "price": "170k",
+    "rating": 4.8
   },
   {
     "name": "Bach Hoa Lẩu",
@@ -6391,7 +7098,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "",
     "dist": "​",
     "time": "",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Quán mì hủ tiếu Đài Loan (Bún bò viên Tân Phát)",
@@ -6400,7 +7108,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "404 Trần Phú, P.7",
     "dist": "Quận 5",
     "time": "09:00 - 21:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 4.1
   },
   {
     "name": "Sủi cảo Liên Xô",
@@ -6409,7 +7118,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Mạc Vân, p.12, Q.8",
     "dist": "Quận 8",
     "time": "11h đến hết",
-    "price": "30-45k"
+    "price": "30-45k",
+    "rating": 4.4
   },
   {
     "name": "Hủ Tiếu Cá Tài Ký",
@@ -6418,7 +7128,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "185A Tân Sơn Nhì, P. Tân Sơn Nhì, Quận Tân Phú, TP. HCM",
     "dist": "Quận Tân Phú",
     "time": "06:00 - 12:00",
-    "price": "40-55k"
+    "price": "40-55k",
+    "rating": 4.8
   },
   {
     "name": "Miì trộn khô Hồng kong",
@@ -6427,7 +7138,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "684/24 Trần Hưng Đạo, P2, Q5",
     "dist": "Quận 5",
     "time": "",
-    "price": "từ 55k"
+    "price": "từ 55k",
+    "rating": 4.8
   },
   {
     "name": "Bún riêu",
@@ -6436,7 +7148,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1348 Trường Sa Tân Bình",
     "dist": "Quận Tân Bình",
     "time": "Đóng cửa lúc 18h",
-    "price": "từ 28k"
+    "price": "từ 28k",
+    "rating": 3.7
   },
   {
     "name": "Cơm tấm",
@@ -6445,7 +7158,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "641 Đoàn Văn Bơ",
     "dist": "Quận 4",
     "time": "5:00 - 9:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.1
   },
   {
     "name": "Bánh Flan Hoài Thương",
@@ -6454,7 +7168,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "10 Cô Giang",
     "dist": "Quận Phú Nhuận",
     "time": "10:00 - 22:00",
-    "price": "10k-30k"
+    "price": "10k-30k",
+    "rating": 4.1
   },
   {
     "name": "Bánh ướt Dì Năm",
@@ -6463,7 +7178,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1 Khánh Hội",
     "dist": "Quận 4",
     "time": "6:00 _ 10:00",
-    "price": "30k"
+    "price": "30k",
+    "rating": 4.4
   },
   {
     "name": "Lẩu mắm Út Nhàn",
@@ -6472,7 +7188,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "409 Phạm Văn Đồng, phường 11",
     "dist": "Quận Bình Thạnh",
     "time": "15:00 - 22:00",
-    "price": "295k"
+    "price": "295k",
+    "rating": 3.7
   },
   {
     "name": "Bún bò Cô Hạnh",
@@ -6481,7 +7198,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "190-192 Hà Tôn Quyền, Phường 6",
     "dist": "Quận 11",
     "time": "06:30 - 11:00",
-    "price": "25k-30k"
+    "price": "25k-30k",
+    "rating": 4.3
   },
   {
     "name": "Ramen Tomidaya",
@@ -6490,7 +7208,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "68 Phạm Viết Chánh, phường 19",
     "dist": "Quận Bình Thạnh",
     "time": "11:30-14h 17h-21h",
-    "price": "50k-220k"
+    "price": "50k-220k",
+    "rating": 4.5
   },
   {
     "name": "Trà sữa A Chà",
@@ -6499,7 +7218,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "140 Châu Văn Liêm, P. 11",
     "dist": "Quận 5",
     "time": "10:00 - 22:00",
-    "price": "15k-30k"
+    "price": "15k-30k",
+    "rating": 4.3
   },
   {
     "name": "Bò né 2 Péo",
@@ -6508,7 +7228,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "69/2/44 Nguyễn Gia Trí, P. 25",
     "dist": "Quận Bình Thạnh",
     "time": "10:00 - 14:00",
-    "price": "10k-55k"
+    "price": "10k-55k",
+    "rating": 3.8
   },
   {
     "name": "Hồng trà dì Anh",
@@ -6517,7 +7238,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "70 Đường số 5 - Cư xá Bình Thới phường 8",
     "dist": "Quận 11",
     "time": "9h15h - 23h30",
-    "price": "16k-25k"
+    "price": "16k-25k",
+    "rating": 3.7
   },
   {
     "name": "Gà nướng cô gái Ấn",
@@ -6526,7 +7248,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "45A Ung Văn Khiêm, P. 25",
     "dist": "Quận Bình Thạnh",
     "time": "15:30 - 23:59",
-    "price": "5k-130k"
+    "price": "5k-130k",
+    "rating": 3.6
   },
   {
     "name": "Khanh - Bánh Khọt Vũng Tàu",
@@ -6535,7 +7258,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "7 Đồng Nai, P. 15",
     "dist": "Quận 10",
     "time": "10:00 - 21:00",
-    "price": "15k-50k"
+    "price": "15k-50k",
+    "rating": 4.6
   },
   {
     "name": "Cơm Cu Hải",
@@ -6544,7 +7268,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "189B/A30 Cống Quỳnh, P. Nguyễn Cư Trinh",
     "dist": "Quận 1",
     "time": "00:01-02:00 | 16:30-23:59",
-    "price": "70k-90k"
+    "price": "70k-90k",
+    "rating": 4.7
   },
   {
     "name": "O Hè",
@@ -6553,7 +7278,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "315/30 Lê Văn Sỹ, P. 13",
     "dist": "Quận 3",
     "time": "06:30 - 12:30",
-    "price": "45k-50k"
+    "price": "45k-50k",
+    "rating": 4.3
   },
   {
     "name": "Tiệm mì Chọn Tui",
@@ -6562,7 +7288,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "292 Tô Hiến Thành, P. 15",
     "dist": "Quận 10",
     "time": "07:30 - 21:15",
-    "price": "15k-45k"
+    "price": "15k-45k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì Bùi Thị Xuân",
@@ -6571,7 +7298,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "122E Bùi Thị Xuân, P. Phạm Ngũ Lão",
     "dist": "Quận 1",
     "time": "05:30 - 01:00",
-    "price": "20k-30k"
+    "price": "20k-30k",
+    "rating": 4.8
   },
   {
     "name": "Shabu Ya - Vạn Hạnh Mall",
@@ -6580,7 +7308,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Tầng 6, 19 Tầng 6 Vạn Hạnh Mall, 11 Sư Vạn Hạnh, P. 12",
     "dist": "Quận 10",
     "time": "10:00 - 21:30",
-    "price": "138k-238k"
+    "price": "138k-238k",
+    "rating": 3.7
   },
   {
     "name": "Má heo Ngọc Yến",
@@ -6590,7 +7319,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "8:00 - 00:00",
-    "price": "60k-120k"
+    "price": "60k-120k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Canh Trảng Bàng",
@@ -6599,7 +7329,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "439-441 Nguyễn Tri Phương, P. 8",
     "dist": "Quận 10",
     "time": "10:00 - 22:00",
-    "price": "30-60k"
+    "price": "30-60k",
+    "rating": 4.2
   },
   {
     "name": "Bún bò cô Đào",
@@ -6608,7 +7339,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "22A Điện Biên Phủ, Phường 15",
     "dist": "Quận Bình Thạnh",
     "time": "06:00-10:30",
-    "price": "43k"
+    "price": "43k",
+    "rating": 4.3
   },
   {
     "name": "Đồi Thái",
@@ -6617,7 +7349,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "36 Chu Mạnh Trinh P. Bến Nghé",
     "dist": "Quận 1",
     "time": "09:00 - 22:00",
-    "price": "149k"
+    "price": "149k",
+    "rating": 4.8
   },
   {
     "name": "Bánh Tráng Trộn Nhà Thờ Cha Tam",
@@ -6626,7 +7359,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "25 Học Lạc, Phường 14 (Trước Cửa Nhà Thờ)",
     "dist": "Quận 5",
     "time": "21:30 - 2:00",
-    "price": "18-36k"
+    "price": "18-36k",
+    "rating": 4.6
   },
   {
     "name": "Chú Mập Thanh Đa",
@@ -6635,7 +7369,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "183 Bình Quới, P. 28",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 19:00",
-    "price": "15-25k"
+    "price": "15-25k",
+    "rating": 3.5
   },
   {
     "name": "Cô Hằng Thịt Nướng",
@@ -6644,7 +7379,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 710/2 Phan Văn Trị, P. 10",
     "dist": "Quận Gò Vấp",
     "time": "07:00 - 21:00",
-    "price": "37-80k"
+    "price": "37-80k",
+    "rating": 5.0
   },
   {
     "name": "Mạ Tôi - Bánh Canh Cua",
@@ -6653,7 +7389,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "86 Vạn Kiếp, P. 4",
     "dist": "Quận Bình Thạnh",
     "time": "15:00 - 21:00",
-    "price": "22-40k"
+    "price": "22-40k",
+    "rating": 4.8
   },
   {
     "name": "Cơm Chiên Bé Tám",
@@ -6662,7 +7399,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "246 Nguyễn Công Trứ, P. Nguyễn Thái Bình",
     "dist": "Quận 1",
     "time": "00:01-01:00 | 18:30-23:59",
-    "price": "30-55k"
+    "price": "30-55k",
+    "rating": 4.9
   },
   {
     "name": "Món Huế",
@@ -6671,7 +7409,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "26A Hoàng Hoa Thám, P. 7",
     "dist": "Quận Tân Bình",
     "time": "06:30 - 14:00 | 16:00 - 21:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.7
   },
   {
     "name": "Cô Tám",
@@ -6680,7 +7419,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "56T Lê Quang Sung, P. 6",
     "dist": "Quận 6",
     "time": "09:00 - 22:00",
-    "price": "15-20k"
+    "price": "15-20k",
+    "rating": 4.5
   },
   {
     "name": "An An",
@@ -6689,7 +7429,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "282/1 Nguyễn Gia Trí, phường 25",
     "dist": "Quận Bình Thạnh",
     "time": "06:00 - 22;00",
-    "price": "27-69k"
+    "price": "27-69k",
+    "rating": 3.9
   },
   {
     "name": "Quán Sương",
@@ -6698,7 +7439,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1181 Lê Văn Lương, Xã Phước Kiển",
     "dist": "Huyện Nhà Bè",
     "time": "07:00 - 21:00",
-    "price": "20-25k"
+    "price": "20-25k",
+    "rating": 4.3
   },
   {
     "name": "Mì Gà Xá Kén K3",
@@ -6707,7 +7449,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "82 Đường Đồng Đen, P. 14",
     "dist": "Quận Tân Bình",
     "time": "06:30 - 12:00 | 16:30 - 21:00",
-    "price": "50-99k"
+    "price": "50-99k",
+    "rating": 4.1
   },
   {
     "name": "Lẩu Xưa 139k",
@@ -6716,7 +7459,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "292/1 Nguyễn Xí Phuờng 13",
     "dist": "Quận Bình Thạnh",
     "time": "",
-    "price": "139-219k"
+    "price": "139-219k",
+    "rating": 4.2
   },
   {
     "name": "Quán Hào 598",
@@ -6725,7 +7469,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "004 Lô F Chung Cư Xóm Cải Mạc Thiên Tích, P. 8",
     "dist": "Quận 5",
     "time": "09:00 - 22:00",
-    "price": "40k"
+    "price": "40k",
+    "rating": 4.2
   },
   {
     "name": "Bánh Ướt & Bánh Cuốn",
@@ -6734,7 +7479,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "752/53 Lạc Long Quân, P.9",
     "dist": "Quận Tân Bình",
     "time": "15:00 - 20:00",
-    "price": "30-40k"
+    "price": "30-40k",
+    "rating": 4.1
   },
   {
     "name": "Quán cháo",
@@ -6743,7 +7489,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108 Trần Văn Quang, P.10",
     "dist": "Quận Tân Bình",
     "time": "16:00 - 21:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 5.0
   },
   {
     "name": "Quán lẩu bò kho xương ống",
@@ -6752,7 +7499,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "207/6 Trần Bình Trọng",
     "dist": "Quận 5",
     "time": "16h30 đến hết",
-    "price": "180k"
+    "price": "180k",
+    "rating": 4.2
   },
   {
     "name": "Xe bánh mì, xôi",
@@ -6761,7 +7509,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "271 Tùng Thiện Vương, Phường 11",
     "dist": "Quận 8",
     "time": "05:00 - 10:00 15:00 - 17:00",
-    "price": "17-20k"
+    "price": "17-20k",
+    "rating": 4.4
   },
   {
     "name": "Cơm Tấm Bà Chị Hai",
@@ -6770,7 +7519,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "51 Đặng Văn Ngữ , P. 14",
     "dist": "Quận Phú Nhuận",
     "time": "18:00 - 22:00",
-    "price": "40-70k"
+    "price": "40-70k",
+    "rating": 3.7
   },
   {
     "name": "Heo quay Kim Mai",
@@ -6779,7 +7529,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "15 Lô B, chợ Bình Tiên, phường 4",
     "dist": "Quận 6",
     "time": "06:30–11:00, 15:00–18:00",
-    "price": "170-320k"
+    "price": "170-320k",
+    "rating": 4.8
   },
   {
     "name": "Bánh canh hẹ Phú Yên",
@@ -6788,7 +7539,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "18A/4 Nguyễn Thị Minh Khai, phường Đa Kao",
     "dist": "Quận 1",
     "time": "6 - 14g và 16g30 - 21g30",
-    "price": "40k trở lên"
+    "price": "40k trở lên",
+    "rating": 4.8
   },
   {
     "name": "Bánh Đúc Nóng - NGUYÊN",
@@ -6797,7 +7549,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "188 Vạn Kiếp, P. 2",
     "dist": "Quận Bình Thạnh",
     "time": "11:00 - 18:00",
-    "price": "30-45k"
+    "price": "30-45k",
+    "rating": 5.0
   },
   {
     "name": "Bánh Mì Dậu",
@@ -6806,7 +7559,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "538/161 Đoàn Văn Bơ, P. 14",
     "dist": "Quận 4",
     "time": "16:00 - 22:00",
-    "price": "5-20k"
+    "price": "5-20k",
+    "rating": 4.1
   },
   {
     "name": "Bánh căn Cô Hằng",
@@ -6815,7 +7569,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "100 Trần Hưng Đạo, phường Phạm Ngũ Lão",
     "dist": "Quận 1",
     "time": "6:00 – 9:00",
-    "price": "6-25k"
+    "price": "6-25k",
+    "rating": 4.4
   },
   {
     "name": "Bò Né Cô Út",
@@ -6824,7 +7579,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "009 Lô K chung cư Nguyễn Thiện Thuật, P.1",
     "dist": "Quận 3",
     "time": "06:00 - 12:00",
-    "price": "45-100k"
+    "price": "45-100k",
+    "rating": 3.6
   },
   {
     "name": "Kim Ký",
@@ -6833,7 +7589,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "255 Nguyễn Công Trứ, P. Nguyễn Thái Bình",
     "dist": "Quận 1",
     "time": "18:00 - 22:00",
-    "price": "34-45k"
+    "price": "34-45k",
+    "rating": 4.9
   },
   {
     "name": "Gánh bánh mì đêm",
@@ -6842,7 +7599,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "65F Nguyễn Thái Học, Phường Cầu Ông Lãnh",
     "dist": "Quận 1",
     "time": "19:00 - 05:00",
-    "price": "15k"
+    "price": "15k",
+    "rating": 4.9
   },
   {
     "name": "Tiệm Bún Đậu CÁM",
@@ -6851,7 +7609,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "206 Nguyễn Tri Phương, P. 4",
     "dist": "Quận 10",
     "time": "10:00 - 22:00",
-    "price": "20-100k"
+    "price": "20-100k",
+    "rating": 4.8
   },
   {
     "name": "Đông Mập",
@@ -6860,7 +7619,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "164/5 Nguyễn Oanh, P.17",
     "dist": "Quận Gò Vấp",
     "time": "17:00 - 22:00",
-    "price": "15-50k"
+    "price": "15-50k",
+    "rating": 3.9
   },
   {
     "name": "Hủ tiếu heo gà",
@@ -6869,7 +7629,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "160 Trần Bình Trọng, P.3",
     "dist": "Quận 5",
     "time": "18:30 - 04:00",
-    "price": "35-100k"
+    "price": "35-100k",
+    "rating": 5.0
   },
   {
     "name": "Bánh Canh Chả Cá Nha Trang Go79",
@@ -6878,7 +7639,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "264 Trường Sa, P. 3",
     "dist": "Quận Bình Thạnh",
     "time": "16:00 - 23:00",
-    "price": "19-69k"
+    "price": "19-69k",
+    "rating": 4.0
   },
   {
     "name": "Ốc Sữa 29",
@@ -6887,7 +7649,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "11 Hoa Sữa, P. 7",
     "dist": "Quận Phú Nhuận",
     "time": "15:00 - 23:59",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 3.6
   },
   {
     "name": "Bún riêu Chị Gái",
@@ -6896,7 +7659,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "64/19 Nguyễn Khoái, P. 2",
     "dist": "Quận 4",
     "time": "06:00 - 15:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 4.9
   },
   {
     "name": "Bánh Mì Chảo Cô Lệ",
@@ -6905,7 +7669,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "003 Lô D Chung Cư Nguyễn Thiện Thuật, Nguyễn Thiện Thuật",
     "dist": "Quận 3",
     "time": "07:00 - 14:00",
-    "price": "20-35k"
+    "price": "20-35k",
+    "rating": 4.0
   },
   {
     "name": "Vạn quán",
@@ -6914,7 +7679,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "123/17 Nguyễn Xí, Phường 26",
     "dist": "Quận Bình Thạnh",
     "time": "00:01 - 01:00 | 09:00 - 23:59",
-    "price": "120-399k"
+    "price": "120-399k",
+    "rating": 3.8
   },
   {
     "name": "Hoành thánh lá Ngũ Trảo",
@@ -6923,7 +7689,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 66 Lãnh Binh Thăng, Phường 13",
     "dist": "Quận 11",
     "time": "15:00 - 22:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 4.5
   },
   {
     "name": "Quán Bánh Canh Chả Cá Phan Rang",
@@ -6933,7 +7700,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "06:00 - 12:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 3.8
   },
   {
     "name": "ĂN vặt, bánh tráng nướng, trộn",
@@ -6942,7 +7710,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "5 Đường Số 42, P. 4",
     "dist": "Quận 4",
     "time": "09:00 - 22:00",
-    "price": "20-40k"
+    "price": "20-40k",
+    "rating": 3.9
   },
   {
     "name": "Lẩu Bò Hẻm 616",
@@ -6951,7 +7720,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Hẻm 616 Cách Mạng Tháng 8, P. 11",
     "dist": "Quận 10",
     "time": "18:00 - 22:00",
-    "price": "100-200k"
+    "price": "100-200k",
+    "rating": 4.4
   },
   {
     "name": "Bò lá lốt mỡ chài",
@@ -6960,7 +7730,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "129/12B Hoàng Văn Thụ p8",
     "dist": "Quận Phú Nhuận",
     "time": "15:00 đến hết",
-    "price": "80k"
+    "price": "80k",
+    "rating": 4.1
   },
   {
     "name": "Thèm Gì Cũng Có",
@@ -6969,7 +7740,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "327 Phan Đình Phùng, P. 15",
     "dist": "Quận Phú Nhuận",
     "time": "09:00 - 22:00",
-    "price": "5- 75k"
+    "price": "5- 75k",
+    "rating": 3.9
   },
   {
     "name": "Hey Pelo - Original French Tacos",
@@ -6978,7 +7750,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Số 60 Trần Khắc Chân, P.Tân Định",
     "dist": "Quận 1",
     "time": "10:30 - 22:20",
-    "price": "30-110k"
+    "price": "30-110k",
+    "rating": 3.7
   },
   {
     "name": "Vua Mì",
@@ -6987,7 +7760,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "190 Cao Thắng P. 11",
     "dist": "Quận 10",
     "time": "11:00 - 23:59",
-    "price": "20-50k"
+    "price": "20-50k",
+    "rating": 3.6
   },
   {
     "name": "Hải Sản Phan Thiết",
@@ -6996,7 +7770,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "005 Lô D C/c Nguyễn Thiện Thuật, P. 1",
     "dist": "Quận 3",
     "time": "14:00 - 23:00",
-    "price": "50-110k"
+    "price": "50-110k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Mì Cô Điệp",
@@ -7005,7 +7780,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "238 Võ Thành Trang, P. 11",
     "dist": "Quận Tân Bình",
     "time": "06:00 - 00:00",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.5
   },
   {
     "name": "Bánh mì Bùi Thị Xuân",
@@ -7014,7 +7790,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "122E Bùi Thị Xuân, P. Phạm Ngũ Lão",
     "dist": "Quận 1",
     "time": "05:30 - 01:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 3.6
   },
   {
     "name": "Hủ tiếu cá 80 năm Pháp Mập",
@@ -7023,7 +7800,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "108/1 Bis Calmette, P. Nguyễn Thái Bình",
     "dist": "Quận 1",
     "time": "06:00 - 10:30",
-    "price": "25-45k"
+    "price": "25-45k",
+    "rating": 3.8
   },
   {
     "name": "Sunset & Chill Sky Bar",
@@ -7032,7 +7810,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "1143 Bình Quới, Phường 28",
     "dist": "Quận Bình Thạnh",
     "time": "07:00 - 00:00",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "Buffe ốc Cô Giang",
@@ -7041,7 +7820,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "59 Nguyễn Hữu Dật,Tây Thạnh",
     "dist": "Quận Tân Phú",
     "time": "",
-    "price": "trong tuần 159k, cuối tuần 179k"
+    "price": "trong tuần 159k, cuối tuần 179k",
+    "rating": 4.5
   },
   {
     "name": "Bánh Cuốn Cô Loan",
@@ -7050,7 +7830,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "357B Lê Đại Hành, P. 11",
     "dist": "Quận 11",
     "time": "06:00 - 11:30",
-    "price": "35-50k"
+    "price": "35-50k",
+    "rating": 4.6
   },
   {
     "name": "Quán Nướng Má Hai",
@@ -7059,7 +7840,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "200 Nguyễn Thượng Hiền, P. 5",
     "dist": "Quận 3",
     "time": "10:00 - 22:00",
-    "price": "20-70k"
+    "price": "20-70k",
+    "rating": 3.8
   },
   {
     "name": "Doya Jjambbong",
@@ -7068,7 +7850,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "S63-1 Sky Garden 3, P. Tân Phong",
     "dist": "Quận 7",
     "time": "11:00 - 22:00",
-    "price": ""
+    "price": "",
+    "rating": 4.3
   },
   {
     "name": "Quán Chà Bá",
@@ -7077,7 +7860,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "185Q Mai Xuân Thưởng, P. 5",
     "dist": "Quận 6",
     "time": "13:00 - 22:00",
-    "price": "10-30k"
+    "price": "10-30k",
+    "rating": 4.2
   },
   {
     "name": "Lẩu 72 Nguyễn Trường Tộ",
@@ -7086,7 +7870,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "72 Nguyễn Trường Tộ, P. 3, Tp. Vũng Tàu",
     "dist": "​",
     "time": "09:00 - 21:00",
-    "price": "50-200k"
+    "price": "50-200k",
+    "rating": 4.5
   },
   {
     "name": "Nhà Thơm",
@@ -7095,7 +7880,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "42CT Tam Đảo, Cư Xá Bắc Hải, P. 15",
     "dist": "Quận 10",
     "time": "08:00 - 22:00",
-    "price": "20-30k"
+    "price": "20-30k",
+    "rating": 4.7
   },
   {
     "name": "Quán Út Phượng",
@@ -7105,7 +7891,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "12:00 - 20:00",
-    "price": "20-35k"
+    "price": "20-35k",
+    "rating": 3.9
   },
   {
     "name": "Mì Vịt Tiềm Hữu Ký",
@@ -7114,7 +7901,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "84 Nguyễn Văn Lạc, P. 19",
     "dist": "Quận Bình Thạnh",
     "time": "06:00 - 23:59",
-    "price": "50-100k"
+    "price": "50-100k",
+    "rating": 3.8
   },
   {
     "name": "Bánh Canh Cua Bùi Phát",
@@ -7123,7 +7911,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "453/95 Lê Văn Sỹ, P. 12",
     "dist": "Quận 3",
     "time": "08:00 - 21:00",
-    "price": "35k"
+    "price": "35k",
+    "rating": 3.5
   },
   {
     "name": "Quán Phở Sụn Ông Già Đầu Bạc",
@@ -7132,7 +7921,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "Đối diện 212/7 Nguyễn Văn Nguyễn, P. Tân Định",
     "dist": "Quận 1",
     "time": "6h30 - 13h00",
-    "price": ""
+    "price": "",
+    "rating": 4.1
   },
   {
     "name": "MỘC",
@@ -7141,7 +7931,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "11 Công Chúa Ngọc Hân. P. 13",
     "dist": "Quận 11",
     "time": "07:30 - 12:00 | 18:30 - 21:00",
-    "price": "60-75k"
+    "price": "60-75k",
+    "rating": 4.7
   },
   {
     "name": "Bánh ướt 25k",
@@ -7150,7 +7941,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "117 Thoại Ngọc Hầu, Hoà Thanh",
     "dist": "Quận Tân Phú",
     "time": "7h đến hết",
-    "price": "25k"
+    "price": "25k",
+    "rating": 4.6
   },
   {
     "name": "Trang Minh - Bún Chả Hà Nội",
@@ -7159,7 +7951,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "169 Bùi Đình Túy, P. 24",
     "dist": "Quận Bình Thạnh",
     "time": "06:30 - 20:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.8
   },
   {
     "name": "BamBoo Quán",
@@ -7168,7 +7961,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "47/24/33 Bùi Đình Túy, P. 24",
     "dist": "Quận Bình Thạnh",
     "time": "14:00 - 22:00",
-    "price": "30-50k"
+    "price": "30-50k",
+    "rating": 4.4
   },
   {
     "name": "Tiệm Cháo Trắng Về Đây Em",
@@ -7177,7 +7971,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "221/10 Phan Văn Khỏe",
     "dist": "Quận 6",
     "time": "16:00 - 19:00",
-    "price": "2-20k"
+    "price": "2-20k",
+    "rating": 4.9
   },
   {
     "name": "MiinTea",
@@ -7186,7 +7981,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "addr": "104 Đường 17, Khu Phố 3, P.Tân Kiểng",
     "dist": "Quận 7",
     "time": "08:00 - 22:30",
-    "price": "19-39k"
+    "price": "19-39k",
+    "rating": 4.6
   },
   {
     "name": "Quán ốc Như",
@@ -7196,7 +7992,8 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "16:00 - 23:00",
-    "price": "50-200k"
+    "price": "50-200k",
+    "rating": 4.1
   },
   {
     "name": "Tàu Hủ Đá",
@@ -7206,6 +8003,7 @@ export const database = [...newRestaurants, ...provincialRestaurants,
     "dist": "Thành phố Thủ Đức",
     "oldDist": "Thủ Đức",
     "time": "15:30 - 21:30",
-    "price": "15k-50k"
+    "price": "15k-50k",
+    "rating": 4.3
   }
 ];
