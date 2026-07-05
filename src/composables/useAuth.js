@@ -1,95 +1,148 @@
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged,
+  updateProfile
+} from 'firebase/auth'
+import { auth, googleProvider } from '../firebase.js'
 
 const currentUser = ref(null)
+const isLoading = ref(true)
 const FREE_SPINS = 10
 
-function loadUsers() {
-  try {
-    return JSON.parse(localStorage.getItem('be-oi-users') || '{}')
-  } catch { return {} }
-}
-
-function saveUsers(users) {
-  localStorage.setItem('be-oi-users', JSON.stringify(users))
-}
-
 function initAuth() {
-  const saved = localStorage.getItem('be-oi-current-user')
-  if (saved) {
-    currentUser.value = JSON.parse(saved)
+  return new Promise((resolve) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        currentUser.value = {
+          uid: user.uid,
+          name: user.displayName || user.email?.split('@')[0] || 'User',
+          email: user.email,
+          photoURL: user.photoURL
+        }
+        loadSpinData(user.uid)
+      } else {
+        currentUser.value = null
+      }
+      isLoading.value = false
+      unsubscribe()
+      resolve()
+    })
+  })
+}
+
+function loadSpinData(uid) {
+  const data = localStorage.getItem(`be-oi-spins-${uid}`)
+  if (data) {
+    const parsed = JSON.parse(data)
+    const now = Date.now()
+    const dayMs = 24 * 60 * 60 * 1000
+    if (now - parsed.lastReset > dayMs) {
+      spinsLeft.value = FREE_SPINS
+      saveSpinData(uid)
+    } else {
+      spinsLeft.value = parsed.spinsLeft
+    }
+  } else {
+    spinsLeft.value = FREE_SPINS
+    saveSpinData(uid)
   }
 }
 
-function register(name, phone, password) {
-  const users = loadUsers()
-  const key = phone.trim()
-  if (users[key]) return { ok: false, msg: 'Số điện thoại đã được đăng ký' }
-  if (!name.trim() || !phone.trim() || !password.trim()) return { ok: false, msg: 'Vui lòng nhập đầy đủ thông tin' }
-  if (password.length < 4) return { ok: false, msg: 'Mật khẩu phải có ít nhất 4 ký tự' }
+function saveSpinData(uid) {
+  localStorage.setItem(`be-oi-spins-${uid}`, JSON.stringify({
+    spinsLeft: spinsLeft.value,
+    lastReset: Date.now()
+  }))
+}
 
-  users[key] = {
-    name: name.trim(),
-    phone: phone.trim(),
-    password,
-    spinsLeft: FREE_SPINS,
-    totalSpins: 0,
-    createdAt: Date.now()
+const spinsLeft = ref(FREE_SPINS)
+
+const isLoggedIn = computed(() => !!currentUser.value)
+const hasSpins = computed(() => spinsLeft.value > 0)
+
+async function registerWithEmail(name, email, password) {
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, password)
+    await updateProfile(cred.user, { displayName: name })
+    currentUser.value = {
+      uid: cred.user.uid,
+      name,
+      email,
+      photoURL: null
+    }
+    spinsLeft.value = FREE_SPINS
+    saveSpinData(cred.user.uid)
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, msg: translateError(err.code) }
   }
-  saveUsers(users)
-  currentUser.value = { ...users[key], phone: key }
-  localStorage.setItem('be-oi-current-user', JSON.stringify(currentUser.value))
-  return { ok: true }
 }
 
-function login(phone, password) {
-  const users = loadUsers()
-  const key = phone.trim()
-  if (!users[key]) return { ok: false, msg: 'Tài khoản không tồn tại' }
-  if (users[key].password !== password) return { ok: false, msg: 'Sai mật khẩu' }
-
-  currentUser.value = { ...users[key], phone: key }
-  localStorage.setItem('be-oi-current-user', JSON.stringify(currentUser.value))
-  return { ok: true }
+async function loginWithEmail(email, password) {
+  try {
+    await signInWithEmailAndPassword(auth, email, password)
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, msg: translateError(err.code) }
+  }
 }
 
-function logout() {
+async function loginWithGoogle() {
+  try {
+    await signInWithPopup(auth, googleProvider)
+    return { ok: true }
+  } catch (err) {
+    return { ok: false, msg: translateError(err.code) }
+  }
+}
+
+async function logout() {
+  await signOut(auth)
   currentUser.value = null
-  localStorage.removeItem('be-oi-current-user')
+  spinsLeft.value = FREE_SPINS
 }
 
 function useSpin() {
-  if (!currentUser.value) return false
-  if (currentUser.value.spinsLeft <= 0) return false
-
-  currentUser.value.spinsLeft--
-  currentUser.value.totalSpins++
-
-  const users = loadUsers()
-  users[currentUser.value.phone].spinsLeft = currentUser.value.spinsLeft
-  users[currentUser.value.phone].totalSpins = currentUser.value.totalSpins
-  saveUsers(users)
-  localStorage.setItem('be-oi-current-user', JSON.stringify(currentUser.value))
+  if (!currentUser.value || spinsLeft.value <= 0) return false
+  spinsLeft.value--
+  saveSpinData(currentUser.value.uid)
   return true
 }
 
 function canSpin() {
-  return currentUser.value && currentUser.value.spinsLeft > 0
+  return currentUser.value && spinsLeft.value > 0
 }
 
-const isLoggedIn = computed(() => !!currentUser.value)
-const spinsLeft = computed(() => currentUser.value?.spinsLeft ?? 0)
-const hasSpins = computed(() => spinsLeft.value > 0)
+function translateError(code) {
+  const map = {
+    'auth/email-already-in-use': 'Email đã được đăng ký',
+    'auth/invalid-email': 'Email không hợp lệ',
+    'auth/weak-password': 'Mật khẩu phải có ít nhất 6 ký tự',
+    'auth/user-not-found': 'Tài khoản không tồn tại',
+    'auth/wrong-password': 'Sai mật khẩu',
+    'auth/too-many-requests': 'Thử lại sau vài phút',
+    'auth/popup-closed-by-user': 'Đã đóng popup',
+    'auth/network-request-failed': 'Lỗi mạng, thử lại sau'
+  }
+  return map[code] || 'Có lỗi xảy ra, thử lại sau'
+}
 
 export function useAuth() {
   return {
     currentUser,
+    isLoading,
     isLoggedIn,
     spinsLeft,
     hasSpins,
     FREE_SPINS,
     initAuth,
-    register,
-    login,
+    registerWithEmail,
+    loginWithEmail,
+    loginWithGoogle,
     logout,
     useSpin,
     canSpin
