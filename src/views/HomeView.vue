@@ -33,13 +33,58 @@ const showDonateModal = ref(false)
 const resultCardRef = ref(null)
 const isCapturing = ref(false)
 
+// Time filter
+const timeFilter = ref('all')
+const timeOptions = [
+  { value: 'all', label: 'Tất cả', icon: '🍽️' },
+  { value: 'morning', label: 'Sáng (5h-10h)', icon: '🌅', icon: 'sunrise' },
+  { value: 'lunch', label: 'Trưa (10h-14h)', icon: '☀️', icon: 'sun' },
+  { value: 'afternoon', label: 'Chiều (14h-17h)', icon: '🌤️', icon: 'cloud-sun' },
+  { value: 'evening', label: 'Tối (17h-22h)', icon: '🌙', icon: 'moon' },
+  { value: 'latenight', label: 'Đêm (22h-5h)', icon: '🌃', icon: 'stars' }
+]
+
+const getTimeCategory = (timeStr) => {
+  if (!timeStr) return 'all'
+  const match = timeStr.match(/(\d{1,2})[h:]/)
+  if (!match) return 'all'
+  const hour = parseInt(match[1])
+  if (hour >= 5 && hour < 10) return 'morning'
+  if (hour >= 10 && hour < 14) return 'lunch'
+  if (hour >= 14 && hour < 17) return 'afternoon'
+  if (hour >= 17 && hour < 22) return 'evening'
+  return 'latenight'
+}
+
+// GPS / Nearby
+const userLocation = ref(null)
+const nearbyPlaces = ref([])
+const showNearby = ref(false)
+const locationLoading = ref(false)
+const locationError = ref('')
+
+// Daily challenge
+const dailyChallenge = ref({ spinsToday: 0, completed: false, date: '' })
+const showChallenge = ref(false)
+
 onMounted(async () => {
   await initAuth()
   const saved = localStorage.getItem('be-oi-an-gi-history')
   if (saved) history.value = JSON.parse(saved)
   const savedCount = localStorage.getItem('be-oi-an-gi-spin-count')
   if (savedCount) spinCount.value = parseInt(savedCount)
+  loadDailyChallenge()
+  detectTimeOfDay()
 })
+
+const detectTimeOfDay = () => {
+  const hour = new Date().getHours()
+  if (hour >= 5 && hour < 10) timeFilter.value = 'morning'
+  else if (hour >= 10 && hour < 14) timeFilter.value = 'lunch'
+  else if (hour >= 14 && hour < 17) timeFilter.value = 'afternoon'
+  else if (hour >= 17 && hour < 22) timeFilter.value = 'evening'
+  else timeFilter.value = 'latenight'
+}
 
 const typeList = computed(() => {
   const types = new Set(database.map((p) => p.type).filter(Boolean))
@@ -54,7 +99,9 @@ const filteredDatabase = computed(() => {
       p.name.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       p.dish.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       p.addr.toLowerCase().includes(searchQuery.value.toLowerCase())
-    return matchDist && matchType && matchSearch
+    if (timeFilter.value === 'all') return matchDist && matchType && matchSearch
+    const timeCat = getTimeCategory(p.time)
+    return matchDist && matchType && matchSearch && timeCat === timeFilter.value
   })
 })
 
@@ -130,7 +177,122 @@ const pickRandom = () => {
     history.value.unshift({ ...winner, timestamp: Date.now() })
     if (history.value.length > 20) history.value = history.value.slice(0, 20)
     localStorage.setItem('be-oi-an-gi-history', JSON.stringify(history.value))
+    updateDailyChallenge()
   }, 5000)
+}
+
+// Daily challenge
+const loadDailyChallenge = () => {
+  const today = new Date().toISOString().split('T')[0]
+  const saved = localStorage.getItem('be-oi-daily-challenge')
+  if (saved) {
+    const data = JSON.parse(saved)
+    if (data.date === today) {
+      dailyChallenge.value = data
+      return
+    }
+  }
+  dailyChallenge.value = { spinsToday: 0, completed: false, date: today }
+}
+
+const updateDailyChallenge = () => {
+  const today = new Date().toISOString().split('T')[0]
+  if (dailyChallenge.value.date !== today) {
+    dailyChallenge.value = { spinsToday: 0, completed: false, date: today }
+  }
+  dailyChallenge.value.spinsToday++
+  if (dailyChallenge.value.spinsToday >= 3) {
+    dailyChallenge.value.completed = true
+  }
+  localStorage.setItem('be-oi-daily-challenge', JSON.stringify(dailyChallenge.value))
+}
+
+const shareChallenge = () => {
+  const text = `🍜 Bé ơi ăn gì - Thử thách hàng ngày\n✅ Đã quay ${dailyChallenge.value.spinsToday}/3 lượt hôm nay!\n🎮 Thử thách ngay: ${window.location.origin}`
+  if (navigator.share) {
+    navigator.share({ title: 'Thử thách Bé ơi ăn gì!', text })
+  } else {
+    navigator.clipboard.writeText(text)
+    alert('Đã copy vào clipboard!')
+  }
+}
+
+// Nearby / GPS
+const findNearby = () => {
+  if (!navigator.geolocation) {
+    locationError.value = 'Trình duyệt không hỗ trợ GPS'
+    return
+  }
+  locationLoading.value = true
+  locationError.value = ''
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      userLocation.value = { lat: pos.coords.latitude, lng: pos.coords.longitude }
+      calculateNearby()
+      locationLoading.value = false
+    },
+    () => {
+      locationError.value = 'Không thể lấy vị trí. Hãy cho phép truy cập GPS.'
+      locationLoading.value = false
+    },
+    { enableHighAccuracy: true, timeout: 10000 }
+  )
+}
+
+const calculateNearby = () => {
+  if (!userLocation.value) return
+  nearbyPlaces.value = database
+    .map(p => {
+      const dist = getDistance(userLocation.value.lat, userLocation.value.lng, p)
+      return { ...p, distance: dist }
+    })
+    .filter(p => p.distance !== null)
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, 10)
+  showNearby.value = true
+}
+
+const getDistance = (lat, lng, place) => {
+  const locationMap = {
+    'Quận 1': { lat: 10.7721, lng: 106.7019 },
+    'Quận 2': { lat: 10.7870, lng: 106.7450 },
+    'Quận 3': { lat: 10.7830, lng: 106.6940 },
+    'Quận 4': { lat: 10.7600, lng: 106.7060 },
+    'Quận 5': { lat: 10.7570, lng: 106.6660 },
+    'Quận 7': { lat: 10.7300, lng: 106.7250 },
+    'Quận 10': { lat: 10.7730, lng: 106.6700 },
+    'Bình Thạnh': { lat: 10.8010, lng: 106.7100 },
+    'Phú Nhuận': { lat: 10.7950, lng: 106.6850 },
+    'Tân Bình': { lat: 10.8020, lng: 106.6520 },
+    'Thủ Đức': { lat: 10.8500, lng: 106.7500 },
+    'Gò Vấp': { lat: 10.8380, lng: 106.6650 },
+    'Tân Phú': { lat: 10.7910, lng: 106.6290 },
+    'Bình Tân': { lat: 10.7720, lng: 106.6080 },
+    'Nhà Bè': { lat: 10.6960, lng: 106.7200 },
+    'Cần Giờ': { lat: 10.4110, lng: 106.9530 },
+  }
+  const loc = locationMap[place.dist]
+  if (!loc) return null
+  const R = 6371
+  const dLat = (loc.lat - lat) * Math.PI / 180
+  const dLng = (loc.lng - lng) * Math.PI / 180
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat * Math.PI / 180) * Math.cos(loc.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+}
+
+const formatDistance = (km) => {
+  if (km < 1) return `${Math.round(km * 1000)}m`
+  return `${km.toFixed(1)}km`
+}
+
+const openOrderLink = (place) => {
+  const query = `${place.name} ${place.addr} ${place.dist}`
+  window.open(`https://shopeefood.vn/search?q=${encodeURIComponent(query)}`, '_blank')
+}
+
+const openGrabFood = (place) => {
+  const query = `${place.name} ${place.addr} ${place.dist}`
+  window.open(`https://food.grab.com/sg/en/search?query=${encodeURIComponent(query)}`, '_blank')
 }
 
 const getCoord = (angle, radius) => {
@@ -354,6 +516,32 @@ const switchAuthMode = () => {
         </div>
       </div>
 
+      <!-- Quick Actions -->
+      <div class="w-full max-w-3xl mb-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+        <button @click="findNearby" :disabled="locationLoading"
+          class="flex items-center gap-2 px-4 py-2.5 bg-white border border-stone-200 hover:border-blue-300 hover:bg-blue-50 rounded-xl text-sm font-semibold text-stone-600 hover:text-blue-600 transition-all card-shadow disabled:opacity-50">
+          <Icon :icon="locationLoading ? 'lucide:loader-2' : 'lucide:map-pin'" :class="{ 'animate-spin': locationLoading }" class="size-4" />
+          Quán gần đây
+        </button>
+        <button @click="showChallenge = true"
+          class="flex items-center gap-2 px-4 py-2.5 bg-white border border-stone-200 hover:border-green-300 hover:bg-green-50 rounded-xl text-sm font-semibold text-stone-600 hover:text-green-600 transition-all card-shadow">
+          <Icon icon="lucide:trophy" class="size-4" />
+          Thử thách hôm nay
+          <span v-if="dailyChallenge.completed" class="w-2 h-2 bg-green-400 rounded-full"></span>
+        </button>
+      </div>
+
+      <!-- Time Filter -->
+      <div class="w-full max-w-3xl mb-6 sm:mb-8">
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-hide">
+          <button v-for="opt in timeOptions" :key="opt.value" @click="timeFilter = opt.value; resetWheel()"
+            class="flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all"
+            :class="timeFilter === opt.value ? 'bg-gradient-to-r from-orange-400 to-amber-400 text-white shadow-lg shadow-orange-200/50' : 'bg-white border border-stone-200 text-stone-500 hover:border-orange-300 hover:text-orange-500'">
+            {{ opt.label }}
+          </button>
+        </div>
+      </div>
+
       <!-- Wheel -->
       <div class="relative mb-8 sm:mb-10">
         <!-- Pointer -->
@@ -542,8 +730,22 @@ const switchAuthMode = () => {
               </div>
             </div>
 
+            <!-- Order Online -->
+            <div class="flex gap-2 mt-3">
+              <button @click="openOrderLink(randomPlace)"
+                class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-orange-50 hover:bg-orange-100 border border-orange-200 rounded-xl text-xs font-semibold text-orange-600 transition-all">
+                <Icon icon="lucide:shopping-bag" class="size-3.5" />
+                ShopeeFood
+              </button>
+              <button @click="openGrabFood(randomPlace)"
+                class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-green-50 hover:bg-green-100 border border-green-200 rounded-xl text-xs font-semibold text-green-600 transition-all">
+                <Icon icon="lucide:bike" class="size-3.5" />
+                GrabFood
+              </button>
+            </div>
+
             <!-- Actions -->
-            <div class="flex gap-3 mt-5">
+            <div class="flex gap-3 mt-4">
               <button @click="shareResult(randomPlace)" class="flex-1 py-3.5 bg-white border-2 border-orange-200 hover:border-orange-400 text-orange-500 rounded-xl font-bold text-sm tracking-wide transition-all active:scale-[0.98]">
                 <span class="flex items-center justify-center gap-2">
                   <Icon icon="lucide:share-2" class="size-4" />
@@ -554,6 +756,90 @@ const switchAuthMode = () => {
                 Chốt luôn! 🎉
               </button>
             </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- Nearby Modal -->
+      <transition name="modal">
+        <div v-if="showNearby" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" @click.self="showNearby = false">
+          <div class="w-full max-w-sm bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100 max-h-[80vh] overflow-hidden flex flex-col" @click.stop>
+            <button @click="showNearby = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:x" class="size-4 sm:size-5" />
+            </button>
+
+            <div class="text-center mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-xl mx-auto mb-2 shadow-lg shadow-blue-200">
+                📍
+              </div>
+              <h3 class="text-lg font-bold text-stone-800 font-display">Quán gần bạn</h3>
+              <p v-if="locationError" class="text-xs text-red-500 mt-1">{{ locationError }}</p>
+            </div>
+
+            <div class="space-y-2 overflow-y-auto flex-1 pr-1">
+              <div v-for="place in nearbyPlaces" :key="place.name"
+                @click="randomPlace = place; showNearby = false"
+                class="bg-stone-50 hover:bg-orange-50 rounded-xl p-3 flex items-center gap-3 transition-colors cursor-pointer border border-transparent hover:border-orange-100">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center text-sm font-bold text-orange-500 shrink-0">
+                  {{ formatDistance(place.distance) }}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-semibold text-stone-700 truncate">{{ place.name }}</p>
+                  <p class="text-xs text-stone-400 truncate">{{ place.dish }} • {{ place.dist }}</p>
+                </div>
+                <Icon icon="lucide:chevron-right" class="size-4 text-stone-300 shrink-0" />
+              </div>
+              <div v-if="nearbyPlaces.length === 0 && !locationLoading" class="text-center py-6 text-stone-300">
+                <p class="text-sm">Không tìm thấy quán gần đây</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- Daily Challenge Modal -->
+      <transition name="modal">
+        <div v-if="showChallenge" class="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" @click.self="showChallenge = false">
+          <div class="w-full max-w-sm bg-white rounded-3xl p-6 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100" @click.stop>
+            <button @click="showChallenge = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 hover:bg-stone-200 rounded-full p-2 transition-all z-10">
+              <Icon icon="lucide:x" class="size-4 sm:size-5" />
+            </button>
+
+            <div class="text-center mb-5">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-400 to-emerald-400 flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg shadow-green-200">
+                🏆
+              </div>
+              <h3 class="text-lg font-bold text-stone-800 font-display">Thử thách hôm nay</h3>
+              <p class="text-sm text-stone-400 mt-1">Quay 3 lần để hoàn thành!</p>
+            </div>
+
+            <!-- Progress -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-5 text-center border border-green-100 mb-4">
+              <div class="flex justify-center gap-2 mb-3">
+                <div v-for="i in 3" :key="i"
+                  class="w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold transition-all"
+                  :class="i <= dailyChallenge.spinsToday ? 'bg-green-400 text-white shadow-lg shadow-green-200' : 'bg-white border-2 border-green-200 text-green-300'">
+                  <Icon v-if="i <= dailyChallenge.spinsToday" icon="lucide:check" class="size-5" />
+                  <span v-else>{{ i }}</span>
+                </div>
+              </div>
+              <p class="text-sm font-semibold" :class="dailyChallenge.completed ? 'text-green-600' : 'text-stone-500'">
+                {{ dailyChallenge.spinsToday }}/3 lượt quay
+              </p>
+              <p v-if="dailyChallenge.completed" class="text-xs text-green-500 mt-1 font-medium">🎉 Hoàn thành!</p>
+            </div>
+
+            <button v-if="dailyChallenge.completed" @click="shareChallenge"
+              class="w-full py-3 bg-gradient-to-r from-green-400 to-emerald-400 hover:from-green-500 hover:to-emerald-500 text-white rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-green-200/50 active:scale-[0.98] transition-all mb-3">
+              <span class="flex items-center justify-center gap-2">
+                <Icon icon="lucide:share-2" class="size-4" />
+                Chia sẻ kết quả
+              </span>
+            </button>
+
+            <button @click="showChallenge = false" class="w-full py-3 bg-stone-100 hover:bg-stone-200 text-stone-600 rounded-xl font-bold text-sm transition-all">
+              Đóng
+            </button>
           </div>
         </div>
       </transition>
