@@ -6,7 +6,7 @@ import { useAuth } from '../composables/useAuth.js'
 import { Icon } from '@iconify/vue'
 import html2canvas from 'html2canvas'
 
-const { currentUser, isLoading, isLoggedIn, spinsLeft, hasSpins, FREE_SPINS, initAuth, registerWithEmail, loginWithEmail, loginWithGoogle, logout, useSpin, canSpin } = useAuth()
+const { currentUser, isLoading, isLoggedIn, spinsLeft, hasSpins, FREE_SPINS_LOGGED_IN, FREE_SPINS_GUEST, initAuth, registerWithEmail, loginWithEmail, loginWithGoogle, logout, useSpin, canSpin } = useAuth()
 
 const randomPlace = ref(null)
 const isSpinning = ref(false)
@@ -90,17 +90,13 @@ watch(filteredDatabase, resetWheel, { immediate: true })
 const pickRandom = () => {
   if (isSpinning.value) return
 
-  // Check login
-  if (!isLoggedIn.value) {
-    pendingSpin.value = true
-    authMode.value = 'login'
-    showAuthModal.value = true
-    return
-  }
-
   // Check spins
   if (!canSpin()) {
-    showDonateModal.value = true
+    if (!isLoggedIn.value) {
+      showAuthModal.value = true
+    } else {
+      showDonateModal.value = true
+    }
     return
   }
 
@@ -405,11 +401,16 @@ const switchAuthMode = () => {
           </span>
           <div v-if="!isSpinning && !isLoading" class="absolute inset-0 animate-shimmer rounded-2xl"></div>
         </button>
-        <p v-if="isLoggedIn && !isSpinning && !randomPlace" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-3 italic">
-          Còn {{ spinsLeft }}/{{ FREE_SPINS }} lượt quay miễn phí
-        </p>
-        <p v-if="!isLoggedIn && !isSpinning && !randomPlace && !isLoading" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-4 italic">
-          ✨ Đang chờ lệnh công chúa ạ...
+        <p v-if="!isSpinning && !randomPlace && !isLoading" class="text-stone-400 text-[0.8rem] sm:text-sm font-medium mt-3 italic">
+          <template v-if="isLoggedIn">
+            Còn {{ spinsLeft }}/{{ FREE_SPINS_LOGGED_IN }} lượt quay miễn phí
+          </template>
+          <template v-else-if="spinsLeft > 0">
+            Còn {{ spinsLeft }}/{{ FREE_SPINS_GUEST }} lượt quay miễn phí • <button @click="showAuthModal = true" class="text-orange-500 font-bold hover:underline">Đăng nhập để nhận thêm</button>
+          </template>
+          <template v-else>
+            Hết lượt quay • <button @click="showAuthModal = true" class="text-orange-500 font-bold hover:underline">Đăng nhập để nhận thêm</button>
+          </template>
         </p>
       </div>
 
@@ -570,7 +571,7 @@ const switchAuthMode = () => {
                 🍜
               </div>
               <h3 class="text-xl font-bold text-stone-800 font-display">{{ authMode === 'login' ? 'Đăng nhập' : 'Đăng ký' }}</h3>
-              <p class="text-sm text-stone-400 mt-1">{{ authMode === 'login' ? 'Chào mừng bạn quay trở lại!' : 'Tạo tài khoản để nhận 10 lượt quay miễn phí' }}</p>
+              <p class="text-sm text-stone-400 mt-1">{{ authMode === 'login' ? 'Đăng nhập để nhận thêm lượt quay!' : 'Tạo tài khoản để nhận 10 lượt quay miễn phí' }}</p>
             </div>
 
             <!-- Google Login -->

@@ -11,14 +11,16 @@ import { auth, googleProvider } from '../firebase.js'
 
 const currentUser = ref(null)
 const isLoading = ref(true)
-const FREE_SPINS = 10
-const spinsLeft = ref(FREE_SPINS)
+const FREE_SPINS_LOGGED_IN = 10
+const FREE_SPINS_GUEST = 5
+const spinsLeft = ref(FREE_SPINS_GUEST)
 
 let authInitialized = false
 
 function initAuth() {
   if (authInitialized) return Promise.resolve()
   authInitialized = true
+  loadGuestSpins()
   return new Promise((resolve) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -31,13 +33,42 @@ function initAuth() {
         loadSpinData(user.uid)
       } else {
         currentUser.value = null
-        spinsLeft.value = FREE_SPINS
+        loadGuestSpins()
       }
       isLoading.value = false
       unsubscribe()
       resolve()
     })
   })
+}
+
+function loadGuestSpins() {
+  try {
+    const data = localStorage.getItem('be-oi-spins-guest')
+    if (data) {
+      const parsed = JSON.parse(data)
+      const now = Date.now()
+      const dayMs = 24 * 60 * 60 * 1000
+      if (now - parsed.lastReset > dayMs) {
+        spinsLeft.value = FREE_SPINS_GUEST
+        saveGuestSpins()
+      } else {
+        spinsLeft.value = parsed.spinsLeft
+      }
+    } else {
+      spinsLeft.value = FREE_SPINS_GUEST
+      saveGuestSpins()
+    }
+  } catch {
+    spinsLeft.value = FREE_SPINS_GUEST
+  }
+}
+
+function saveGuestSpins() {
+  localStorage.setItem('be-oi-spins-guest', JSON.stringify({
+    spinsLeft: spinsLeft.value,
+    lastReset: Date.now()
+  }))
 }
 
 function loadSpinData(uid) {
@@ -48,17 +79,17 @@ function loadSpinData(uid) {
       const now = Date.now()
       const dayMs = 24 * 60 * 60 * 1000
       if (now - parsed.lastReset > dayMs) {
-        spinsLeft.value = FREE_SPINS
+        spinsLeft.value = FREE_SPINS_LOGGED_IN
         saveSpinData(uid)
       } else {
         spinsLeft.value = parsed.spinsLeft
       }
     } else {
-      spinsLeft.value = FREE_SPINS
+      spinsLeft.value = FREE_SPINS_LOGGED_IN
       saveSpinData(uid)
     }
   } catch {
-    spinsLeft.value = FREE_SPINS
+    spinsLeft.value = FREE_SPINS_LOGGED_IN
   }
 }
 
@@ -112,18 +143,22 @@ async function loginWithGoogle() {
 async function logout() {
   await signOut(auth)
   currentUser.value = null
-  spinsLeft.value = FREE_SPINS
+  loadGuestSpins()
 }
 
 function useSpin() {
-  if (!currentUser.value || spinsLeft.value <= 0) return false
+  if (spinsLeft.value <= 0) return false
   spinsLeft.value--
-  saveSpinData(currentUser.value.uid)
+  if (currentUser.value) {
+    saveSpinData(currentUser.value.uid)
+  } else {
+    saveGuestSpins()
+  }
   return true
 }
 
 function canSpin() {
-  return currentUser.value && spinsLeft.value > 0
+  return spinsLeft.value > 0
 }
 
 function translateError(code) {
@@ -148,7 +183,8 @@ export function useAuth() {
     isLoggedIn,
     spinsLeft,
     hasSpins,
-    FREE_SPINS,
+    FREE_SPINS_LOGGED_IN,
+    FREE_SPINS_GUEST,
     initAuth,
     registerWithEmail,
     loginWithEmail,
