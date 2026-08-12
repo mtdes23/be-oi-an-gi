@@ -17,6 +17,13 @@ body {
   min-height: 100vh;
   background: #fefce8;
   color: #1c1917;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body,
+.dark {
+  background: #0c0a09;
+  color: #fafaf9;
 }
 
 /* Scrollbar */
