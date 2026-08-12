@@ -1,7 +1,8 @@
 import { newRestaurants } from './new_restaurants.js'
 import { provincialRestaurants } from './provincial_restaurants.js'
+import { extraRestaurants } from './extra_restaurants.js'
 
-export const database = [...newRestaurants, ...provincialRestaurants,
+export const database = [...extraRestaurants, ...newRestaurants, ...provincialRestaurants,
   {
     "name": "Cơm Tấm Cô Bảy",
     "dish": "Cơm tấm",
