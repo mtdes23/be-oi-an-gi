@@ -508,6 +508,10 @@ const switchAuthMode = () => {
           <button v-if="isLoggedIn" @click="logout" class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/80 dark:bg-stone-800/80 border border-orange-100 dark:border-stone-700 flex items-center justify-center text-stone-400 hover:text-orange-500 hover:border-orange-200 dark:hover:border-orange-800 hover:shadow-md transition-all card-shadow">
             <Icon icon="lucide:log-out" class="size-4 sm:size-5" />
           </button>
+          <button v-else @click="showAuthModal = true" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-orange-400 to-amber-400 text-white text-xs font-bold shadow-md shadow-orange-200/50 dark:shadow-orange-900/30 hover:from-orange-500 hover:to-amber-500 active:scale-95 transition-all">
+            <Icon icon="lucide:log-in" class="size-3.5" />
+            {{ t.login }}
+          </button>
         </div>
       </div>
     </header>
