@@ -1,8 +1,31 @@
 import { newRestaurants } from './new_restaurants.js'
 import { provincialRestaurants } from './provincial_restaurants.js'
 import { extraRestaurants } from './extra_restaurants.js'
+import { hcmcRestaurants1 } from './hcmc_restaurants_1.js'
+import { hcmcRestaurants2 } from './hcmc_restaurants_2.js'
+import { hcmcRestaurants3 } from './hcmc_restaurants_3.js'
+import { hanoiRestaurants } from './hanoi_restaurants.js'
+import { danangHoiAnRestaurants } from './danang_hoian_restaurants.js'
+import { centralRestaurants } from './central_vietnam_restaurants.js'
+import { southRestaurants } from './south_vietnam_restaurants.js'
+import { highlandRestaurants } from './highland_restaurants.js'
+import { streetFoodHCMC } from './street_food_hcmc.js'
+import { specialtyRestaurants } from './specialty_restaurants.js'
 
-export const database = [...extraRestaurants, ...newRestaurants, ...provincialRestaurants,
+export const database = [
+  ...extraRestaurants,
+  ...hcmcRestaurants1,
+  ...hcmcRestaurants2,
+  ...hcmcRestaurants3,
+  ...hanoiRestaurants,
+  ...danangHoiAnRestaurants,
+  ...centralRestaurants,
+  ...southRestaurants,
+  ...highlandRestaurants,
+  ...streetFoodHCMC,
+  ...specialtyRestaurants,
+  ...newRestaurants,
+  ...provincialRestaurants,
   {
     "name": "Cơm Tấm Cô Bảy",
     "dish": "Cơm tấm",
