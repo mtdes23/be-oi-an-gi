@@ -3,7 +3,6 @@ import { computed } from 'vue'
 import { Icon } from '@iconify/vue'
 import { useI18n } from '../composables/useI18n.js'
 import { useChallengeStore } from '../stores/challengeStore.js'
-import { useToast } from '../composables/useToast.js'
 
 const props = defineProps({
   show: { type: Boolean, default: false }
@@ -13,7 +12,6 @@ const emit = defineEmits(['close'])
 
 const { t } = useI18n()
 const challengeStore = useChallengeStore()
-const { success } = useToast()
 
 const weeklyProgress = computed(() => challengeStore.getWeeklyProgress())
 
@@ -23,7 +21,7 @@ const shareChallenge = () => {
     navigator.share({ title: t.value.dailyChallenge, text })
   } else {
     navigator.clipboard.writeText(text)
-    success(t.value.copied)
+    alert(t.value.copied)
   }
 }
 
@@ -34,7 +32,7 @@ const shareWeeklyChallenge = () => {
     navigator.share({ title: t.value.weeklyChallenge, text })
   } else {
     navigator.clipboard.writeText(text)
-    success(t.value.copied)
+    alert(t.value.copied)
   }
 }
 </script>

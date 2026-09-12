@@ -1,4 +1,4 @@
-const CACHE_NAME = 'be-oi-an-gi-v2'
+const CACHE_NAME = 'be-oi-an-gi-v1'
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -28,16 +28,11 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return
 
-  if (event.request.destination === 'document') {
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match('/'))
-    )
-    return
-  }
-
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      const fetchPromise = fetch(event.request).then((response) => {
+      if (cached) return cached
+
+      return fetch(event.request).then((response) => {
         if (!response || response.status !== 200) return response
 
         const responseToCache = response.clone()
@@ -46,9 +41,11 @@ self.addEventListener('fetch', (event) => {
         })
 
         return response
-      }).catch(() => cached)
-
-      return cached || fetchPromise
+      }).catch(() => {
+        if (event.request.destination === 'document') {
+          return caches.match('/')
+        }
+      })
     })
   )
 })

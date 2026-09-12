@@ -2,10 +2,7 @@
 import { ref, computed } from 'vue'
 import { Icon } from '@iconify/vue'
 import { useFavorites } from '../composables/useFavorites.js'
-import { useToast } from '../composables/useToast.js'
 import { getProvinceDisplay } from '../data/districts.js'
-
-const { success, error } = useToast()
 
 const props = defineProps({
   place: { type: Object, required: true }
@@ -40,7 +37,7 @@ const shareResult = (place) => {
     navigator.share({ title: 'Bé ơi ăn gì?', text })
   } else {
     navigator.clipboard.writeText(text)
-    success('Đã copy vào clipboard!')
+    alert('Đã copy vào clipboard!')
   }
 }
 
@@ -48,9 +45,9 @@ const shareAsText = async (place) => {
   const text = `🍜 ${place.name}\n📍 ${place.addr}, ${place.dist}\n💰 ${place.price}\n⏰ ${place.time}`
   try {
     await navigator.clipboard.writeText(text)
-    success('Đã copy!')
+    alert('Đã copy!')
   } catch {
-    error('Không thể copy')
+    alert('Không thể copy')
   }
 }
 
