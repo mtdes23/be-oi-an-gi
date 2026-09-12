@@ -1,0 +1,27 @@
+{
+  "name": "Bé Ơi Ăn Gì?",
+  "short_name": "Bé Ăn Gì",
+  "description": "Quay vòng tìm quán ăn ngon - Không còn phải suy nghĩ ăn gì!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fefce8",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle"],
+  "lang": "vi",
+  "dir": "ltr"
+}

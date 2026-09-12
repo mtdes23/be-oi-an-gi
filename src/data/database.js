@@ -7,10 +7,7 @@ import { hcmcRestaurants3 } from './hcmc_restaurants_3.js'
 import { hanoiRestaurants } from './hanoi_restaurants.js'
 import { danangHoiAnRestaurants } from './danang_hoian_restaurants.js'
 import { centralRestaurants } from './central_vietnam_restaurants.js'
-import { southRestaurants } from './south_vietnam_restaurants.js'
-import { highlandRestaurants } from './highland_restaurants.js'
-import { streetFoodHCMC } from './street_food_hcmc.js'
-import { specialtyRestaurants } from './specialty_restaurants.js'
+import { henHoSaiGon } from './hen_ho_sai_gon.js'
 
 export const database = [
   ...extraRestaurants,
@@ -20,12 +17,9 @@ export const database = [
   ...hanoiRestaurants,
   ...danangHoiAnRestaurants,
   ...centralRestaurants,
-  ...southRestaurants,
-  ...highlandRestaurants,
-  ...streetFoodHCMC,
-  ...specialtyRestaurants,
   ...newRestaurants,
   ...provincialRestaurants,
+  ...henHoSaiGon,
   {
     "name": "Cơm Tấm Cô Bảy",
     "dish": "Cơm tấm",

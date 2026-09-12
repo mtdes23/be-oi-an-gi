@@ -1,4 +1,5 @@
 import { ref } from 'vue'
+import { debouncedSet } from './useLocalStorage.js'
 
 const weeklyChallenge = ref({ spinsThisWeek: 0, completed: false, weekStart: '', dailySpins: {} })
 
@@ -34,7 +35,7 @@ function resetWeeklyChallenge() {
 }
 
 function saveWeeklyChallenge() {
-  localStorage.setItem('be-oi-weekly-challenge', JSON.stringify(weeklyChallenge.value))
+  debouncedSet('be-oi-weekly-challenge', JSON.stringify(weeklyChallenge.value))
 }
 
 function updateWeeklyChallenge() {

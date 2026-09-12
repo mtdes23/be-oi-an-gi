@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { debouncedSet } from './useLocalStorage.js'
 
 const favorites = ref([])
 
@@ -12,7 +13,7 @@ function loadFavorites() {
 }
 
 function saveFavorites() {
-  localStorage.setItem('be-oi-favorites', JSON.stringify(favorites.value))
+  debouncedSet('be-oi-favorites', JSON.stringify(favorites.value))
 }
 
 function toggleFavorite(restaurant) {

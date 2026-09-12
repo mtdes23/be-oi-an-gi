@@ -1,4 +1,5 @@
 import { ref, computed } from 'vue'
+import { debouncedSet } from './useLocalStorage.js'
 
 const leaderboard = ref([])
 const currentRank = ref(null)
@@ -16,7 +17,7 @@ function loadLeaderboard() {
 }
 
 function saveLeaderboard() {
-  localStorage.setItem('be-oi-leaderboard', JSON.stringify(leaderboard.value))
+  debouncedSet('be-oi-leaderboard', JSON.stringify(leaderboard.value))
 }
 
 function sortLeaderboard() {

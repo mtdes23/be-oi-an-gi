@@ -40,3 +40,7 @@ __screenshots__/
 .env
 
 .vercel
+
+# Capacitor
+/android/
+/ios/

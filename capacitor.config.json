@@ -1,0 +1,34 @@
+{
+  "appId": "com.beoiangi.app",
+  "appName": "Bé Ơi Ăn Gì",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "backgroundColor": "#fefce8",
+      "androidSplashResourceName": "splash",
+      "showFullscreen": false
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#fefce8",
+      "overlaysWebView": false
+    },
+    "Share": {
+      "enabled": true
+    },
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon_config_sample",
+      "iconColor": "#FB923C"
+    },
+    "Haptics": {
+      "enabled": true
+    }
+  }
+}

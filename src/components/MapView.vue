@@ -8,6 +8,7 @@
 import { ref, onMounted, watch, onBeforeUnmount } from 'vue'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { DISTRICT_LOCATIONS } from '../data/locations.js'
 
 const props = defineProps({
   places: { type: Array, default: () => [] },
@@ -20,6 +21,13 @@ let markers = []
 
 const defaultCenter = [10.762622, 106.660172]
 const defaultZoom = 12
+
+function escapeHtml(str) {
+  if (!str) return ''
+  const div = document.createElement('div')
+  div.textContent = str
+  return div.innerHTML
+}
 
 onMounted(() => {
   initMap()
@@ -73,31 +81,12 @@ function updateMarkers() {
   markers.forEach(m => map.removeLayer(m))
   markers = []
 
-  const locationMap = {
-    'Quận 1': [10.7721, 106.7019],
-    'Quận 2': [10.7870, 106.7450],
-    'Quận 3': [10.7830, 106.6940],
-    'Quận 4': [10.7600, 106.7060],
-    'Quận 5': [10.7570, 106.6660],
-    'Quận 7': [10.7300, 106.7250],
-    'Quận 10': [10.7730, 106.6700],
-    'Bình Thạnh': [10.8010, 106.7100],
-    'Phú Nhuận': [10.7950, 106.6850],
-    'Tân Bình': [10.8020, 106.6520],
-    'Thủ Đức': [10.8500, 106.7500],
-    'Gò Vấp': [10.8380, 106.6650],
-    'Tân Phú': [10.7910, 106.6290],
-    'Bình Tân': [10.7720, 106.6080],
-    'Nhà Bè': [10.6960, 106.7200],
-    'Cần Giờ': [10.4110, 106.9530],
-  }
-
   props.places.forEach(place => {
-    const coords = locationMap[place.dist]
-    if (!coords) return
+    const loc = DISTRICT_LOCATIONS[place.dist]
+    if (!loc) return
 
-    const offsetLat = coords[0] + (Math.random() - 0.5) * 0.005
-    const offsetLng = coords[1] + (Math.random() - 0.5) * 0.005
+    const offsetLat = loc.lat + (Math.random() - 0.5) * 0.005
+    const offsetLng = loc.lng + (Math.random() - 0.5) * 0.005
 
     const icon = L.divIcon({
       className: 'custom-marker',
@@ -110,10 +99,10 @@ function updateMarkers() {
       .addTo(map)
       .bindPopup(`
         <div style="min-width:180px;">
-          <strong style="font-size:14px;color:#1c1917;">${place.name}</strong>
-          <div style="font-size:12px;color:#78716c;margin:4px 0;">${place.dish} • ${place.price}</div>
-          <div style="font-size:11px;color:#a8a29e;">${place.addr}, ${place.dist}</div>
-          <div style="font-size:11px;color:#a8a29e;margin-top:2px;">⏰ ${place.time || 'N/A'}</div>
+          <strong style="font-size:14px;color:#1c1917;">${escapeHtml(place.name)}</strong>
+          <div style="font-size:12px;color:#78716c;margin:4px 0;">${escapeHtml(place.dish)} • ${escapeHtml(place.price)}</div>
+          <div style="font-size:11px;color:#a8a29e;">${escapeHtml(place.addr)}, ${escapeHtml(place.dist)}</div>
+          <div style="font-size:11px;color:#a8a29e;margin-top:2px;">⏰ ${escapeHtml(place.time) || 'N/A'}</div>
         </div>
       `)
 

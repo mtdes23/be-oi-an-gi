@@ -10,17 +10,27 @@
     "lint": "run-s lint:*",
     "lint:oxlint": "oxlint . --fix",
     "lint:eslint": "eslint . --fix --cache",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "cap:sync": "npx cap sync",
+    "cap:ios": "npx cap open ios",
+    "cap:android": "npx cap open android"
   },
   "dependencies": {
+    "@capacitor/core": "^8.5.0",
     "@iconify/vue": "^5.0.0",
-    "firebase": "^12.15.0",
     "html2canvas": "^1.4.1",
     "leaflet": "^1.9.4",
+    "pinia": "^3.0.4",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
   },
   "devDependencies": {
+    "@capacitor/android": "^8.5.0",
+    "@capacitor/cli": "^8.5.0",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/ios": "^8.5.0",
+    "@capacitor/local-notifications": "^8.3.0",
+    "@capacitor/share": "^8.0.1",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/vite": "^4.2.2",
     "@vitejs/plugin-vue": "^6.0.4",
@@ -34,7 +44,6 @@
     "oxlint": "~1.51.0",
     "postcss": "^8.5.8",
     "prettier": "3.8.1",
-    "puppeteer": "^24.40.0",
     "tailwindcss": "^4.2.2",
     "vite": "^7.3.1",
     "vite-plugin-vue-devtools": "^8.0.7"
