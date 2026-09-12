@@ -226,9 +226,9 @@ const formatDistance = (km) => {
 
     <!-- Background decorations -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden contain-strict">
-      <div class="bg-blob absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-orange-200/40 dark:bg-orange-900/20 rounded-full blur-[100px] will-change-transform"></div>
-      <div class="bg-blob absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-amber-100/50 dark:bg-amber-900/10 rounded-full blur-[100px] will-change-transform"></div>
-      <div class="bg-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-50/40 dark:bg-yellow-900/10 rounded-full blur-[120px] will-change-transform"></div>
+      <div class="bg-blob absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-orange-100/50 dark:bg-orange-900/15 rounded-full blur-[100px] will-change-transform"></div>
+      <div class="bg-blob absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-amber-50/60 dark:bg-amber-900/10 rounded-full blur-[100px] will-change-transform"></div>
+      <div class="bg-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-50/30 dark:bg-yellow-900/10 rounded-full blur-[120px] will-change-transform"></div>
     </div>
 
     <!-- Header -->

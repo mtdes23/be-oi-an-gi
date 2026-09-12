@@ -19,7 +19,7 @@ body {
   padding: 0;
   min-height: 100vh;
   min-height: 100dvh;
-  background: #fefce8;
+  background: #fffdf5;
   color: #1c1917;
   transition: background-color 0.4s ease, color 0.4s ease;
   padding-top: env(safe-area-inset-top);
