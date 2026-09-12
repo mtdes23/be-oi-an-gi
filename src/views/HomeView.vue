@@ -20,8 +20,10 @@ import StatsPanel from '../components/StatsPanel.vue'
 import HistoryPanel from '../components/HistoryPanel.vue'
 import FavoritesPanel from '../components/FavoritesPanel.vue'
 import ChallengeModal from '../components/ChallengeModal.vue'
-
-const MapView = defineAsyncComponent(() => import('../components/MapView.vue'))
+import LeaderboardPanel from '../components/LeaderboardPanel.vue'
+import MapModal from '../components/MapModal.vue'
+import NearbyModal from '../components/NearbyModal.vue'
+import ToastContainer from '../components/ToastContainer.vue'
 
 const { favorites, toggleFavorite, isFavorite, favoriteCount } = useFavorites()
 const { t } = useI18n()
@@ -231,6 +233,9 @@ const formatDistance = (km) => {
       <div class="bg-blob absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-50/40 dark:bg-yellow-900/10 rounded-full blur-[120px] will-change-transform"></div>
     </div>
 
+      <!-- Toast -->
+      <ToastContainer />
+
     <!-- Header -->
     <AppHeader
       :resultCount="resultCount"
@@ -314,34 +319,7 @@ const formatDistance = (km) => {
       <FavoritesPanel :show="appStore.showFavorites" @close="appStore.showFavorites = false" @select="(item) => { appStore.randomPlace = item; appStore.showFavorites = false }" />
 
       <!-- Leaderboard Panel -->
-      <transition name="slide">
-        <div v-if="appStore.showLeaderboard" class="w-full max-w-2xl bg-white dark:bg-stone-800 rounded-3xl p-5 sm:p-6 mb-6 card-shadow-lg border border-stone-100 dark:border-stone-700">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-lg font-bold text-stone-800 dark:text-stone-100 font-display">🏆 {{ t.leaderboard }}</h3>
-            <button @click="appStore.showLeaderboard = false" class="text-stone-300 dark:text-stone-600 hover:text-stone-600 dark:hover:text-stone-300 transition-colors p-1"><Icon icon="lucide:x" class="size-5" /></button>
-          </div>
-
-          <div v-if="leaderboardStore.getTopPlayers().length === 0" class="text-center py-8 text-stone-300 dark:text-stone-600">
-            <Icon icon="lucide:trophy" class="size-10 mx-auto mb-2" />
-            <p class="text-sm">{{ t.noLeaderboard }}</p>
-          </div>
-          <div v-else class="space-y-2 max-h-64 overflow-y-auto pr-1">
-            <div v-for="(player, i) in leaderboardStore.getTopPlayers()" :key="player.name"
-                 class="rounded-xl p-3 flex items-center gap-3 transition-colors border"
-                 :class="i < 3 ? 'bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/10 dark:to-orange-900/10 border-amber-100 dark:border-amber-900/30' : 'bg-stone-50 dark:bg-stone-700/50 border-stone-100 dark:border-stone-700'">
-              <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shrink-0"
-                   :class="i === 0 ? 'bg-amber-400 text-white' : i === 1 ? 'bg-stone-300 text-stone-700' : i === 2 ? 'bg-orange-300 text-orange-700' : 'bg-stone-100 dark:bg-stone-600 text-stone-500 dark:text-stone-400'">
-                {{ i < 3 ? ['🥇', '🥈', '🥉'][i] : i + 1 }}
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-stone-700 dark:text-stone-200 truncate">{{ player.name }}</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">{{ player.spinsToday }} {{ t.dayProgress }} today</p>
-              </div>
-              <span class="text-sm font-bold text-amber-500">{{ player.score }} pts</span>
-            </div>
-          </div>
-        </div>
-      </transition>
+      <LeaderboardPanel :show="appStore.showLeaderboard" @close="appStore.showLeaderboard = false" />
 
       <!-- History Panel -->
       <HistoryPanel :show="appStore.showHistory" :history="appStore.history" @close="appStore.showHistory = false" @clear="appStore.clearHistory" @select="(item) => { appStore.randomPlace = item; appStore.showHistory = false }" />
@@ -349,67 +327,11 @@ const formatDistance = (km) => {
       <!-- Result Modal -->
       <ResultModal v-if="appStore.randomPlace && !appStore.isSpinning" :place="appStore.randomPlace" @close="appStore.randomPlace = null" />
 
-      <!-- Map View Modal -->
-      <transition name="modal">
-        <div v-if="appStore.showMapView" class="fixed inset-0 z-[200] flex items-end sm:items-center justify-center sm:p-4 bg-black/40 backdrop-blur-sm" @click.self="appStore.showMapView = false">
-          <div class="w-full sm:max-w-2xl bg-white dark:bg-stone-800 sm:rounded-3xl rounded-t-3xl p-5 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100 dark:border-stone-700 max-h-[85vh] max-h-[85dvh] overflow-y-auto" @click.stop>
-            <button @click="appStore.showMapView = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 rounded-full p-2 transition-all z-10">
-              <Icon icon="lucide:x" class="size-4 sm:size-5" />
-            </button>
-
-            <div class="text-center mb-4">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center text-xl mx-auto mb-2 shadow-lg shadow-emerald-200 dark:shadow-emerald-900/30">
-                🗺️
-              </div>
-              <h3 class="text-lg font-bold text-stone-800 dark:text-stone-100 font-display">{{ t.mapTitle }}</h3>
-              <p class="text-xs text-stone-400 dark:text-stone-500 mt-1">{{ t.mapHint }} • {{ filteredDatabase.length }}</p>
-            </div>
-
-            <MapView :places="filteredDatabase" :user-location="userLocation" @select="(place) => { appStore.randomPlace = place; appStore.showMapView = false }" />
-
-            <button @click="appStore.showMapView = false" class="w-full py-3 bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 text-stone-600 dark:text-stone-300 rounded-xl font-bold text-sm transition-all mt-4">
-              {{ t.close }}
-            </button>
-          </div>
-        </div>
-      </transition>
+      <!-- Map Modal -->
+      <MapModal :show="appStore.showMapView" :places="filteredDatabase" :user-location="userLocation" @close="appStore.showMapView = false" @select="(place) => { appStore.randomPlace = place; appStore.showMapView = false }" />
 
       <!-- Nearby Modal -->
-      <transition name="modal">
-        <div v-if="appStore.showNearby" class="fixed inset-0 z-[200] flex items-end sm:items-center justify-center sm:p-4 bg-black/40 backdrop-blur-sm" @click.self="appStore.showNearby = false">
-          <div class="w-full sm:max-w-sm bg-white dark:bg-stone-800 sm:rounded-3xl rounded-t-3xl p-5 sm:p-7 card-shadow-lg relative animate-bounce-in border border-stone-100 dark:border-stone-700 max-h-[80vh] max-h-[80dvh] overflow-hidden flex flex-col" @click.stop>
-            <button @click="appStore.showNearby = false" class="absolute top-4 right-4 text-stone-300 hover:text-stone-600 bg-stone-100 dark:bg-stone-700 hover:bg-stone-200 dark:hover:bg-stone-600 rounded-full p-2 transition-all z-10">
-              <Icon icon="lucide:x" class="size-4 sm:size-5" />
-            </button>
-
-            <div class="text-center mb-4">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center text-xl mx-auto mb-2 shadow-lg shadow-blue-200 dark:shadow-blue-900/30">
-                📍
-              </div>
-              <h3 class="text-lg font-bold text-stone-800 dark:text-stone-100 font-display">{{ t.nearbyTitle }}</h3>
-              <p v-if="locationError" class="text-xs text-red-500 mt-1">{{ locationError }}</p>
-            </div>
-
-            <div class="space-y-2 overflow-y-auto flex-1 pr-1">
-              <div v-for="place in nearbyPlaces" :key="place.name"
-                @click="appStore.randomPlace = place; appStore.showNearby = false"
-                class="bg-stone-50 dark:bg-stone-700/50 hover:bg-orange-50 dark:hover:bg-orange-900/20 rounded-xl p-3 flex items-center gap-3 transition-colors cursor-pointer border border-transparent hover:border-orange-100 dark:hover:border-orange-900/30">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-100 to-amber-100 dark:from-orange-900/30 dark:to-amber-900/30 flex items-center justify-center text-sm font-bold text-orange-500 shrink-0">
-                  {{ formatDistance(place.distance) }}
-                </div>
-                <div class="flex-1 min-w-0">
-                  <p class="text-sm font-semibold text-stone-700 dark:text-stone-200 truncate">{{ place.name }}</p>
-                  <p class="text-xs text-stone-400 dark:text-stone-500 truncate">{{ place.dish }} • {{ place.dist }}</p>
-                </div>
-                <Icon icon="lucide:chevron-right" class="size-4 text-stone-300 dark:text-stone-600 shrink-0" />
-              </div>
-              <div v-if="nearbyPlaces.length === 0 && !locationLoading" class="text-center py-6 text-stone-300 dark:text-stone-600">
-                <p class="text-sm">{{ t.noNearby }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </transition>
+      <NearbyModal :show="appStore.showNearby" :places="nearbyPlaces" :loading="locationLoading" :error="locationError" @close="appStore.showNearby = false" @select="(place) => { appStore.randomPlace = place; appStore.showNearby = false }" />
 
       <!-- Challenge Modal -->
       <ChallengeModal :show="appStore.showChallenge" @close="appStore.showChallenge = false" />
